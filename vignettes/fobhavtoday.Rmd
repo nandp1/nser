@@ -1,0 +1,25 @@
+---
+title: "fobhavtoday: Today's F&O Bhavcopy"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{fobhavtoday}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Introduction 
+
+Download today's Derivatives(F&O) bhavcopy. Just use ```fobhavtoday()```. Note that bhavcopy is made available by NSE in the evening. 
+
+```{r example}
+library(nser)
+report = fobhavtoday()
+head(report)
+```

@@ -1,0 +1,32 @@
+Package: nser
+Type: Package
+Title: Bhavcopy from NSE of Equities and Derivatives(FO)
+Version: 0.1.0
+Date: 2021-07-06
+Author: c(
+        person(
+          c("Nandan", "Patil")
+        , email = "tryanother609@gmail.com"
+        , role = c("cre", "aut")
+            )
+        )
+Maintainer: Nandan Patil <tryanother609@gmail.com>
+Description: The packages gets you bhavcopy from NSE of Equities and Dervatives(F&O) segment. 
+URL: https://github.com/nandp1/nser/ 
+BugReports: https://github.com/nandp1/nser/issues 
+Language: en-US
+License: GPL-2
+Depends: R (>= 3.0)
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    stats, 
+    utils, 
+    readr
+Suggests: 
+    testthat,
+    knitr,
+    rmarkdown,
+    reshape2
+RoxygenNote: 7.1.1
+VignetteBuilder: knitr

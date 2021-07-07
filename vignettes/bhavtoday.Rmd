@@ -1,0 +1,25 @@
+---
+title: "bhavtoday: Today's Equity Bhavcopy"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{bhavtoday}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Introduction 
+
+Download today's equity bhavcopy. Just use ```bhavtoday()```. Note that bhavcopy is made available by NSE in the evening. 
+
+```{r example}
+library(nser)
+report = bhavtoday()
+head(report)
+```
