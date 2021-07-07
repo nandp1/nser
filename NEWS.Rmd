@@ -1,0 +1,17 @@
+---
+title: "NEWS: nser"
+author: "Nandan Patil"
+date: "7/7/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# WELCOME
+
+
+## Version 0.1.0 
+
+* First version 0.1.0 contains five functions to download Equity and Derivatives(F&O) Bhavcopy from NSE. 
