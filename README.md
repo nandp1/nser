@@ -6,6 +6,8 @@
 “nser” helps you to download historical bhavcopy of Equities and F\&O
 segment easily.
 
+Package website [nser](https://nandp1.github.io/nser/)
+
 ## Installation
 
 You can install “nser” from [CRAN](https://CRAN.R-project.org) with:
@@ -22,7 +24,7 @@ library(devtools)
 install_github("nandp1/nser")
 ```
 
-## Example 1. Downloading Equity Bhavcopy
+## Example 1. Downloading Historical Equity Bhavcopy
 
 ``` r
 library(nser)
@@ -30,7 +32,7 @@ library(nser)
 report1 = bhav("01072021")
 ```
 
-## Example 2. Downloading F\&O Bhavcopy
+## Example 2. Downloading Historical F\&O Bhavcopy
 
 ``` r
 library(nser)
