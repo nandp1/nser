@@ -1,0 +1,28 @@
+---
+title: "bhavpr: Historical Equity Bhavcopy PR"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{bhavpr}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Introduction 
+
+To download historical Bhavcopy PR just mention the date in numeric format(Date, Month, Year). Note that date should be mentioned 
+in quotation mark "" (inverted comma). The function returns list containing ten dataframes form Bhavcopy PR. 
+
+```{r example}
+library(nser)
+library(readr)
+report = bhavpr("01072021")
+head(report)
+```
+

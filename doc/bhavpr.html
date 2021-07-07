@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+<title>bhavpr: Historical Equity Bhavcopy PR</title>
+
+<script>// Hide empty <a> tag within highlighted CodeBlock for screen reader accessibility (see https://github.com/jgm/pandoc/issues/6352#issuecomment-626106786) -->
+// v0.0.1
+// Written by JooYoung Seo (jooyoung@psu.edu) and Atsushi Yasumoto on June 1st, 2020.
+
+document.addEventListener('DOMContentLoaded', function() {
+  const codeList = document.getElementsByClassName("sourceCode");
+  for (var i = 0; i < codeList.length; i++) {
+    var linkList = codeList[i].getElementsByTagName('a');
+    for (var j = 0; j < linkList.length; j++) {
+      if (linkList[j].innerHTML === "") {
+        linkList[j].setAttribute('aria-hidden', 'true');
+      }
+    }
+  }
+});
+</script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+      code.sourceCode > span { display: inline-block; line-height: 1.25; }
+  code.sourceCode > span { color: inherit; text-decoration: inherit; }
+  code.sourceCode > span:empty { height: 1.2em; }
+  .sourceCode { overflow: visible; }
+  code.sourceCode { white-space: pre; position: relative; }
+  div.sourceCode { margin: 1em 0; }
+  pre.sourceCode { margin: 0; }
+  @media screen {
+  div.sourceCode { overflow: auto; }
+  }
+  @media print {
+  code.sourceCode { white-space: pre-wrap; }
+  code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+  }
+  pre.numberSource code
+    { counter-reset: source-line 0; }
+  pre.numberSource code > span
+    { position: relative; left: -4em; counter-increment: source-line; }
+  pre.numberSource code > span > a:first-child::before
+    { content: counter(source-line);
+      position: relative; left: -1em; text-align: right; vertical-align: baseline;
+      border: none; display: inline-block;
+      -webkit-touch-callout: none; -webkit-user-select: none;
+      -khtml-user-select: none; -moz-user-select: none;
+      -ms-user-select: none; user-select: none;
+      padding: 0 4px; width: 4em;
+      color: #aaaaaa;
+    }
+  pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+  div.sourceCode
+    {   }
+  @media screen {
+  code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+  }
+  code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+  code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+  code span.at { color: #7d9029; } /* Attribute */
+  code span.bn { color: #40a070; } /* BaseN */
+  code span.bu { } /* BuiltIn */
+  code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+  code span.ch { color: #4070a0; } /* Char */
+  code span.cn { color: #880000; } /* Constant */
+  code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+  code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+  code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+  code span.dt { color: #902000; } /* DataType */
+  code span.dv { color: #40a070; } /* DecVal */
+  code span.er { color: #ff0000; font-weight: bold; } /* Error */
+  code span.ex { } /* Extension */
+  code span.fl { color: #40a070; } /* Float */
+  code span.fu { color: #06287e; } /* Function */
+  code span.im { } /* Import */
+  code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+  code span.op { color: #666666; } /* Operator */
+  code span.ot { color: #007020; } /* Other */
+  code span.pp { color: #bc7a00; } /* Preprocessor */
+  code span.sc { color: #4070a0; } /* SpecialChar */
+  code span.ss { color: #bb6688; } /* SpecialString */
+  code span.st { color: #4070a0; } /* String */
+  code span.va { color: #19177c; } /* Variable */
+  code span.vs { color: #4070a0; } /* VerbatimString */
+  code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    </style>
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; } 
+code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">bhavpr: Historical Equity Bhavcopy PR</h1>
+
+
+
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>To download historical Bhavcopy PR just mention the date in numeric format(Date, Month, Year). Note that date should be mentioned in quotation mark &quot;&quot; (inverted comma). The function returns list containing ten dataframes form Bhavcopy PR.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">library</span>(nser)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="kw">library</span>(readr)</span>
+<span id="cb1-3"><a href="#cb1-3"></a>report =<span class="st"> </span><span class="kw">bhavpr</span>(<span class="st">&quot;01072021&quot;</span>)</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="co">#&gt; Parsed with column specification:</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="co">#&gt; cols(</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="co">#&gt;   SERIES = col_character(),</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="co">#&gt;   SYMBOL = col_character(),</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="co">#&gt;   </span><span class="al">SECURITY</span><span class="co"> = col_character(),</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="co">#&gt;   RECORD_DT = col_character(),</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="co">#&gt;   BC_STRT_DT = col_character(),</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="co">#&gt;   BC_</span><span class="re">END</span><span class="co">_DT = col_character(),</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="co">#&gt;   EX_DT = col_character(),</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="co">#&gt;   ND_STRT_DT = col_character(),</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="co">#&gt;   ND_</span><span class="re">END</span><span class="co">_DT = col_character(),</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="co">#&gt;   PURPOSE = col_character()</span></span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="co">#&gt; )</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="co">#&gt; Parsed with column specification:</span></span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="co">#&gt; cols(</span></span>
+<span id="cb1-19"><a href="#cb1-19"></a><span class="co">#&gt;   SYMBOL = col_character(),</span></span>
+<span id="cb1-20"><a href="#cb1-20"></a><span class="co">#&gt;   SERIES = col_character(),</span></span>
+<span id="cb1-21"><a href="#cb1-21"></a><span class="co">#&gt;   </span><span class="al">SECURITY</span><span class="co"> = col_character(),</span></span>
+<span id="cb1-22"><a href="#cb1-22"></a><span class="co">#&gt;   `HIGH/LOW` = col_character(),</span></span>
+<span id="cb1-23"><a href="#cb1-23"></a><span class="co">#&gt;   `INDEX FLAG` = col_character()</span></span>
+<span id="cb1-24"><a href="#cb1-24"></a><span class="co">#&gt; )</span></span>
+<span id="cb1-25"><a href="#cb1-25"></a><span class="co">#&gt; Warning: 345 parsing failures.</span></span>
+<span id="cb1-26"><a href="#cb1-26"></a><span class="co">#&gt; row col  expected    actual             file</span></span>
+<span id="cb1-27"><a href="#cb1-27"></a><span class="co">#&gt;   1  -- 5 columns 4 columns &#39;./bh010721.csv&#39;</span></span>
+<span id="cb1-28"><a href="#cb1-28"></a><span class="co">#&gt;   2  -- 5 columns 4 columns &#39;./bh010721.csv&#39;</span></span>
+<span id="cb1-29"><a href="#cb1-29"></a><span class="co">#&gt;   3  -- 5 columns 4 columns &#39;./bh010721.csv&#39;</span></span>
+<span id="cb1-30"><a href="#cb1-30"></a><span class="co">#&gt;   4  -- 5 columns 4 columns &#39;./bh010721.csv&#39;</span></span>
+<span id="cb1-31"><a href="#cb1-31"></a><span class="co">#&gt;   5  -- 5 columns 4 columns &#39;./bh010721.csv&#39;</span></span>
+<span id="cb1-32"><a href="#cb1-32"></a><span class="co">#&gt; ... ... ......... ......... ................</span></span>
+<span id="cb1-33"><a href="#cb1-33"></a><span class="co">#&gt; See problems(...) for more details.</span></span>
+<span id="cb1-34"><a href="#cb1-34"></a><span class="co">#&gt; Parsed with column specification:</span></span>
+<span id="cb1-35"><a href="#cb1-35"></a><span class="co">#&gt; cols(</span></span>
+<span id="cb1-36"><a href="#cb1-36"></a><span class="co">#&gt;   MARKET = col_character(),</span></span>
+<span id="cb1-37"><a href="#cb1-37"></a><span class="co">#&gt;   SERIES = col_character(),</span></span>
+<span id="cb1-38"><a href="#cb1-38"></a><span class="co">#&gt;   SYMBOL = col_character(),</span></span>
+<span id="cb1-39"><a href="#cb1-39"></a><span class="co">#&gt;   </span><span class="al">SECURITY</span><span class="co"> = col_character(),</span></span>
+<span id="cb1-40"><a href="#cb1-40"></a><span class="co">#&gt;   PREV_CL_PR = col_double(),</span></span>
+<span id="cb1-41"><a href="#cb1-41"></a><span class="co">#&gt;   OPEN_PRICE = col_double(),</span></span>
+<span id="cb1-42"><a href="#cb1-42"></a><span class="co">#&gt;   HIGH_PRICE = col_double(),</span></span>
+<span id="cb1-43"><a href="#cb1-43"></a><span class="co">#&gt;   LOW_PRICE = col_double(),</span></span>
+<span id="cb1-44"><a href="#cb1-44"></a><span class="co">#&gt;   CLOSE_PRICE = col_double(),</span></span>
+<span id="cb1-45"><a href="#cb1-45"></a><span class="co">#&gt;   NET_TRDVAL = col_double(),</span></span>
+<span id="cb1-46"><a href="#cb1-46"></a><span class="co">#&gt;   NET_TRDQTY = col_double(),</span></span>
+<span id="cb1-47"><a href="#cb1-47"></a><span class="co">#&gt;   CORP_IND = col_logical(),</span></span>
+<span id="cb1-48"><a href="#cb1-48"></a><span class="co">#&gt;   TRADES = col_double(),</span></span>
+<span id="cb1-49"><a href="#cb1-49"></a><span class="co">#&gt;   HI_52_WK = col_double(),</span></span>
+<span id="cb1-50"><a href="#cb1-50"></a><span class="co">#&gt;   LO_52_WK = col_double()</span></span>
+<span id="cb1-51"><a href="#cb1-51"></a><span class="co">#&gt; )</span></span>
+<span id="cb1-52"><a href="#cb1-52"></a><span class="co">#&gt; Parsed with column specification:</span></span>
+<span id="cb1-53"><a href="#cb1-53"></a><span class="co">#&gt; cols(</span></span>
+<span id="cb1-54"><a href="#cb1-54"></a><span class="co">#&gt;   MARKET = col_character(),</span></span>
+<span id="cb1-55"><a href="#cb1-55"></a><span class="co">#&gt;   SERIES = col_character(),</span></span>
+<span id="cb1-56"><a href="#cb1-56"></a><span class="co">#&gt;   SYMBOL = col_character(),</span></span>
+<span id="cb1-57"><a href="#cb1-57"></a><span class="co">#&gt;   </span><span class="al">SECURITY</span><span class="co"> = col_character(),</span></span>
+<span id="cb1-58"><a href="#cb1-58"></a><span class="co">#&gt;   `PREVIOUS CLOSE PRICE` = col_double(),</span></span>
+<span id="cb1-59"><a href="#cb1-59"></a><span class="co">#&gt;   `OPEN PRICE` = col_double(),</span></span>
+<span id="cb1-60"><a href="#cb1-60"></a><span class="co">#&gt;   `HIGH PRICE` = col_double(),</span></span>
+<span id="cb1-61"><a href="#cb1-61"></a><span class="co">#&gt;   `LOW PRICE` = col_double(),</span></span>
+<span id="cb1-62"><a href="#cb1-62"></a><span class="co">#&gt;   `CLOSE PRICE` = col_double(),</span></span>
+<span id="cb1-63"><a href="#cb1-63"></a><span class="co">#&gt;   `NET TRADED VALUE` = col_double(),</span></span>
+<span id="cb1-64"><a href="#cb1-64"></a><span class="co">#&gt;   `NET TRADED QTY` = col_double(),</span></span>
+<span id="cb1-65"><a href="#cb1-65"></a><span class="co">#&gt;   TRADES = col_double(),</span></span>
+<span id="cb1-66"><a href="#cb1-66"></a><span class="co">#&gt;   `52 WEEK HIGH` = col_double(),</span></span>
+<span id="cb1-67"><a href="#cb1-67"></a><span class="co">#&gt;   `52 WEEK LOW` = col_double(),</span></span>
+<span id="cb1-68"><a href="#cb1-68"></a><span class="co">#&gt;   UNDERLYING = col_character()</span></span>
+<span id="cb1-69"><a href="#cb1-69"></a><span class="co">#&gt; )</span></span>
+<span id="cb1-70"><a href="#cb1-70"></a><span class="co">#&gt; Parsed with column specification:</span></span>
+<span id="cb1-71"><a href="#cb1-71"></a><span class="co">#&gt; cols(</span></span>
+<span id="cb1-72"><a href="#cb1-72"></a><span class="co">#&gt;   GAIN_LOSS = col_character(),</span></span>
+<span id="cb1-73"><a href="#cb1-73"></a><span class="co">#&gt;   </span><span class="al">SECURITY</span><span class="co"> = col_character(),</span></span>
+<span id="cb1-74"><a href="#cb1-74"></a><span class="co">#&gt;   CLOSE_PRIC = col_double(),</span></span>
+<span id="cb1-75"><a href="#cb1-75"></a><span class="co">#&gt;   PREV_CL_PR = col_double(),</span></span>
+<span id="cb1-76"><a href="#cb1-76"></a><span class="co">#&gt;   PERCENT_CG = col_double()</span></span>
+<span id="cb1-77"><a href="#cb1-77"></a><span class="co">#&gt; )</span></span>
+<span id="cb1-78"><a href="#cb1-78"></a><span class="co">#&gt; Parsed with column specification:</span></span>
+<span id="cb1-79"><a href="#cb1-79"></a><span class="co">#&gt; cols(</span></span>
+<span id="cb1-80"><a href="#cb1-80"></a><span class="co">#&gt;   </span><span class="al">SECURITY</span><span class="co"> = col_character(),</span></span>
+<span id="cb1-81"><a href="#cb1-81"></a><span class="co">#&gt;   NEW = col_double(),</span></span>
+<span id="cb1-82"><a href="#cb1-82"></a><span class="co">#&gt;   PREVIOUS = col_double(),</span></span>
+<span id="cb1-83"><a href="#cb1-83"></a><span class="co">#&gt;   NEW_STATUS = col_character()</span></span>
+<span id="cb1-84"><a href="#cb1-84"></a><span class="co">#&gt; )</span></span>
+<span id="cb1-85"><a href="#cb1-85"></a><span class="co">#&gt; Parsed with column specification:</span></span>
+<span id="cb1-86"><a href="#cb1-86"></a><span class="co">#&gt; cols(</span></span>
+<span id="cb1-87"><a href="#cb1-87"></a><span class="co">#&gt;   MKT = col_character(),</span></span>
+<span id="cb1-88"><a href="#cb1-88"></a><span class="co">#&gt;   SERIES = col_character(),</span></span>
+<span id="cb1-89"><a href="#cb1-89"></a><span class="co">#&gt;   SYMBOL = col_character(),</span></span>
+<span id="cb1-90"><a href="#cb1-90"></a><span class="co">#&gt;   </span><span class="al">SECURITY</span><span class="co"> = col_character(),</span></span>
+<span id="cb1-91"><a href="#cb1-91"></a><span class="co">#&gt;   PREV_CL_PR = col_double(),</span></span>
+<span id="cb1-92"><a href="#cb1-92"></a><span class="co">#&gt;   OPEN_PRICE = col_double(),</span></span>
+<span id="cb1-93"><a href="#cb1-93"></a><span class="co">#&gt;   HIGH_PRICE = col_double(),</span></span>
+<span id="cb1-94"><a href="#cb1-94"></a><span class="co">#&gt;   LOW_PRICE = col_double(),</span></span>
+<span id="cb1-95"><a href="#cb1-95"></a><span class="co">#&gt;   CLOSE_PRICE = col_double(),</span></span>
+<span id="cb1-96"><a href="#cb1-96"></a><span class="co">#&gt;   NET_TRDVAL = col_double(),</span></span>
+<span id="cb1-97"><a href="#cb1-97"></a><span class="co">#&gt;   NET_TRDQTY = col_double(),</span></span>
+<span id="cb1-98"><a href="#cb1-98"></a><span class="co">#&gt;   IND_SEC = col_character(),</span></span>
+<span id="cb1-99"><a href="#cb1-99"></a><span class="co">#&gt;   CORP_IND = col_character(),</span></span>
+<span id="cb1-100"><a href="#cb1-100"></a><span class="co">#&gt;   TRADES = col_double(),</span></span>
+<span id="cb1-101"><a href="#cb1-101"></a><span class="co">#&gt;   HI_52_WK = col_double(),</span></span>
+<span id="cb1-102"><a href="#cb1-102"></a><span class="co">#&gt;   LO_52_WK = col_double()</span></span>
+<span id="cb1-103"><a href="#cb1-103"></a><span class="co">#&gt; )</span></span>
+<span id="cb1-104"><a href="#cb1-104"></a><span class="co">#&gt; Parsed with column specification:</span></span>
+<span id="cb1-105"><a href="#cb1-105"></a><span class="co">#&gt; cols(</span></span>
+<span id="cb1-106"><a href="#cb1-106"></a><span class="co">#&gt;   MKT = col_character(),</span></span>
+<span id="cb1-107"><a href="#cb1-107"></a><span class="co">#&gt;   </span><span class="al">SECURITY</span><span class="co"> = col_character(),</span></span>
+<span id="cb1-108"><a href="#cb1-108"></a><span class="co">#&gt;   PREV_CL_PR = col_double(),</span></span>
+<span id="cb1-109"><a href="#cb1-109"></a><span class="co">#&gt;   OPEN_PRICE = col_double(),</span></span>
+<span id="cb1-110"><a href="#cb1-110"></a><span class="co">#&gt;   HIGH_PRICE = col_double(),</span></span>
+<span id="cb1-111"><a href="#cb1-111"></a><span class="co">#&gt;   LOW_PRICE = col_double(),</span></span>
+<span id="cb1-112"><a href="#cb1-112"></a><span class="co">#&gt;   CLOSE_PRICE = col_double(),</span></span>
+<span id="cb1-113"><a href="#cb1-113"></a><span class="co">#&gt;   NET_TRDVAL = col_double(),</span></span>
+<span id="cb1-114"><a href="#cb1-114"></a><span class="co">#&gt;   NET_TRDQTY = col_double(),</span></span>
+<span id="cb1-115"><a href="#cb1-115"></a><span class="co">#&gt;   IND_SEC = col_character(),</span></span>
+<span id="cb1-116"><a href="#cb1-116"></a><span class="co">#&gt;   CORP_IND = col_character(),</span></span>
+<span id="cb1-117"><a href="#cb1-117"></a><span class="co">#&gt;   TRADES = col_double(),</span></span>
+<span id="cb1-118"><a href="#cb1-118"></a><span class="co">#&gt;   HI_52_WK = col_double(),</span></span>
+<span id="cb1-119"><a href="#cb1-119"></a><span class="co">#&gt;   LO_52_WK = col_double()</span></span>
+<span id="cb1-120"><a href="#cb1-120"></a><span class="co">#&gt; )</span></span>
+<span id="cb1-121"><a href="#cb1-121"></a><span class="co">#&gt; Warning: 8 parsing failures.</span></span>
+<span id="cb1-122"><a href="#cb1-122"></a><span class="co">#&gt;  row col   expected     actual             file</span></span>
+<span id="cb1-123"><a href="#cb1-123"></a><span class="co">#&gt;   60  -- 14 columns 16 columns &#39;./Pr010721.csv&#39;</span></span>
+<span id="cb1-124"><a href="#cb1-124"></a><span class="co">#&gt;   61  -- 14 columns 16 columns &#39;./Pr010721.csv&#39;</span></span>
+<span id="cb1-125"><a href="#cb1-125"></a><span class="co">#&gt;  113  -- 14 columns 16 columns &#39;./Pr010721.csv&#39;</span></span>
+<span id="cb1-126"><a href="#cb1-126"></a><span class="co">#&gt;  162  -- 14 columns 16 columns &#39;./Pr010721.csv&#39;</span></span>
+<span id="cb1-127"><a href="#cb1-127"></a><span class="co">#&gt; 1522  -- 14 columns 16 columns &#39;./Pr010721.csv&#39;</span></span>
+<span id="cb1-128"><a href="#cb1-128"></a><span class="co">#&gt; .... ... .......... .......... ................</span></span>
+<span id="cb1-129"><a href="#cb1-129"></a><span class="co">#&gt; See problems(...) for more details.</span></span>
+<span id="cb1-130"><a href="#cb1-130"></a><span class="co">#&gt; Parsed with column specification:</span></span>
+<span id="cb1-131"><a href="#cb1-131"></a><span class="co">#&gt; cols(</span></span>
+<span id="cb1-132"><a href="#cb1-132"></a><span class="co">#&gt;   MARKET = col_character(),</span></span>
+<span id="cb1-133"><a href="#cb1-133"></a><span class="co">#&gt;   SERIES = col_character(),</span></span>
+<span id="cb1-134"><a href="#cb1-134"></a><span class="co">#&gt;   SYMBOL = col_character(),</span></span>
+<span id="cb1-135"><a href="#cb1-135"></a><span class="co">#&gt;   </span><span class="al">SECURITY</span><span class="co"> = col_character(),</span></span>
+<span id="cb1-136"><a href="#cb1-136"></a><span class="co">#&gt;   PREV_CL_PR = col_double(),</span></span>
+<span id="cb1-137"><a href="#cb1-137"></a><span class="co">#&gt;   OPEN_PRICE = col_double(),</span></span>
+<span id="cb1-138"><a href="#cb1-138"></a><span class="co">#&gt;   HIGH_PRICE = col_double(),</span></span>
+<span id="cb1-139"><a href="#cb1-139"></a><span class="co">#&gt;   LOW_PRICE = col_double(),</span></span>
+<span id="cb1-140"><a href="#cb1-140"></a><span class="co">#&gt;   CLOSE_PRICE = col_double(),</span></span>
+<span id="cb1-141"><a href="#cb1-141"></a><span class="co">#&gt;   NET_TRDVAL = col_double(),</span></span>
+<span id="cb1-142"><a href="#cb1-142"></a><span class="co">#&gt;   NET_TRDQTY = col_double(),</span></span>
+<span id="cb1-143"><a href="#cb1-143"></a><span class="co">#&gt;   CORP_IND = col_logical(),</span></span>
+<span id="cb1-144"><a href="#cb1-144"></a><span class="co">#&gt;   HI_52_WK = col_double(),</span></span>
+<span id="cb1-145"><a href="#cb1-145"></a><span class="co">#&gt;   LO_52_WK = col_double()</span></span>
+<span id="cb1-146"><a href="#cb1-146"></a><span class="co">#&gt; )</span></span>
+<span id="cb1-147"><a href="#cb1-147"></a><span class="co">#&gt; Parsed with column specification:</span></span>
+<span id="cb1-148"><a href="#cb1-148"></a><span class="co">#&gt; cols(</span></span>
+<span id="cb1-149"><a href="#cb1-149"></a><span class="co">#&gt;   </span><span class="al">SECURITY</span><span class="co"> = col_character(),</span></span>
+<span id="cb1-150"><a href="#cb1-150"></a><span class="co">#&gt;   PREV_CL_PR = col_double(),</span></span>
+<span id="cb1-151"><a href="#cb1-151"></a><span class="co">#&gt;   CLOSE_PRIC = col_double(),</span></span>
+<span id="cb1-152"><a href="#cb1-152"></a><span class="co">#&gt;   NET_TRDQTY = col_double(),</span></span>
+<span id="cb1-153"><a href="#cb1-153"></a><span class="co">#&gt;   NET_TRDVAL = col_double()</span></span>
+<span id="cb1-154"><a href="#cb1-154"></a><span class="co">#&gt; )</span></span>
+<span id="cb1-155"><a href="#cb1-155"></a><span class="kw">head</span>(report)</span>
+<span id="cb1-156"><a href="#cb1-156"></a><span class="co">#&gt; $`./Bc010721.csv`</span></span>
+<span id="cb1-157"><a href="#cb1-157"></a><span class="co">#&gt; # A tibble: 687 x 10</span></span>
+<span id="cb1-158"><a href="#cb1-158"></a><span class="co">#&gt;    SERIES SYMBOL </span><span class="al">SECURITY</span><span class="co"> RECORD_DT BC_STRT_DT BC_</span><span class="re">END</span><span class="co">_DT EX_DT ND_STRT_DT</span></span>
+<span id="cb1-159"><a href="#cb1-159"></a><span class="co">#&gt;    &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;     </span></span>
+<span id="cb1-160"><a href="#cb1-160"></a><span class="co">#&gt;  1 16     SRTRA~ Sec Red~ 07/08/20~ &lt;NA&gt;       &lt;NA&gt;      05/0~ &lt;NA&gt;      </span></span>
+<span id="cb1-161"><a href="#cb1-161"></a><span class="co">#&gt;  2 17     SRTRA~ Sec Red~ 07/08/20~ &lt;NA&gt;       &lt;NA&gt;      05/0~ &lt;NA&gt;      </span></span>
+<span id="cb1-162"><a href="#cb1-162"></a><span class="co">#&gt;  3 18     SRTRA~ Sec Red~ 07/08/20~ &lt;NA&gt;       &lt;NA&gt;      05/0~ &lt;NA&gt;      </span></span>
+<span id="cb1-163"><a href="#cb1-163"></a><span class="co">#&gt;  4 19     SRTRA~ Sec Red~ 07/08/20~ &lt;NA&gt;       &lt;NA&gt;      05/0~ &lt;NA&gt;      </span></span>
+<span id="cb1-164"><a href="#cb1-164"></a><span class="co">#&gt;  5 BE     LTI    L&amp;T Inf~ 02/07/20~ &lt;NA&gt;       &lt;NA&gt;      01/0~ &lt;NA&gt;      </span></span>
+<span id="cb1-165"><a href="#cb1-165"></a><span class="co">#&gt;  6 BE     PDMJE~ Pudumje~ &lt;NA&gt;      14/08/2021 21/08/20~ 12/0~ &lt;NA&gt;      </span></span>
+<span id="cb1-166"><a href="#cb1-166"></a><span class="co">#&gt;  7 BE     LSIL   Lloyds ~ &lt;NA&gt;      09/07/2021 15/07/20~ 07/0~ &lt;NA&gt;      </span></span>
+<span id="cb1-167"><a href="#cb1-167"></a><span class="co">#&gt;  8 BE     BALKR~ Balkrsh~ &lt;NA&gt;      17/07/2021 23/07/20~ 15/0~ &lt;NA&gt;      </span></span>
+<span id="cb1-168"><a href="#cb1-168"></a><span class="co">#&gt;  9 BE     CROMP~ Crompt ~ 09/07/20~ &lt;NA&gt;       &lt;NA&gt;      08/0~ &lt;NA&gt;      </span></span>
+<span id="cb1-169"><a href="#cb1-169"></a><span class="co">#&gt; 10 BE     KIRLF~ Kirlosk~ &lt;NA&gt;      18/07/2021 27/07/20~ 15/0~ &lt;NA&gt;      </span></span>
+<span id="cb1-170"><a href="#cb1-170"></a><span class="co">#&gt; # ... with 677 more rows, and 2 more variables: ND_</span><span class="re">END</span><span class="co">_DT &lt;chr&gt;, PURPOSE &lt;chr&gt;</span></span>
+<span id="cb1-171"><a href="#cb1-171"></a><span class="co">#&gt; </span></span>
+<span id="cb1-172"><a href="#cb1-172"></a><span class="co">#&gt; $`./bh010721.csv`</span></span>
+<span id="cb1-173"><a href="#cb1-173"></a><span class="co">#&gt; # A tibble: 345 x 5</span></span>
+<span id="cb1-174"><a href="#cb1-174"></a><span class="co">#&gt;    SYMBOL     SERIES </span><span class="al">SECURITY</span><span class="co">                  `HIGH/LOW` `INDEX FLAG`</span></span>
+<span id="cb1-175"><a href="#cb1-175"></a><span class="co">#&gt;    &lt;chr&gt;      &lt;chr&gt;  &lt;chr&gt;                     &lt;chr&gt;      &lt;chr&gt;       </span></span>
+<span id="cb1-176"><a href="#cb1-176"></a><span class="co">#&gt;  1 21STCENMGM EQ     21ST CENTURY MGMT SERVICE H          &lt;NA&gt;        </span></span>
+<span id="cb1-177"><a href="#cb1-177"></a><span class="co">#&gt;  2 396GS2022  GS     GOI LOAN  3.96% 2022      H          &lt;NA&gt;        </span></span>
+<span id="cb1-178"><a href="#cb1-178"></a><span class="co">#&gt;  3 522GS2025  GS     GOI LOAN 5.22% 2025       H          &lt;NA&gt;        </span></span>
+<span id="cb1-179"><a href="#cb1-179"></a><span class="co">#&gt;  4 AAATECH    SM     AAA TECHNOLOGIES LIMITED  H          &lt;NA&gt;        </span></span>
+<span id="cb1-180"><a href="#cb1-180"></a><span class="co">#&gt;  5 ABSLRIF6RD MF     BIRLASLAMC - ABSLRIF6RD   H          &lt;NA&gt;        </span></span>
+<span id="cb1-181"><a href="#cb1-181"></a><span class="co">#&gt;  6 ADROITINFO EQ     ADROIT INFOTECH LIMITED   H          &lt;NA&gt;        </span></span>
+<span id="cb1-182"><a href="#cb1-182"></a><span class="co">#&gt;  7 ADSL       EQ     ALLIED DIGITAL SERV. LTD  H          &lt;NA&gt;        </span></span>
+<span id="cb1-183"><a href="#cb1-183"></a><span class="co">#&gt;  8 AFFLE      BE     AFFLE (INDIA) LIMITED     H          &lt;NA&gt;        </span></span>
+<span id="cb1-184"><a href="#cb1-184"></a><span class="co">#&gt;  9 AGCNET     BE     AGC NETWORKS LIMITED      H          &lt;NA&gt;        </span></span>
+<span id="cb1-185"><a href="#cb1-185"></a><span class="co">#&gt; 10 AHLADA     EQ     AHLADA ENGINEERS LIMITED  H          &lt;NA&gt;        </span></span>
+<span id="cb1-186"><a href="#cb1-186"></a><span class="co">#&gt; # ... with 335 more rows</span></span>
+<span id="cb1-187"><a href="#cb1-187"></a><span class="co">#&gt; </span></span>
+<span id="cb1-188"><a href="#cb1-188"></a><span class="co">#&gt; $`./corpbond010721.csv`</span></span>
+<span id="cb1-189"><a href="#cb1-189"></a><span class="co">#&gt; # A tibble: 144 x 15</span></span>
+<span id="cb1-190"><a href="#cb1-190"></a><span class="co">#&gt;    MARKET SERIES SYMBOL </span><span class="al">SECURITY</span><span class="co"> PREV_CL_PR OPEN_PRICE HIGH_PRICE LOW_PRICE</span></span>
+<span id="cb1-191"><a href="#cb1-191"></a><span class="co">#&gt;    &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;         &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;</span></span>
+<span id="cb1-192"><a href="#cb1-192"></a><span class="co">#&gt;  1 N      N1     IRFC   BOND 8.~     1081       1080.      1080.     1080. </span></span>
+<span id="cb1-193"><a href="#cb1-193"></a><span class="co">#&gt;  2 N      N1     NHAI   BOND 8.~     1085       1087.      1087      1083  </span></span>
+<span id="cb1-194"><a href="#cb1-194"></a><span class="co">#&gt;  3 N      N2     BRITA~ 8.00% S~       32.8       32.8       32.9      32.8</span></span>
+<span id="cb1-195"><a href="#cb1-195"></a><span class="co">#&gt;  4 N      N2     HUDCO  8.20 NC~     1225.      1232.      1232.     1216. </span></span>
+<span id="cb1-196"><a href="#cb1-196"></a><span class="co">#&gt;  5 N      N2     IIFL   SEC RED~     1037.      1031.      1035.     1031. </span></span>
+<span id="cb1-197"><a href="#cb1-197"></a><span class="co">#&gt;  6 N      N2     IREDA  IREDA 8~     1248.      1489       1489      1489  </span></span>
+<span id="cb1-198"><a href="#cb1-198"></a><span class="co">#&gt;  7 N      N2     IRFC   BOND 8.~     1238       1248       1248      1232  </span></span>
+<span id="cb1-199"><a href="#cb1-199"></a><span class="co">#&gt;  8 N      N2     M&amp;MFIN 9.00% U~     1085       1090       1090      1086  </span></span>
+<span id="cb1-200"><a href="#cb1-200"></a><span class="co">#&gt;  9 N      N2     NABARD 7.64% T~     1247.      1237.      1249      1237  </span></span>
+<span id="cb1-201"><a href="#cb1-201"></a><span class="co">#&gt; 10 N      N2     NHAI   BOND 8.~     1259.      1265       1265      1258  </span></span>
+<span id="cb1-202"><a href="#cb1-202"></a><span class="co">#&gt; # ... with 134 more rows, and 7 more variables: CLOSE_PRICE &lt;dbl&gt;,</span></span>
+<span id="cb1-203"><a href="#cb1-203"></a><span class="co">#&gt; #   NET_TRDVAL &lt;dbl&gt;, NET_TRDQTY &lt;dbl&gt;, CORP_IND &lt;lgl&gt;, TRADES &lt;dbl&gt;,</span></span>
+<span id="cb1-204"><a href="#cb1-204"></a><span class="co">#&gt; #   HI_52_WK &lt;dbl&gt;, LO_52_WK &lt;dbl&gt;</span></span>
+<span id="cb1-205"><a href="#cb1-205"></a><span class="co">#&gt; </span></span>
+<span id="cb1-206"><a href="#cb1-206"></a><span class="co">#&gt; $`./etf010721.csv`</span></span>
+<span id="cb1-207"><a href="#cb1-207"></a><span class="co">#&gt; # A tibble: 99 x 15</span></span>
+<span id="cb1-208"><a href="#cb1-208"></a><span class="co">#&gt;    MARKET SERIES SYMBOL </span><span class="al">SECURITY</span><span class="co"> `PREVIOUS CLOSE~ `OPEN PRICE` `HIGH PRICE`</span></span>
+<span id="cb1-209"><a href="#cb1-209"></a><span class="co">#&gt;    &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;               &lt;dbl&gt;        &lt;dbl&gt;        &lt;dbl&gt;</span></span>
+<span id="cb1-210"><a href="#cb1-210"></a><span class="co">#&gt;  1 N      EQ     ABSLB~ BIRLASL~            346.         346.         347. </span></span>
+<span id="cb1-211"><a href="#cb1-211"></a><span class="co">#&gt;  2 N      EQ     ABSLN~ BIRLASL~            392          393.         393. </span></span>
+<span id="cb1-212"><a href="#cb1-212"></a><span class="co">#&gt;  3 N      EQ     AXISB~ AXISAMC~            346.         348.         349. </span></span>
+<span id="cb1-213"><a href="#cb1-213"></a><span class="co">#&gt;  4 N      EQ     AXISB~ AXISAMC~             10.2         10.2         10.2</span></span>
+<span id="cb1-214"><a href="#cb1-214"></a><span class="co">#&gt;  5 N      EQ     AXISG~ AXIS MF~             40.5         40.6         41.0</span></span>
+<span id="cb1-215"><a href="#cb1-215"></a><span class="co">#&gt;  6 N      EQ     AXISH~ AXISAMC~             87.8         87.8         88.4</span></span>
+<span id="cb1-216"><a href="#cb1-216"></a><span class="co">#&gt;  7 N      EQ     AXISN~ AXISAMC~            164.         164.         175. </span></span>
+<span id="cb1-217"><a href="#cb1-217"></a><span class="co">#&gt;  8 N      EQ     AXIST~ AXISAMC~            293          295          295  </span></span>
+<span id="cb1-218"><a href="#cb1-218"></a><span class="co">#&gt;  9 N      EQ     BANKB~ NIP IND~            350.         355          359  </span></span>
+<span id="cb1-219"><a href="#cb1-219"></a><span class="co">#&gt; 10 N      EQ     BSLGO~ ADITYBI~           4276.        4316         4320  </span></span>
+<span id="cb1-220"><a href="#cb1-220"></a><span class="co">#&gt; # ... with 89 more rows, and 8 more variables: `LOW PRICE` &lt;dbl&gt;, `CLOSE</span></span>
+<span id="cb1-221"><a href="#cb1-221"></a><span class="co">#&gt; #   PRICE` &lt;dbl&gt;, `NET TRADED VALUE` &lt;dbl&gt;, `NET TRADED QTY` &lt;dbl&gt;,</span></span>
+<span id="cb1-222"><a href="#cb1-222"></a><span class="co">#&gt; #   TRADES &lt;dbl&gt;, `52 WEEK HIGH` &lt;dbl&gt;, `52 WEEK LOW` &lt;dbl&gt;, UNDERLYING &lt;chr&gt;</span></span>
+<span id="cb1-223"><a href="#cb1-223"></a><span class="co">#&gt; </span></span>
+<span id="cb1-224"><a href="#cb1-224"></a><span class="co">#&gt; $`./Gl010721.csv`</span></span>
+<span id="cb1-225"><a href="#cb1-225"></a><span class="co">#&gt; # A tibble: 168 x 5</span></span>
+<span id="cb1-226"><a href="#cb1-226"></a><span class="co">#&gt;    GAIN_LOSS </span><span class="al">SECURITY</span><span class="co">                  CLOSE_PRIC PREV_CL_PR PERCENT_CG</span></span>
+<span id="cb1-227"><a href="#cb1-227"></a><span class="co">#&gt;    &lt;chr&gt;     &lt;chr&gt;                          &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;</span></span>
+<span id="cb1-228"><a href="#cb1-228"></a><span class="co">#&gt;  1 &lt;NA&gt;      Nifty 50 Sec.                    NA         NA       NA   </span></span>
+<span id="cb1-229"><a href="#cb1-229"></a><span class="co">#&gt;  2 &lt;NA&gt;      &lt;NA&gt;                             NA         NA       NA   </span></span>
+<span id="cb1-230"><a href="#cb1-230"></a><span class="co">#&gt;  3 G         DR. REDDY&#39;S LABORATORIES       5558.      5423.       2.5 </span></span>
+<span id="cb1-231"><a href="#cb1-231"></a><span class="co">#&gt;  4 G         GAIL (INDIA) LTD                153        150.       2.24</span></span>
+<span id="cb1-232"><a href="#cb1-232"></a><span class="co">#&gt;  5 G         HINDALCO  INDUSTRIES  LTD       379.       372.       1.98</span></span>
+<span id="cb1-233"><a href="#cb1-233"></a><span class="co">#&gt;  6 G         BAJAJ AUTO LIMITED             4205.      4134.       1.71</span></span>
+<span id="cb1-234"><a href="#cb1-234"></a><span class="co">#&gt;  7 G         TATA MOTORS LIMITED             344.       340.       1.37</span></span>
+<span id="cb1-235"><a href="#cb1-235"></a><span class="co">#&gt;  8 G         SUN PHARMACEUTICAL IND L        684.       675.       1.29</span></span>
+<span id="cb1-236"><a href="#cb1-236"></a><span class="co">#&gt;  9 G         OIL AND NATURAL GAS CORP.       119.       118.       0.98</span></span>
+<span id="cb1-237"><a href="#cb1-237"></a><span class="co">#&gt; 10 G         ASIAN PAINTS LIMITED           3022.      2993.       0.97</span></span>
+<span id="cb1-238"><a href="#cb1-238"></a><span class="co">#&gt; # ... with 158 more rows</span></span>
+<span id="cb1-239"><a href="#cb1-239"></a><span class="co">#&gt; </span></span>
+<span id="cb1-240"><a href="#cb1-240"></a><span class="co">#&gt; $`./HL010721.csv`</span></span>
+<span id="cb1-241"><a href="#cb1-241"></a><span class="co">#&gt; # A tibble: 105 x 4</span></span>
+<span id="cb1-242"><a href="#cb1-242"></a><span class="co">#&gt;    </span><span class="al">SECURITY</span><span class="co">                     NEW PREVIOUS NEW_STATUS</span></span>
+<span id="cb1-243"><a href="#cb1-243"></a><span class="co">#&gt;    &lt;chr&gt;                      &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;     </span></span>
+<span id="cb1-244"><a href="#cb1-244"></a><span class="co">#&gt;  1 FORTIS HEALTHCARE LTD      250.    248.   H         </span></span>
+<span id="cb1-245"><a href="#cb1-245"></a><span class="co">#&gt;  2 HAPPIEST MINDS TECHNO LTD 1194.   1020    H         </span></span>
+<span id="cb1-246"><a href="#cb1-246"></a><span class="co">#&gt;  3 JSW ENERGY LIMITED         177     172.   H         </span></span>
+<span id="cb1-247"><a href="#cb1-247"></a><span class="co">#&gt;  4 MAGADH SUGAR &amp; ENERGY LTD  353.    336.   H         </span></span>
+<span id="cb1-248"><a href="#cb1-248"></a><span class="co">#&gt;  5 MPHASIS LIMITED           2184    2144.   H         </span></span>
+<span id="cb1-249"><a href="#cb1-249"></a><span class="co">#&gt;  6 NITIN FIRE PROT IND. LTD.    1.4     1.35 H         </span></span>
+<span id="cb1-250"><a href="#cb1-250"></a><span class="co">#&gt;  7 ONE POINT ONE SOL LTD       32.8    31.3  H         </span></span>
+<span id="cb1-251"><a href="#cb1-251"></a><span class="co">#&gt;  8 PITTI ENGINEERING LIMITED  145     140.   H         </span></span>
+<span id="cb1-252"><a href="#cb1-252"></a><span class="co">#&gt;  9 PROSEED INDIA LTD            5.1     4.9  H         </span></span>
+<span id="cb1-253"><a href="#cb1-253"></a><span class="co">#&gt; 10 RAJRATAN GLOBAL WIRE LTD  1848    1557.   H         </span></span>
+<span id="cb1-254"><a href="#cb1-254"></a><span class="co">#&gt; # ... with 95 more rows</span></span></code></pre></div>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

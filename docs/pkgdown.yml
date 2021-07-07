@@ -1,0 +1,11 @@
+pandoc: 2.7.3
+pkgdown: 1.6.1
+pkgdown_sha: ~
+articles:
+  bhav: bhav.html
+  bhavpr: bhavpr.html
+  bhavtoday: bhavtoday.html
+  fobhav: fobhav.html
+  fobhavtoday: fobhavtoday.html
+last_built: 2021-07-07T17:57Z
+
