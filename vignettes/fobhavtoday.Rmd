@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 
 Download today's Derivatives(F&O) bhavcopy. Just use ```fobhavtoday()```. Note that bhavcopy is made available by NSE in the evening. 
 
-```{r example}
+``` r
 library(nser)
 report = fobhavtoday()
 head(report)

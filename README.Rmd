@@ -17,6 +17,8 @@ knitr::opts_chunk$set(
 
 "nser" helps you to download historical bhavcopy of Equities and F&O segment easily. 
 
+Package website [nser](https://nandp1.github.io/nser/)
+
 ## Installation
 
 You can install "nser" from [CRAN](https://CRAN.R-project.org) with:
