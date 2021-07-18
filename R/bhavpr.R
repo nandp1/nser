@@ -37,7 +37,7 @@ bhavpr = function(x){
   download.file(bhavurl, temp)
   unzip(temp)
   files <- list.files(pattern = ".csv", full.names = T)
-  tbl <- sapply(files, read_csv)
+  suppressWarnings(suppressMessages(tbl <- sapply(files, function(x) read_csv(x, progress = FALSE ))))
   unlink(temp)
   return(tbl)
   }
