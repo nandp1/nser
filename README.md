@@ -12,7 +12,9 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 [![](https://cranlogs.r-pkg.org/badges/grand-total/nser)](https://cran.r-project.org/package=nser)
 <!-- badges: end -->
 
-# Note: Since 23/07/2021 we are encountering "HTTP 403 Forbidden, Access Denied" error. 
+## Note: Since 23/07/2021 we are encountering "HTTP 403 Forbidden, Access Denied" error for all the functions. 
+
+## Function bhav and fobhav can fetch you data from 2020 and backward. 
 # Introduction
 
 “nser” helps you to download historical bhavcopy of Equities and F\&O
