@@ -14,9 +14,8 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 
 ## 27/07/2021
 
-All functions working now. 
+## All functions working now. 
 
-## ```bhavpr``` can fethch current data. 
 
 # Introduction
 
