@@ -1,11 +1,11 @@
 Package: nser
 Type: Package
-Title: Bhavcopy from National Stock Exchange(NSE) India of Equities and Derivatives(F&O)
-Version: 1.0.0
-Date: 2021-07-06
+Title: Bhavcopy and Live Market Data from National Stock Exchange(NSE) India of Equities and Derivatives(F&O)
+Version: 1.1.0
+Date: 2021-08-03
 Authors@R: person("Nandan", "Patil", email = "tryanother609@gmail.com", role = c("cre", "aut"))
 Maintainer: Nandan Patil <tryanother609@gmail.com>
-Description: Download Historical Bhavcopy from NSE of Equities and Derivatives(F&O) segment. Data source is from NSE webpage  <https://www.nseindia.com/all-reports>. 
+Description: Download Historical Bhavcopy and get Live Market data from NSE of Equities and Derivatives(F&O) segment. Data source  <https://www.nseindia.com/>. 
 URL: https://github.com/nandp1/nser/ 
 BugReports: https://github.com/nandp1/nser/issues 
 Language: en-US
@@ -13,9 +13,14 @@ License: GPL-2
 Depends: R (>= 3.0)
 Encoding: UTF-8
 Imports: 
-    stats, 
-    utils, 
-    readr
+    stats,
+    utils,
+    readr,
+    magrittr,
+    rvest,
+    tidyverse,
+    stringr,
+    jsonlite
 Suggests: 
     testthat,
     knitr,

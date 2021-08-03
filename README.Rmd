@@ -35,15 +35,16 @@ You can install "nser" from [CRAN](https://CRAN.R-project.org) with:
 ``` r
 install.packages("nser")
 ```
-You can also install it from github by:
+Install it from github by:
 ``` r
 install.packages("devtools")
 library(devtools)
 install_github("nandp1/nser")
 ```
+
 ## Example 1. Downloading Historical Equity Bhavcopy 
 
-```r
+```{r example}
 library(nser)
 # Download Bhavcopy of 1st July 2021
 report1 = bhav("01072021")
@@ -51,14 +52,32 @@ report1 = bhav("01072021")
 
 ## Example 2. Downloading Historical F&O Bhavcopy 
 
-```r
+```{r example}
 library(nser)
 # Download Bhavcopy of 1st July 2021
 report2 = fobhav("01072021")
 ```
 ## Example 3. Downloading today's Equity and F&O Bhavcopy 
-```r
+```{r example}
 library(nser)
 report3 = bhavtoday()
 report4 = fobhavtoday()
+```
+
+## Example 4. Live F&O data.
+```{r example}
+library(nser)
+nselive()
+```
+
+## Example 5. Pre market open data of F&O stocks
+```{r example}
+library(nser)
+nseopen("fo")
+```
+
+## Example 6. Current and Upcoming IPO's
+```{r eaxample}
+library(nser)
+nseipo()
 ```
