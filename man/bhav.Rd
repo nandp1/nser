@@ -3,6 +3,9 @@
 \name{bhav}
 \alias{bhav}
 \title{Bhavcopy from NSE}
+\source{
+<https://www1.nseindia.com/products/content/all_daily_reports.htm>
+}
 \usage{
 bhav(x)
 }

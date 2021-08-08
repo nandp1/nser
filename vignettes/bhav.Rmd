@@ -20,7 +20,7 @@ To download historical bhavcopy just mention the date in numeric format(Date, Mo
 in quotation mark "" (inverted comma). 
 
 ```{r example}
-# Example  
+# Example: Lets download the bhavcopy of 1 July 2021 for Equity. 
 library(nser)
 report = bhav("01072021")
 head(report)

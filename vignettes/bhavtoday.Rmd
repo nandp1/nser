@@ -14,11 +14,16 @@ knitr::opts_chunk$set(
 )
 ```
 
+
+
+
 ## Introduction 
 
-Download today's equity bhavcopy. Just use ```bhavtoday()```. Note that bhavcopy is made available by NSE in the evening. 
+Download today's equity bhavcopy. Just use ```bhavtoday()```. Note that today's bhavcopy is made available by NSE in the evening. 
 
-```{r example}
+``` r
+# Example
+
 library(nser)
 report = bhavtoday()
 head(report)

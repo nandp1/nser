@@ -8,7 +8,7 @@
 #' @return Bhavcopy for the given date.
 #' @author Nandan L. Patil \email{tryanother609@@gmail.com}
 #' @details Gets Bhavcopy from NSE for the given date.
-#'
+#' @source <https://www1.nseindia.com/products/content/all_daily_reports.htm>
 #' @seealso \code{\link[nser]{bhavpr}}\code{\link[nser]{bhavtoday}}
 #'
 #' @import stats
