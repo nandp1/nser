@@ -11,6 +11,7 @@
 "nser" helps you to download historical bhavcopy and get live market data of Equities and F&O segment easily. 
 
 ## New functions
+* `bhavs` Download Equity Bhavcopy through RSelenium 
 * `nselive` Get live NSE market data
 * `nseopen` Get Pre open market data
 * `nseindex` Get Live report of NSE Indices
@@ -70,4 +71,27 @@ nseopen("fo")
 ```{r eaxample}
 library(nser)
 nseipo()
+```
+
+
+## Example 7. Current and Upcoming IPO's
+``` r
+library(nser)
+library(RSelenium)
+
+# Start a selenium server and browser
+# For Google Chrome (Update Chrome to latest version)
+
+ driver <- rsDriver(browser = c("chrome"), port = 3163L, chromever = "91.0.4472.101")
+ remDr <- driver$client
+
+# or for Firefox
+ driver <- rsDriver(browser = c("firefox"), port = 3799L)
+ 
+# Download Equity Bhavcopy zip file
+bhavs("03012000", 2)
+
+# Close the Browser
+remDr$close()
+
 ```
