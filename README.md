@@ -74,7 +74,7 @@ nseipo()
 ```
 
 
-## Example 7. Current and Upcoming IPO's
+## Example 7. RSelenium to Download Equity Bhavcopy
 ``` r
 library(nser)
 library(RSelenium)
