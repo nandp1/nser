@@ -4,6 +4,7 @@
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable-1)
 ![Downloads](http://cranlogs.r-pkg.org/badges/nser)
 [![](https://cranlogs.r-pkg.org/badges/grand-total/nser)](https://cran.r-project.org/package=nser)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5179176.svg)](https://doi.org/10.5281/zenodo.5179176)
 <!-- badges: end -->
 
 # Introduction
