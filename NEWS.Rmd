@@ -23,4 +23,4 @@ Visit website for examples and more info [nser](https://nandp1.github.io/nser/)
 
 Version 1.2.0
 
-* 
+* New function ```bhavs``` to download bhavcopy zipfile using RSelenium.
