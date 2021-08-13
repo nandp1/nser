@@ -29,19 +29,27 @@ nselive = function(x = "n50"){
     live = dat[["data"]]
     live = live[,-c(9,11,14, 15, 16, 17, 20, 21)]
     live = `colnames<-`(live, c("SYMBOL", "OPEN", "HIGH", "LOW", "LTP", "Change", "% Change", "Volume (lacs)", "Turnover (crs)", "52 week High", "52 week Low", "Previous CLOSE", "CLOSE", "52 week % Change", "30 day % Change"))
+    num = sapply(live[,(2:15)], function(x) as.numeric(gsub(",","",x)))
+    num = as.data.frame(num)
+    num$SYMBOL = live$SYMBOL
+    num = num[,c(15,1:14)]
     adv = dat[["advances"]]
     dec = dat[["declines"]]
     time = dat[["time"]]
     message("\nAdvances ", adv, "\n",
             "\nDeclines ", dec, "\n",
             "\nTime ", time, "\n")
-    return(live)
+    return(num)
   }
   else if(x == "fo"){
     dat = fromJSON('https://www1.nseindia.com/live_market/dynaContent/live_watch/stock_watch/foSecStockWatch.json')
     live = dat[["data"]]
     live = live[,-c(9,11,14, 15, 16, 17, 20, 21)]
     live = `colnames<-`(live,c("SYMBOL", "OPEN", "HIGH", "LOW", "LTP", "Change", "% Change", "Volume (lacs)", "Turnover (crs)", "52 week High", "52 week Low", "52 week % Change", "30 day % Change"))
+    num = sapply(live[,(2:13)], function(x) as.numeric(gsub(",","",x)))
+    num = as.data.frame(num)
+    num$SYMBOL = live$SYMBOL
+    num = num[,c(13,1:12)]
     adv = dat[["adv"]]
     dec = dat[["dec"]]
     time = dat[["time"]]

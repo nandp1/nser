@@ -21,8 +21,7 @@
 #'
 #' @export
 #'
-#' @examples \dontrun{#
-#'# Start a selenium server and browser
+#' @examples \dontrun{ # Start a selenium server and browser
 #'# For Google Chrome (Update Chrome to latest version)
 #' driver = rsDriver(browser = c("chrome"), port = 3163L, chromever = "91.0.4472.101")
 #' remDr = driver$client
@@ -36,7 +35,6 @@
 #' # Close the Browser
 #' remDr$close()
 #'}
-
 bhavs = function(x, n = 0){
   Sys.sleep(n)
   x = as.character(x)

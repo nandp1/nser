@@ -29,38 +29,50 @@ dat = fromJSON('https://www1.nseindia.com/live_market/dynaContent/live_analysis/
 open = dat[["data"]]
 open = open[,-c(2,3,4,14,15,16,17)]
 open = `colnames<-`(open, c("SYMBOL", "Price", "Change", "%Change", "Prev.Close", "Quantity", "Value(in lakhs)", "FFM Caps(crs.)", "52 Week High", "52 Week Low"))
+num = sapply(open[,(2:10)], function(x) as.numeric(gsub(",","",x)))
+num = as.data.frame(num)
+num$SYMBOL = open$SYMBOL
+num = num[,c(10,1:9)]
 adv = dat[["advances"]]
 dec = dat[["declines"]]
 nc = dat[["noChange"]]
 message("\nAdvances - ", adv, "\n",
         "\nDeclines - ", dec, "\n",
         "\nNo Change - ", nc, "\n")
-return(open)
+return(num)
   }
   else if(x == "fo"){
     dat = fromJSON('https://www1.nseindia.com/live_market/dynaContent/live_analysis/pre_open/fo.json')
     open = dat[["data"]]
     open = open[,-c(2,3,4,14,15,16,17)]
     open = `colnames<-`(open, c("SYMBOL", "Price", "Change", "%Change", "Prev.Close", "Quantity", "Value(in lakhs)", "FFM Caps(crs.)", "52 Week High", "52 Week Low"))
+    num = sapply(open[,(2:10)], function(x) as.numeric(gsub(",","",x)))
+    num = as.data.frame(num)
+    num$SYMBOL = open$SYMBOL
+    num = num[,c(10,1:9)]
     adv = dat[["advances"]]
     dec = dat[["declines"]]
     nc = dat[["noChange"]]
     message("\nAdvances - ", adv, "\n",
             "\nDeclines - ", dec, "\n",
             "\nNo Change - ", nc, "\n")
-    return(open)
+    return(num)
   }
   else if(x == "all"){
     dat = fromJSON('https://www1.nseindia.com/live_market/dynaContent/live_analysis/pre_open/all.json')
     open = dat[["data"]]
     open = open[,-c(2,3,4,14,15,16,17)]
     open = `colnames<-`(open, c("SYMBOL", "Price", "Change", "%Change", "Prev.Close", "Quantity", "Value(in lakhs)", "FFM Caps(crs.)", "52 Week High", "52 Week Low"))
+    num = sapply(open[,(2:10)], function(x) as.numeric(gsub(",","",x)))
+    num = as.data.frame(num)
+    num$SYMBOL = open$SYMBOL
+    num = num[,c(10,1:9)]
     adv = dat[["advances"]]
     dec = dat[["declines"]]
     nc = dat[["noChange"]]
     message("\nAdvances - ", adv, "\n",
             "\nDeclines - ", dec, "\n",
             "\nNo Change - ", nc, "\n")
-    return(open)
+    return(num)
     }
 }

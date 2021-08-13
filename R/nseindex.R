@@ -22,6 +22,10 @@ nseindex = function(){
   live = dat[["data"]]
   live = live[,-5]
   live = `colnames<-`(live, c("NAME", "Last Price", "Change", "% Change"))
+  num = sapply(live[,(2:4)], function(x) as.numeric(gsub(",","",x)))
+  num = as.data.frame(num)
+  num$SYMBOL = live$NAME
+  num = num[,c(4,1:3)]
   time = dat[["time"]]
   status = dat[["status"]]
   message("\n", status, "\n",
