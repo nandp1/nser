@@ -11,6 +11,8 @@
 
 "nser" helps you to download historical bhavcopy and get live market data of Equities and F&O segment easily. 
 
+## New version 1.2.1 (13-08-2021) 
+
 ## New functions
 * `bhavs` Download Equity Bhavcopy through RSelenium 
 * `nselive` Get live NSE market data
