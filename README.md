@@ -29,7 +29,7 @@ Install "nser" from [CRAN](https://CRAN.R-project.org) with:
 ``` r
 install.packages("nser")
 ```
-Install it from github by:
+Install latest version from github:
 ``` r
 install.packages("devtools")
 library(devtools)
