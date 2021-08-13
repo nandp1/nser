@@ -27,8 +27,7 @@ Gets zip Bhavcopy from NSE for the given date.
 The date should be strictly numerical of format 'ddmmyyyy' and mentioned in quotation mark.
 }
 \examples{
-\dontrun{#
-# Start a selenium server and browser
+\dontrun{ # Start a selenium server and browser
 # For Google Chrome (Update Chrome to latest version)
 driver = rsDriver(browser = c("chrome"), port = 3163L, chromever = "91.0.4472.101")
 remDr = driver$client

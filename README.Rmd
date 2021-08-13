@@ -84,7 +84,7 @@ library(nser)
 nseipo()
 ```
 
-## Example 6. Current and Upcoming IPO's
+## Example 7. RSelenium to Download Equity Bhavcopy
 ``` r
 library(nser)
 library(RSelenium)
