@@ -13,6 +13,10 @@
 
 ## New version 1.2.1 (13-08-2021) 
 
+## Upcoming function 
+
+* Option chain for nifty and banknifty
+
 ## New functions
 * `bhavs` Download Equity Bhavcopy through RSelenium 
 * `nselive` Get live NSE market data
