@@ -3,7 +3,6 @@
 
 <!-- badges: start -->
 
-`r badge_github_actions("rossellhayes/ipa")`
 [![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/nser)](https://cran.r-project.org/package=nser)
 [![cran
 checks](https://cranchecks.info/badges/summary/nser)](https://cran.r-project.org/web/checks/check_results_nser.html)
@@ -13,6 +12,10 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 [![](https://cranlogs.r-pkg.org/badges/grand-total/nser)](https://cran.r-project.org/package=nser)
 <!-- badges: end -->
 
++ GitHub actions
+  - syntax: `` ``r ''`r badge_github_actions("rossellhayes/ipa")` ``
+  - badge: `r badge_github_actions("rossellhayes/ipa")`
+ 
 # Latest Version `1.3.0`
 
 * New functions `nsetree`, `optnifty`, `optbanknifty` & `bhavfos`
