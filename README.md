@@ -16,6 +16,8 @@
 ## Upcoming function 
 
 * Option chain for nifty and banknifty
+* Treemap for NIFTY50 and FO Securities
+* `bhavfos` Download F&O bhav zip file through RSelenium
 
 ## New functions
 * `bhavs` Download Equity Bhavcopy through RSelenium 
