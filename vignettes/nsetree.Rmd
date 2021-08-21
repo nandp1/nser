@@ -1,0 +1,33 @@
+---
+title: "nsetree: Treemap for Nifty50 and F&O Securities"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{nsetree}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Introduction 
+
+View the Treemap of NIFTY50 and FO securities along with percent change. 
+
+```r
+library(nser)
+
+# Example 
+#Treemap of NIFTY50 securities
+nsetree()
+
+
+#Treemap of F&O securities
+nsetree("fo")
+
+ 
+```

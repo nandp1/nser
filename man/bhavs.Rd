@@ -24,10 +24,11 @@ Equity Bhavcopy through RSelenium
 Gets zip Bhavcopy from NSE for the given date.
 }
 \note{
-The date should be strictly numerical of format 'ddmmyyyy' and mentioned in quotation mark.
+The date should be strictly numeric and of format 'ddmmyyyy' mentioned in quotation mark.
 }
 \examples{
 \dontrun{ # Start a selenium server and browser
+library(RSelenium)
 # For Google Chrome (Update Chrome to latest version)
 driver = rsDriver(browser = c("chrome"), port = 3163L, chromever = "91.0.4472.101")
 remDr = driver$client
@@ -41,9 +42,10 @@ bhavs("03012000", 3)
 # Close the Browser
 remDr$close()
 }
+
 }
 \seealso{
-\code{\link[nser]{bhavpr}}\code{\link[nser]{bhavtoday}}\code{\link[nser]{bhav}}\code{\link[nser]{fobhav}}
+\code{\link[nser]{bhavpr}}\code{\link[nser]{bhavtoday}}\code{\link[nser]{bhav}}\code{\link[nser]{fobhav}}\code{\link[nser]{bhavfos}}
 }
 \author{
 Nandan L. Patil \email{tryanother609@gmail.com}

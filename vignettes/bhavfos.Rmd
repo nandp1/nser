@@ -1,8 +1,8 @@
 ---
-title: "bhavs: Download Equity Bhavcopy through RSelenium"
+title: "bhavfos: Download Futures and Options (F&o) Bhavcopy through RSelenium"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{bhavs}
+  %\VignetteIndexEntry{bhavfos}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -16,8 +16,7 @@ knitr::opts_chunk$set(
 
 ## Introduction 
 
-Function ```bhavs``` downloads the zipfile of equity bhavcopy from NSE for the given date through RSelenium. 
-
+Function ```bhavs``` downloads the zipfile of FO bhavcopy from NSE for the given date through RSelenium. 
 
 ``` r
 library(nser)
@@ -27,18 +26,16 @@ library(RSelenium)
 
 driver <- rsDriver(browser = c("chrome"), port = 3163L, chromever = "91.0.4472.101")
 driver <- rsDriver(browser = c("firefox"), port = 3799L)
- 
 remDr <- driver$client
 
 ```
 
-Use ```bhavs`` to download the bhavcopy for the given date. 
+Use ```bhavfos`` to download the bhavcopy zipfile for the given date. 
 Mention the date in numeric (ddmmyyyy). Time interval delay in seconds can be adjusted. Default is 0 second. 
 
 ``` r
-bhavs("03012000", 2)
+bhavfos("03012000", 2)
 
 # Close the Browser
 remDr$close()
-
-``` 
+```

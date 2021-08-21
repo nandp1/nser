@@ -21,7 +21,7 @@ nseindex = function(){
   dat = fromJSON('https://www1.nseindia.com/homepage/Indices1.json')
   live = dat[["data"]]
   live = live[,-5]
-  live = `colnames<-`(live, c("NAME", "Last Price", "Change", "% Change"))
+  live = `colnames<-`(live, c("NAME", "Last Price", "Change", "pChange"))
   num = sapply(live[,(2:4)], function(x) as.numeric(gsub(",","",x)))
   num = as.data.frame(num)
   num$SYMBOL = live$NAME
@@ -30,5 +30,5 @@ nseindex = function(){
   status = dat[["status"]]
   message("\n", status, "\n",
           "\nTime ", time, "\n")
-  return(live)
+  return(num)
 }

@@ -32,7 +32,7 @@ Package website [nser](https://nandp1.github.io/nser/)
 
 ## Installation
 
-You can install "nser" from [CRAN](https://CRAN.R-project.org) with:
+You can install "nser" from [CRAN](https://cloud.r-project.org/web/packages/nser/index.html) with:
 
 ``` r
 install.packages("nser")
@@ -100,6 +100,28 @@ library(RSelenium)
  
 # Download Equity Bhavcopy zip file
 bhavs("03012000", 2)
+
+# Close the Browser
+remDr$close()
+
+```
+
+## Example 8. RSelenium to Download F&O Bhavcopy
+``` r
+library(nser)
+library(RSelenium)
+
+# Start a selenium server and browser
+# For Google Chrome (Update Chrome to latest version)
+
+ driver <- rsDriver(browser = c("chrome"), port = 3163L, chromever = "91.0.4472.101")
+ remDr <- driver$client
+
+# or for Firefox
+ driver <- rsDriver(browser = c("firefox"), port = 3799L)
+ 
+# Download Equity Bhavcopy zip file
+bhavfos("03012000", 2)
 
 # Close the Browser
 remDr$close()

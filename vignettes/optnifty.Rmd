@@ -1,0 +1,29 @@
+---
+title: "optnifty: Option Chain for NSE Nifty 50"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{optnifty}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Introduction 
+
+Option chain of NSE NIFTY 50. 
+
+
+``` r
+library(nser)
+# NIFTY 50 option chain table
+optnifty()
+
+### Only the raw data
+optnifty(raw_data = TRUE)
+```
