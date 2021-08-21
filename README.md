@@ -10,6 +10,8 @@ checks](https://cranchecks.info/badges/summary/nser)](https://cran.r-project.org
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable-1)
 ![Downloads](http://cranlogs.r-pkg.org/badges/nser)
 [![](https://cranlogs.r-pkg.org/badges/grand-total/nser)](https://cran.r-project.org/package=nser)
+[![Last-changedate](https://img.shields.io/badge/last%20change-`r gsub('-', '--', Sys.Date())`-yellowgreen.svg)](/commits/master)
+
 <!-- badges: end -->
 
 
