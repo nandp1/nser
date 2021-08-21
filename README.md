@@ -86,7 +86,7 @@ nseopen("fo")
 ```
 
 ## Example 6. Current and Upcoming IPO's
-``` {r example}
+``` r 
 library(nser)
 nseipo()
 ```
