@@ -3,6 +3,7 @@
 
 <!-- badges: start -->
 
+`r badge_github_actions("rossellhayes/ipa")`
 [![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/nser)](https://cran.r-project.org/package=nser)
 [![cran
 checks](https://cranchecks.info/badges/summary/nser)](https://cran.r-project.org/web/checks/check_results_nser.html)
