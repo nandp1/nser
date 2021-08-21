@@ -30,7 +30,7 @@ Package website [nser](https://nandp1.github.io/nser/)
 
 ## Installation
 
-Install "nser" from [CRAN](https://CRAN.R-project.org) with:
+Install "nser" from [CRAN](https://cloud.r-project.org/web/packages/nser/index.html) with:
 
 ``` r
 install.packages("nser")
