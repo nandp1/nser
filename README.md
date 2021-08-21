@@ -12,10 +12,7 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 [![](https://cranlogs.r-pkg.org/badges/grand-total/nser)](https://cran.r-project.org/package=nser)
 <!-- badges: end -->
 
-+ GitHub actions
-  - syntax: `` ``r ''`r badge_github_actions("rossellhayes/ipa")` ``
-  - badge: `r badge_github_actions("rossellhayes/ipa")`
- 
+
 # Latest Version `1.3.0`
 
 * New functions `nsetree`, `optnifty`, `optbanknifty` & `bhavfos`
