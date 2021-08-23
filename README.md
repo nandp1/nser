@@ -10,6 +10,8 @@ checks](https://cranchecks.info/badges/summary/nser)](https://cran.r-project.org
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable-1)
 ![Downloads](http://cranlogs.r-pkg.org/badges/nser)
 [![](https://cranlogs.r-pkg.org/badges/grand-total/nser)](https://cran.r-project.org/package=nser)
+[![R-CMD-check](https://github.com/nandp1/nser/actions/workflows/rcmd.yml/badge.svg)](https://github.com/nandp1/nser/actions/workflows/rcmd.yml)
+
 <!-- badges: end -->
 
 
