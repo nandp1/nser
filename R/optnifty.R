@@ -11,6 +11,7 @@
 #' @seealso \code{\link[nser]{bhavpr}}\code{\link[nser]{bhavtoday}}\code{\link[nser]{bhavfos}}\code{\link[nser]{nsetree}}\code{\link[nser]{optbanknifty}}
 #'
 #' @import stats gt magrittr
+#' @importFrom dplyr across
 #' @importFrom jsonlite fromJSON
 #' @importFrom scales comma
 #' @export

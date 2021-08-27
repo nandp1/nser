@@ -5,7 +5,7 @@
 #' @param x numeric date format (ddmmyyyy)
 #' @param n  time interval to delay in seconds. DEFAULT = 0
 #'
-#' @note The date should be strictly numeric and of format 'ddmmyyyy' mentioned in quotation mark.
+#' @note The date should be strictly numeric and of format 'ddmmyyyy' mentioned in quotation mark. All the Bhavcopy's can be downloaded.
 #'
 #' @return Download Equity Bhavcopy zip file of the given date.
 #'

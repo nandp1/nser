@@ -11,6 +11,7 @@
 #' @seealso \code{\link[nser]{bhavpr}}\code{\link[nser]{bhavtoday}}\code{\link[nser]{bhavfos}}\code{\link[nser]{nsetree}}\code{\link[nser]{optbanknifty}}
 #'
 #' @import stats gt magrittr
+#' @importFrom dplyr across
 #' @importFrom jsonlite fromJSON
 #' @importFrom scales comma
 #' @export
@@ -22,8 +23,8 @@
   if(raw_data == FALSE){
   opt= fromJSON("https://www.nseindia.com/api/option-chain-indices?symbol=BANKNIFTY")
   dat = opt[["filtered"]][["data"]]
-  ce = dat[,3]
-  pe = dat[,4]
+  ce = dat[,4]
+  pe = dat[,3]
   sp = dat$strikePrice
   ed = dat$expiryDate
   tim = opt[["records"]][["timestamp"]]
@@ -43,6 +44,7 @@
   pe2 = pe1[,-c(1:4)]
   pe2 = pe2[,c(6:8, 15:9, 5:1)]
   pe2 = pe2[,-12]
+
   # Final table
   final = cbind(ce2, "Strike.Price" = sp, pe2 )
   final = final %>% mutate(across(starts_with("pCha"), round, 2))
@@ -65,7 +67,7 @@
         bins = c(-Inf,  0, Inf),
         palette = c("red", "#87CEFA"),)) %>%
     tab_header(
-      title =md("**OPTION CHAIN NIFTY**"),
+      title =md("**OPTION CHAIN BANKNIFTY**"),
       subtitle = md(paste("*EXPIRY DATE*", dat$expiryDate[1], "( Time", tim, ")"))
     ) %>%
     tab_spanner(

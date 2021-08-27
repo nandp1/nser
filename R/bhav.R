@@ -4,7 +4,7 @@
 #'
 #' @param x numeric date format
 #'
-#' @note The date should be strictly numerical and mentioned in quotation mark.
+#' @note The date should be strictly numerical and mentioned in quotation mark. `bhav` can be used to download bhavcopy from 1 Jan 2016 onwards. To download bhavcopy previous to aforementioned date use `bhavs`.
 #' @return Bhavcopy for the given date.
 #' @author Nandan L. Patil \email{tryanother609@@gmail.com}
 #' @details Gets Bhavcopy from NSE for the given date.
