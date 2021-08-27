@@ -1,0 +1,20 @@
+pandoc: 2.14.2
+pkgdown: 1.6.1
+pkgdown_sha: ~
+articles:
+  bhav: bhav.html
+  bhavfos: bhavfos.html
+  bhavpr: bhavpr.html
+  bhavs: bhavs.html
+  bhavtoday: bhavtoday.html
+  fobhav: fobhav.html
+  fobhavtoday: fobhavtoday.html
+  nseindex: nseindex.html
+  nseipo: nseipo.html
+  nselive: nselive.html
+  nseopen: nseopen.html
+  nsetree: nsetree.html
+  optbanknifty: optbanknifty.html
+  optnifty: optnifty.html
+last_built: 2021-08-23T02:30Z
+

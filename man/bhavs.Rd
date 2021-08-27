@@ -24,7 +24,7 @@ Equity Bhavcopy through RSelenium
 Gets zip Bhavcopy from NSE for the given date.
 }
 \note{
-The date should be strictly numeric and of format 'ddmmyyyy' mentioned in quotation mark.
+The date should be strictly numeric and of format 'ddmmyyyy' mentioned in quotation mark. All the Bhavcopy's can be downloaded.
 }
 \examples{
 \dontrun{ # Start a selenium server and browser

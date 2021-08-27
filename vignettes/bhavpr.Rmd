@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 To download historical Bhavcopy PR just mention the date in numeric format(Date, Month, Year). Note that date should be mentioned 
 in quotation mark "" (inverted comma). The function returns list containing ten dataframes form Bhavcopy PR. 
 
-```{r example}
+``` r
 library(nser)
 library(readr)
 report = bhavpr("01072021")

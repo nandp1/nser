@@ -22,7 +22,7 @@ Futures and Options Bhavcopy from NSE
 Gets Futures and Options Bhavcopy from NSE for the given date.
 }
 \note{
-The date should be strictly numerical and mentioned in quotation mark.
+The date should be strictly numerical and mentioned in quotation mark. `fobhav` can be used to download bhavcopy from 1 Jan 2016 onwards. To download bhavcopy previous to aforementioned date use `bhavfos`.
 }
 \examples{
 report = fobhav("01072021") # Download F&O bhavcopy for 01 July 2021
