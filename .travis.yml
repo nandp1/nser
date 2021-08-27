@@ -1,4 +1,1 @@
 language: r
-
-install: travis_wait mvn install
- 
