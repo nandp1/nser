@@ -58,3 +58,90 @@ library(nser)
 report3 = bhavtoday()
 report4 = fobhavtoday()
 ```
+
+
+## Example 4. Live F&O data.
+``` r
+library(nser)
+nselive()
+```
+
+## Example 5. Pre market open data of F&O stocks
+``` r
+library(nser)
+nseopen("fo")
+```
+
+## Example 6. Current and Upcoming IPO's
+``` {r example}
+library(nser)
+nseipo()
+```
+
+## Example 7. RSelenium to Download Equity Bhavcopy
+``` r
+library(nser)
+library(RSelenium)
+
+# Start a selenium server and browser
+# For Google Chrome (Update Chrome to latest version)
+
+ driver <- rsDriver(browser = c("chrome"), port = 3163L, chromever = "91.0.4472.101")
+ remDr <- driver$client
+
+# or for Firefox
+ driver <- rsDriver(browser = c("firefox"), port = 3799L)
+ 
+# Download Equity Bhavcopy zip file
+bhavs("03012000", 2)
+
+# Close the Browser
+remDr$close()
+
+```
+
+## Example 8. RSelenium to Download F&O Bhavcopy
+``` r
+library(nser)
+library(RSelenium)
+
+# Start a selenium server and browser
+# For Google Chrome (Update Chrome to latest version)
+
+ driver <- rsDriver(browser = c("chrome"), port = 3163L, chromever = "91.0.4472.101")
+ remDr <- driver$client
+
+# or for Firefox
+ driver <- rsDriver(browser = c("firefox"), port = 3799L)
+ 
+# Download Equity Bhavcopy zip file
+bhavfos("03012000", 2)
+
+# Close the Browser
+remDr$close()
+
+```
+
+## Example 9. NSE Treemap 
+``` r 
+library(nser)
+# NIFTY 50 stocks
+nsetree()
+
+# F&O stocks
+nsetree("fo")
+```
+
+## Example 10. NSE NIFTY50 Option chain 
+``` r 
+library(nser)
+optnifty()
+```
+
+## Example 11. NSE NIFTY50 Option chain 
+``` r 
+library(nser)
+optbanknifty()
+```
+
+
