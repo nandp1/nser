@@ -34,7 +34,7 @@ Package website [nser](https://nandp1.github.io/nser/)
 
 ## Installation
 
-You can install “nser” from [CRAN](https://CRAN.R-project.org) with:
+You can install “nser” from [CRAN](https://cloud.r-project.org/web/packages/nser/index.html) with:
 
 ``` r
 install.packages("nser")
