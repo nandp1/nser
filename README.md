@@ -12,15 +12,12 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 [![](https://cranlogs.r-pkg.org/badges/grand-total/nser)](https://cran.r-project.org/package=nser)
 <!-- badges: end -->
 
-Latest Version `1.3.1`
+Latest Version `1.3.2`
 
-* New functions `nsetree`, `optnifty`, `optbanknifty`, `bhavfos`
+* `optnifty`, `optbanknifty` are deprecated.
+* New functions `nsetree`, `bhavfos`
 
 * `nsetree` Get a treeplot plot of NSE NIFTY 50 and FO securities. 
-
-* `optnifty` Option chain of NIFTY 50 for the current expiry. 
-
-* `optbanknifty` Option chain of BANKNIFTY for the current expiry. 
 
 * `bhavfos` Download historical F&O Bhavcopy zip file through RSelenium. 
 
