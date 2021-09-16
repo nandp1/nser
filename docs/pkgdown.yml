@@ -1,4 +1,4 @@
-pandoc: 2.14.2
+pandoc: 2.11.4
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
@@ -14,7 +14,5 @@ articles:
   nselive: nselive.html
   nseopen: nseopen.html
   nsetree: nsetree.html
-  optbanknifty: optbanknifty.html
-  optnifty: optnifty.html
-last_built: 2021-08-29T05:28Z
+last_built: 2021-09-16T17:18Z
 

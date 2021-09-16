@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">nser</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.3.2</span>
       </span>
     </div>
 
@@ -89,12 +89,6 @@
     <li>
       <a href="articles/nsetree.html">nsetree: Treemap for Nifty50 and F&amp;O Securities</a>
     </li>
-    <li>
-      <a href="articles/optbanknifty.html">optbanknifty: Option Chain for NSE BANKNIFTY</a>
-    </li>
-    <li>
-      <a href="articles/optnifty.html">optnifty: Option Chain for NSE Nifty 50</a>
-    </li>
   </ul>
 </li>
       </ul>
@@ -120,15 +114,14 @@
 
 
 <!-- badges: end -->
-<div id="latest-version-131" class="section level1">
+<div id="latest-version-132" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#latest-version-131" class="anchor"></a>Latest Version <code>1.3.1</code>
+<a href="#latest-version-132" class="anchor"></a>Latest Version <code>1.3.2</code>
 </h1></div>
 <ul>
-<li><p>New functions <code>nsetree</code>, <code>optnifty</code>, <code>optbanknifty</code>, <code>bhavfos</code></p></li>
+<li><p><code>optnifty</code>, <code>optbanknifty</code> are deprecated.</p></li>
+<li><p>New functions <code>nsetree</code>, <code>bhavfos</code></p></li>
 <li><p><code>nsetree</code> Get a treeplot plot of NSE NIFTY 50 and FO securities.</p></li>
-<li><p><code>optnifty</code> Option chain of NIFTY 50 for the current expiry.</p></li>
-<li><p><code>optbanknifty</code> Option chain of BANKNIFTY for the current expiry.</p></li>
 <li><p><code>bhavfos</code> Download historical F&amp;O Bhavcopy zip file through RSelenium.</p></li>
 </ul>
 </div>
@@ -140,7 +133,7 @@
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
-<p>You can install “nser” from <a href="https://cloud.r-project.org/web/packages/nser/index.html">CRAN</a> with:</p>
+<p>You can install “nser” from <a href="https://cran.r-project.org/package=nser">CRAN</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"nser"</span><span class="op">)</span></code></pre></div>
 <p>Install it from github by:</p>
@@ -195,17 +188,19 @@
 <span class="co">#&gt; Creating a generic function for 'toJSON' from package 'jsonlite' in package 'googleVis'</span>
 <span class="fu"><a href="reference/nseipo.html">nseipo</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt;   Equity /IPO Name    Type    Rating   Issue Price Issue Size (in crores)</span>
-<span class="co">#&gt; 1     Ami Organics     IPO Not Rated 603.00-610.00        565.39 - 571.96</span>
-<span class="co">#&gt; 2  Vijaya Diagnost     IPO Not Rated 522.00-531.00        1862.92-1895.04</span>
-<span class="co">#&gt; 3        Naapbooks SME IPO Not Rated   71.00-74.00            3.83 - 3.99</span>
-<span class="co">#&gt; 4  BEW Engineering SME IPO Not Rated         58.00                   3.97</span>
-<span class="co">#&gt; 5  Platinumone Bus SME IPO Not Rated         92.00                   3.89</span>
+<span class="co">#&gt; 1          Sansera     IPO Not Rated 734.00-744.00        1265.73 - 1282.</span>
+<span class="co">#&gt; 2    Paras Defence     IPO Not Rated 165.00-175.00        170.78 - 181.13</span>
+<span class="co">#&gt; 3  Markolines Traf SME IPO Not Rated         78.00                     40</span>
+<span class="co">#&gt; 4          Prevest SME IPO Not Rated   82.00-84.00          25.98 - 26.61</span>
+<span class="co">#&gt; 5    SBL Infratech SME IPO Not Rated        111.00                   2.37</span>
+<span class="co">#&gt; 6          Quadpro SME IPO Not Rated         20.00                   14.1</span>
 <span class="co">#&gt;   Lot Size Open Date Close Date</span>
-<span class="co">#&gt; 1       24    01-Sep     03-Sep</span>
-<span class="co">#&gt; 2       28    01-Sep     03-Sep</span>
-<span class="co">#&gt; 3     1600    01-Sep     06-Sep</span>
-<span class="co">#&gt; 4     2000    02-Sep     07-Sep</span>
-<span class="co">#&gt; 5     1200    02-Sep     07-Sep</span></code></pre></div>
+<span class="co">#&gt; 1       20    14-Sep     16-Sep</span>
+<span class="co">#&gt; 2       85    21-Sep     23-Sep</span>
+<span class="co">#&gt; 3     1600    15-Sep     20-Sep</span>
+<span class="co">#&gt; 4     1600    15-Sep     17-Sep</span>
+<span class="co">#&gt; 5     1200    16-Sep     20-Sep</span>
+<span class="co">#&gt; 6     6000    20-Sep     22-Sep</span></code></pre></div>
 </div>
 <div id="example-7-rselenium-to-download-equity-bhavcopy" class="section level2">
 <h2 class="hasAnchor">
@@ -261,20 +256,6 @@
 
 <span class="co"># F&amp;O stocks</span>
 <span class="fu"><a href="reference/nsetree.html">nsetree</a></span><span class="op">(</span><span class="st">"fo"</span><span class="op">)</span></code></pre></div>
-</div>
-<div id="example-10-nse-nifty50-option-chain" class="section level2">
-<h2 class="hasAnchor">
-<a href="#example-10-nse-nifty50-option-chain" class="anchor"></a>Example 10. NSE NIFTY50 Option chain</h2>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/nandp1/nser/">nser</a></span><span class="op">)</span>
-<span class="fu"><a href="reference/optnifty.html">optnifty</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-</div>
-<div id="example-11-nse-nifty50-option-chain" class="section level2">
-<h2 class="hasAnchor">
-<a href="#example-11-nse-nifty50-option-chain" class="anchor"></a>Example 11. NSE NIFTY50 Option chain</h2>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/nandp1/nser/">nser</a></span><span class="op">)</span>
-<span class="fu"><a href="reference/optbanknifty.html">optbanknifty</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 </div>
 </div>
 
