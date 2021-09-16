@@ -142,16 +142,4 @@ nsetree()
 nsetree("fo")
 ```
 
-## Example 10. NSE NIFTY50 Option chain 
-``` r 
-library(nser)
-optnifty()
-```
-
-## Example 11. NSE NIFTY50 Option chain 
-``` r 
-library(nser)
-optbanknifty()
-```
-
 
