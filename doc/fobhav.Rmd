@@ -1,0 +1,27 @@
+---
+title: "fobhav:  Historical Derivatives(F&O) Bhavcopy"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{fobhav}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Introduction 
+
+To download historical bhavcopy just mention the date in numeric format(Date, Month, Year). Note that date should be mentioned 
+in quotation mark "" (inverted comma). 
+
+```{r example}
+# Example: Lets download the bhavcopy of 1 July 2021 for Derivatives (F&O). 
+library(nser)
+report = fobhav("01072021")
+head(report)
+```

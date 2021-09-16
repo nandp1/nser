@@ -1,0 +1,30 @@
+---
+title: "nselive"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{nselive}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Introduction 
+
+Gets NSE live market data of nifty 50 and F&O stocks. The regular trading session starts from 09.15 hrs to 15.30 hrs (IST). Function reutrns dataframe of live market data along with a message of number of advances, declines and time. 
+
+``` r
+# Live Nifty 50 data
+library(nser)
+nselive()
+
+# Live F&O data 
+library(nser)
+nselive("fo")
+
+```

@@ -1,0 +1,24 @@
+---
+title: "nseindex"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{nseindex}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Introducton 
+
+List of Live NSE index data. `nseindex` returns the LTP and % Change along with time. 
+
+```{r example}
+library(nser)
+nseindex()
+```

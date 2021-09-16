@@ -1,0 +1,28 @@
+---
+title: "nseopen"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{nseopen}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Introduction 
+
+NSE pre market open data. Pre market is from 09.00 hrs to 09.08 hrs (IST). The function returns a dataframe of pre open market and message with number of advances and declines. 
+``` r
+# For Nifty 50 stocks
+library(nser)
+nseopen()
+
+# For F&O stocks 
+library(nser)
+nseopen("fo")
+```
