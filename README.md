@@ -24,26 +24,29 @@ Latest Version `1.3.2`
 
 # Introduction
 
-“nser” helps you to download historical bhavcopy of Equities and F\&O
-segment easily.
+Welcome to “nser” packge. 
+
+The packge helps you to download historical bhavcopy of Equities and F&O, get live market data, plot treemap of movement in securities and a lot more...
+
 
 Package website [nser](https://nandp1.github.io/nser/)
 
 ## Installation
 
-You can install “nser” from [CRAN](https://cloud.r-project.org/web/packages/nser/index.html) with:
+Install `nser` from [CRAN](https://cloud.r-project.org/web/packages/nser/index.html) by:
 
 ``` r
 install.packages("nser")
 ```
 
-You can also install it from github by:
+Also install development version from github by:
 
 ``` r
 install.packages("devtools")
 library(devtools)
 install_github("nandp1/nser")
 ```
+Here are few examples to get started, 
 
 ## Example 1. Downloading Historical Equity Bhavcopy
 
