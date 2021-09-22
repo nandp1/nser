@@ -46,7 +46,7 @@ install.packages("devtools")
 library(devtools)
 install_github("nandp1/nser")
 ```
-Here are few examples to get started, 
+## Here are few examples to get started, 
 
 ## Example 1. Downloading Historical Equity Bhavcopy
 
