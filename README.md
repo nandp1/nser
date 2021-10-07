@@ -14,6 +14,9 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 
 Latest Version `1.3.2`
 
+### Upcoming Function
+* daytoweek convert daily data of a stock to weekly data.
+
 * `optnifty`, `optbanknifty` are deprecated.
 ## New functions `nsetree`, `bhavfos`
 
