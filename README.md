@@ -17,12 +17,15 @@ Latest Version `1.3.2`
 ### Upcoming Function
 * daytoweek convert daily data of a stock to weekly data.
 
-* `optnifty`, `optbanknifty` are deprecated.
+
 ## New functions `nsetree`, `bhavfos`
 
 * `nsetree` Get a treeplot plot of NSE NIFTY 50 and FO securities. 
 
 * `bhavfos` Download historical F&O Bhavcopy zip file through RSelenium. 
+
+### NOTE 
+* `optnifty`, `optbanknifty` are deprecated.
 
 
 # Introduction
