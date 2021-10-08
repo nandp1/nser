@@ -10,3 +10,7 @@
 ^Meta$
 ^CRAN-RELEASE$
 ^cran-comments\.md$
+^LICENSE\.md$
+^\.travis\.yml$
+^\.github$
+^data-raw$
