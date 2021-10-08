@@ -150,4 +150,9 @@ nsetree()
 nsetree("fo")
 ```
 
+## Example 10. Day data to Week Data
+library(nser)
+data(dailydata)
+daytoweek(dailydata)
+
 
