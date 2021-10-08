@@ -58,7 +58,7 @@ install_github("nandp1/nser")
 ``` r
 library(nser)
 # Download Bhavcopy of 1st July 2021
-report1 = bhav("01072021")
+bhav("01072021")
 ```
 
 ## Example 2. Downloading Historical F\&O Bhavcopy
@@ -66,15 +66,15 @@ report1 = bhav("01072021")
 ``` r
 library(nser)
 # Download Bhavcopy of 1st July 2021
-report2 = fobhav("01072021")
+fobhav("01072021")
 ```
 
 ## Example 3. Downloading today’s Equity and F\&O Bhavcopy
 
 ``` r
 library(nser)
-report3 = bhavtoday()
-report4 = fobhavtoday()
+bhavtoday()
+fobhavtoday()
 ```
 
 
