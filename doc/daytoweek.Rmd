@@ -1,0 +1,27 @@
+---
+title: "daytoweek: Convert Daily data of a stock to Weekly data"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{daytoweek}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Introduction 
+
+Convert the Daily data of a stock to Weekly data. The dataframe should contain six columns named `SYMBOL`, `OPEN`, `HIGH`, `LOW`, `CLOSE`, `DATE`. 
+
+
+```
+# Example
+library(nser)
+data(dailydata)
+daytoweek(dailydata)
+```

@@ -7,21 +7,15 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
-```
-
 ## Introduction 
 
 To download historical bhavcopy just mention the date in numeric format(Date, Month, Year). Note that date should be mentioned 
 in quotation mark "" (inverted comma). 
 
-``` r
+``` 
 # Example: Lets download the bhavcopy of 1 July 2021 for Equity. 
 library(nser)
 report = bhav("01072021")
 head(report)
+
 ```
