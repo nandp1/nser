@@ -15,9 +15,10 @@
 #' @importFrom utils download.file read.csv unzip
 #' @export
 #'
-#' @examples report = bhav("01072021") # Download bhavcopy for 01 July 2021
+#' @examples \dontrun{
+#' report = bhav("01072021") # Download bhavcopy for 01 July 2021
 #' head(report)
-#'
+#' }
 bhav = function(x){
   if(!nchar(gsub("[^0-9]+", "", x)) == 8){
     print("Check the date. It should be an Eight digit interger.")

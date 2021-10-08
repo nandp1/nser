@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">nser</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.3.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.3.3</span>
       </span>
     </div>
 
@@ -67,6 +67,9 @@
     </li>
     <li>
       <a href="articles/bhavtoday.html">bhavtoday: Today's Equity Bhavcopy</a>
+    </li>
+    <li>
+      <a href="articles/daytoweek.html">daytoweek: Convert Daily data of a stock to Weekly data</a>
     </li>
     <li>
       <a href="articles/fobhav.html">fobhav:  Historical Derivatives(F&amp;O) Bhavcopy</a>
@@ -187,20 +190,10 @@
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/nandp1/nser/">nser</a></span><span class="op">)</span>
 <span class="co">#&gt; Creating a generic function for 'toJSON' from package 'jsonlite' in package 'googleVis'</span>
 <span class="fu"><a href="reference/nseipo.html">nseipo</a></span><span class="op">(</span><span class="op">)</span>
-<span class="co">#&gt;   Equity /IPO Name    Type    Rating   Issue Price Issue Size (in crores)</span>
-<span class="co">#&gt; 1          Sansera     IPO Not Rated 734.00-744.00        1265.73 - 1282.</span>
-<span class="co">#&gt; 2    Paras Defence     IPO Not Rated 165.00-175.00        170.78 - 181.13</span>
-<span class="co">#&gt; 3  Markolines Traf SME IPO Not Rated         78.00                     40</span>
-<span class="co">#&gt; 4          Prevest SME IPO Not Rated   82.00-84.00          25.98 - 26.61</span>
-<span class="co">#&gt; 5    SBL Infratech SME IPO Not Rated        111.00                   2.37</span>
-<span class="co">#&gt; 6          Quadpro SME IPO Not Rated         20.00                   14.1</span>
+<span class="co">#&gt;   Equity /IPO Name    Type    Rating Issue Price Issue Size (in crores)</span>
+<span class="co">#&gt; 1  D.K. Enterprise SME IPO Not Rated          40                   7.99</span>
 <span class="co">#&gt;   Lot Size Open Date Close Date</span>
-<span class="co">#&gt; 1       20    14-Sep     16-Sep</span>
-<span class="co">#&gt; 2       85    21-Sep     23-Sep</span>
-<span class="co">#&gt; 3     1600    15-Sep     20-Sep</span>
-<span class="co">#&gt; 4     1600    15-Sep     17-Sep</span>
-<span class="co">#&gt; 5     1200    16-Sep     20-Sep</span>
-<span class="co">#&gt; 6     6000    20-Sep     22-Sep</span></code></pre></div>
+<span class="co">#&gt; 1     3000    07-Oct     12-Oct</span></code></pre></div>
 </div>
 <div id="example-7-rselenium-to-download-equity-bhavcopy" class="section level2">
 <h2 class="hasAnchor">
@@ -256,6 +249,14 @@
 
 <span class="co"># F&amp;O stocks</span>
 <span class="fu"><a href="reference/nsetree.html">nsetree</a></span><span class="op">(</span><span class="st">"fo"</span><span class="op">)</span></code></pre></div>
+</div>
+<div id="example-10-daily-data-to-weelkly-data" class="section level2">
+<h2 class="hasAnchor">
+<a href="#example-10-daily-data-to-weelkly-data" class="anchor"></a>Example 10. Daily data to Weelkly data</h2>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/nandp1/nser/">nser</a></span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">dailydata</span><span class="op">)</span>
+<span class="fu"><a href="reference/daytoweek.html">daytoweek</a></span><span class="op">(</span><span class="va">dailydata</span><span class="op">)</span></code></pre></div>
 </div>
 </div>
 

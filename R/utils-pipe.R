@@ -13,6 +13,4 @@
 #' @return The result of calling `rhs(lhs)`.
 NULL
 utils::globalVariables(c("remDr"))
-utils::globalVariables(c("LTP.CE" ,"LTP.PE", "SYMBOL", "Strike.Price", "across", "openInterest.CE",
-                         "openInterest.PE", "pChange", "pChange.CE", "pChange.PE", "pChangeOI.CE",
-                         "pChangeOI.PE"))
+utils::globalVariables(c("across",'DATE', 'year', "SYMBOL", 'pChange'))
