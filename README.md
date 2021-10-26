@@ -143,15 +143,15 @@ remDr$close()
 ## Example 9. NSE Treemap 
 ``` r 
 library(nser)
-# NIFTY 50 stocks
+# NIFTY 50 stocks (26/10/2021)
 nsetree()
 ```
 <img src="nsetree.png" style="display: block; margin: auto;" />
 
-# F&O stocks
-nsetree("fo")
-
+# F&O stocks  (26/10/2021)
+nsetree("fo") 
 ```
+<img src="nsetreefo.png" style="display: block; margin: auto;" />
 
 ## Example 10. Daily data to Weelkly data
 ``` r 
