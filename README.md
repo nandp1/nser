@@ -295,6 +295,8 @@ nsetree("fo")
 library(nser)
 data(dailydata)
 daytoweek(dailydata)
+```
+``` r
     SYMBOL   OPEN   HIGH    LOW  CLOSE weekstartdate weekenddate
 1     SBIN 250.10 262.00 244.35 260.95    2019-10-09  2019-10-11
 2     SBIN 256.95 271.35 254.00 255.45    2019-10-14  2019-10-18
