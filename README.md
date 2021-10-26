@@ -145,7 +145,7 @@ remDr$close()
 library(nser)
 # NIFTY 50 stocks
 nsetree()
-![nsetree](https://user-images.githubusercontent.com/54216125/138925052-3540ac92-891b-4718-ab0b-2eff184faf7c.png)
+![nsetree](https://github.com/nandp1/nser/blob/main/nsetree.fo.png)
 
 # F&O stocks
 nsetree("fo")
