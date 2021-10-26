@@ -22,7 +22,7 @@
 #' }
 #'
 daytoweek = function(x){
-    x = dat
+    dat = x
     dat$DATE = dmy(dat$DATE)
     dat = arrange(dat, DATE)
     a1 = data.frame(date = ymd(dat$DATE))
