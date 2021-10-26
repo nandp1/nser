@@ -59,6 +59,8 @@ install_github("nandp1/nser")
 library(nser)
 # Download Bhavcopy of 1st July 2021
 bhav("01072021")
+```
+``` r
 trying URL 'https://archives.nseindia.com/content/historical/EQUITIES/2021/JUL/cm01JUL2021bhav.csv.zip'
 Content type 'application/zip' length 76717 bytes (74 KB)
 downloaded 74 KB
