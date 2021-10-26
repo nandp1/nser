@@ -146,7 +146,7 @@ library(nser)
 # NIFTY 50 stocks
 nsetree()
 
-<img src="nsetree.fo.png" style="display: block; margin: auto;" />
+<img src="nsetree.fo.png" />
 ![](nsetreefo.png)<!-- -->
 
 # F&O stocks
