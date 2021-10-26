@@ -148,7 +148,8 @@ nsetree()
 ```
 <img src="nsetree.png" style="display: block; margin: auto;" />
 
-# F&O stocks  (26/10/2021)
+### F&O stocks  (26/10/2021)
+```
 nsetree("fo") 
 ```
 <img src="nsetreefo.png" style="display: block; margin: auto;" />
