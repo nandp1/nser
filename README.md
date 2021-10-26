@@ -145,9 +145,12 @@ remDr$close()
 library(nser)
 # NIFTY 50 stocks
 nsetree()
+![nsetree](https://user-images.githubusercontent.com/54216125/138925052-3540ac92-891b-4718-ab0b-2eff184faf7c.png)
 
 # F&O stocks
 nsetree("fo")
+![nsetree fo](https://user-images.githubusercontent.com/54216125/138925140-2d116a76-c887-42aa-8f60-94c00a7d22c8.png)
+
 ```
 
 ## Example 10. Daily data to Weelkly data
