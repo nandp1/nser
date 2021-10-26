@@ -89,6 +89,8 @@ downloaded 74 KB
 library(nser)
 # Download Bhavcopy of 1st July 2021
 fobhav("01072021")
+``` r
+``` r
 trying URL 'https://archives.nseindia.com/content/historical/DERIVATIVES/2021/JUL/fo01JUL2021bhav.csv.zip'
 Content type 'application/zip' length 593613 bytes (579 KB)
 downloaded 579 KB
@@ -116,6 +118,8 @@ downloaded 579 KB
 ``` r
 library(nser)
 bhavtoday() # 26/10/2021
+```
+``` r
 trying URL 'https://archives.nseindia.com/content/historical/EQUITIES/2021/OCT/cm26OCT2021bhav.csv.zip'
 Content type 'application/zip' length 79180 bytes (77 KB)
 downloaded 77 KB
@@ -134,7 +138,11 @@ downloaded 77 KB
 11   A2ZINFRA     EQ     4.35     4.70     4.25     4.70     4.70      4.30   1128374 5.116024e+06 26-OCT-2021         747 INE619I01012 NA
 12    AAATECH     SM    60.00    60.00    60.00    60.00    60.00     61.85      3000 1.800000e+05 26-OCT-2021           1 INE0D0U01013 NA
 13     AAKASH     EQ   187.10   190.30   186.25   189.05   186.30    186.85      3849 7.271254e+05 26-OCT-2021         166 INE087Z01016 NA
+```
+``` r
 fobhavtoday() # 26/10/2021
+```
+``` r
 trying URL 'https://archives.nseindia.com/content/historical/DERIVATIVES/2021/OCT/fo26OCT2021bhav.csv.zip'
 Content type 'application/zip' length 861429 bytes (841 KB)
 downloaded 841 KB
@@ -162,6 +170,8 @@ downloaded 841 KB
 ``` r
 library(nser)
 nselive()
+```
+``` r
 Advances 39
 
 Declines 11
@@ -185,6 +195,8 @@ Time Oct 26, 2021 15:59:52
 ``` r
 library(nser)
 nseopen("fo")
+```
+``` r
 Advances - 125
 
 Declines - 35
@@ -213,6 +225,8 @@ No Change - 20
 ``` {r example}
 library(nser)
 nseipo()
+```
+``` r
   Equity /IPO Name    Type    Rating     Issue Price Issue Size (in crores) Lot Size Open Date Close Date
 1   FSN E-Commerce     IPO Not Rated 1,085.00-1,125.        5184.03 - 5375.       12    28-Oct     01-Nov
 2  Nidan Laborator SME IPO Not Rated          125.00                     50     1000    28-Oct     02-Nov
