@@ -147,6 +147,7 @@ library(nser)
 nsetree()
 
 <img src="nsetree.fo.png" style="display: block; margin: auto;" />
+![](nsetreefo.png)<!-- -->
 
 # F&O stocks
 nsetree("fo")
