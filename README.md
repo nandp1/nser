@@ -29,7 +29,7 @@ Latest Version: `1.3.4`(26-10-2021)
 
 # Introduction
 
-Welcome to ## nser packge. 
+Welcome to `nser` packge. 
 
 The packge helps you to download historical bhavcopy of Equities and F&O, get live market data, plot treemap of movement in securities and a lot more...
 
