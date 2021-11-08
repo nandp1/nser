@@ -26,6 +26,10 @@ Latest Version: `1.3.4`(26-10-2021)
 ### NOTE 
 * `optnifty`, `optbanknifty` are deprecated.
 
+## Upcoming functions
+
+* Download historical bhavcopy from BSE 
+* Download currency bhavcopy from NSE and BSE
 
 # Introduction
 
