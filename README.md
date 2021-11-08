@@ -28,7 +28,7 @@ Latest Version: `1.3.4`(26-10-2021)
 
 ## Upcoming functions
 
-* Convert daily data to monthly data
+* Convert daily data to monthly data `daytomonth`
 * Download historical bhavcopy from BSE 
 * Download currency bhavcopy from NSE and BSE
 
