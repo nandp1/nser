@@ -15,7 +15,7 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 Latest Version: `1.3.4`(26-10-2021)
 
 
-## New functions `nsetree`, `bhavfos`
+## New functions `daytoweek` `nsetree`, `bhavfos`
 
 * `daytoweek` Convert daily data of a stock to weekly data.
 
