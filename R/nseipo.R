@@ -5,7 +5,7 @@
 #'
 #' @return A dataframe of IPO's on NSE.
 #' @author Nandan L. Patil \email{tryanother609@@gmail.com}
-#' @details List of upcoming and current IPO's on NSE gathered form moneycontrol.
+#' @details List of upcoming and current IPO's on NSE gathered from moneycontrol.
 #'
 #' @seealso \code{\link[nser]{bhavpr}}\code{\link[nser]{bhav}}\code{\link[nser]{fobhavtoday}}\code{\link[nser]{nseopen}}
 #'

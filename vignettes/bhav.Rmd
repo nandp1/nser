@@ -9,13 +9,20 @@ vignette: >
 
 ## Introduction 
 
-To download historical bhavcopy just mention the date in numeric format(Date, Month, Year). Note that date should be mentioned 
+* Download bhavcopy from NSE(National Stock Exchange) and BSE(Bombay Stock Exchange). 
+
+* To download historical bhavcopy just mention the date in numeric format(Date, Month, Year). Note that date should be mentioned 
 in quotation mark "" (inverted comma). 
 
 ``` 
-# Example: Lets download the bhavcopy of 1 July 2021 for Equity. 
+# Example: Let's download the Equity bhavcopy for 1 July 2021. 
+
 library(nser)
+#Download bhavcopy from NSE
 report = bhav("01072021")
-head(report)
+
+#Download bhavcopy from BSE
+report = bhav("01072021", 'BSE')
+
 
 ```

@@ -36,7 +36,7 @@ daytoweek = function(x){
     op = lapply(dat3, function(x) head(x$OPEN, 1))
     op = unlist(op)
 
-    cl = lapply(dat3, function(x) head(x$CLOSE, 1))
+    cl = lapply(dat3, function(x) tail(x$CLOSE, 1))
     cl = unlist(cl)
 
     hp = lapply(dat3, function(x) max(x$HIGH))

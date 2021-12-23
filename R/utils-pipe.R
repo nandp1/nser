@@ -13,4 +13,4 @@
 #' @return The result of calling `rhs(lhs)`.
 NULL
 utils::globalVariables(c("remDr"))
-utils::globalVariables(c("across",'DATE', 'year', "SYMBOL", 'pChange'))
+utils::globalVariables(c("across",'DATE', 'year', "SYMBOL", 'pChange', 'month'))

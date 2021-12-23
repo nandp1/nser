@@ -1,0 +1,26 @@
+---
+title: "daytomonth: Convert Daily OHLC data of a stock to Monthly data"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{daytomonth}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Introduction 
+
+Convert the Daily OHLC data of a stock to Monthly data. The dataframe should contain six columns named `SYMBOL`, `OPEN`, `HIGH`, `LOW`, `CLOSE`, `DATE`. 
+
+
+```
+library(nser)
+data(dailydata)
+daytomonth(dailydata)
+```

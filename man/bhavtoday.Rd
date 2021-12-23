@@ -3,8 +3,14 @@
 \name{bhavtoday}
 \alias{bhavtoday}
 \title{Get Bhavcopy for the present day}
+\source{
+<https://www1.nseindia.com/products/content/all_daily_reports.htm>, <https://www.bseindia.com/markets/marketinfo/BhavCopy.aspx>
+}
 \usage{
-bhavtoday()
+bhavtoday(se = "NSE")
+}
+\arguments{
+\item{se}{Stock Exchange either 'NSE' or 'BSE'. Default is 'NSE'.}
 }
 \value{
 Todays's Bhavcopy.
@@ -20,9 +26,12 @@ The date should be strictly numerical and mentioned in quotation mark.The presen
 }
 \examples{
 \dontrun{
-#Todays Equity Bhavcopy
+#Todays NSE Equity Bhavcopy
 library(nser)
 report = bhavtoday()
+
+#Todays BSE Equity Bhavcopy
+report = bhavtoday('BSE')
 }
 }
 \seealso{

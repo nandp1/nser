@@ -13,7 +13,7 @@ A dataframe of IPO's on NSE.
 Current and Upcoming IPO's on NSE.
 }
 \details{
-List of upcoming and current IPO's on NSE gathered form moneycontrol.
+List of upcoming and current IPO's on NSE gathered from moneycontrol.
 }
 \examples{
 \dontrun{

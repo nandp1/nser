@@ -1,5 +1,5 @@
 ---
-title: "nseindex"
+title: "nseindex: Live NIFTY indices"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{nseindex}

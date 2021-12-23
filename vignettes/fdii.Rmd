@@ -1,8 +1,8 @@
 ---
-title: "nseipo: Upcoming/Open IPO's of NSE"
+title: "fdii"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{nseipo}
+  %\VignetteIndexEntry{fdii}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -16,9 +16,9 @@ knitr::opts_chunk$set(
 
 ## Introduction
 
-List of current and upcoming IPO's (Initital Public offering) on NSE. `nseipo` returns a dataframe with details of the IPO. 
+Get the latest FII(Foreign Institutional Investor) and DII(Domestic Institutional Investor) data from Moneycontrol. 
 
 ```{r example}
 library(nser)
-nseipo()
+fdii()
 ```
