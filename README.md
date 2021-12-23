@@ -17,21 +17,23 @@ Latest Version: `1.3.4`(26-10-2021)
 
 ## New functions `daytoweek` `nsetree`, `bhavfos`
 
+* `fdii` Get latest FII/DII data.
+
+* `daytomonth` Convert daily data of a stock to montly data.
+
 * `daytoweek` Convert daily data of a stock to weekly data.
 
 * `nsetree` Get a treeplot plot of NSE NIFTY 50 and FO securities. 
 
-* `bhavfos` Download historical F&O Bhavcopy zip file through RSelenium. 
+## Revised functions
+
+* `bhav` and `bhavtoday` Download bhavcopy from NSE and BSE
+
+* `daytoweek` Corrected the CLOSE price. 
 
 ### NOTE 
 * `optnifty`, `optbanknifty` are deprecated.
 
-## Upcoming functions
-
-* Convert daily data to monthly data `daytomonth`
-* Download historical bhavcopy from BSE 
-* Download currency bhavcopy from NSE and BSE
-* FII/DII latest data  
 
 # Introduction
 
