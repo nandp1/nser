@@ -65,7 +65,7 @@ install_github("nandp1/nser")
 
 ``` r
 library(nser)
-# Download Bhavcopy of 1st July 2021
+# Download Bhavcopy of 1st July 2021 from NSE
 bhav("01072021")
 ```
 ``` r
@@ -89,6 +89,31 @@ downloaded 74 KB
 13   68GS2060     GS   100.00   100.00   100.00   100.00   100.00    102.00       185 1.850000e+04 01-JUL-2021           2 IN0020200187 NA
 14  716GS2050     GS   114.50   114.50   114.50   114.50   114.50    111.00         1 1.145000e+02 01-JUL-2021           1 IN0020200054 NA
 15  719GS2060     GS   113.00   113.00   113.00   113.00   113.00    111.99         1 1.130000e+02 01-JUL-2021           1 IN0020200039 NA
+```
+
+``` r
+library(nser)
+# Download Bhavcopy of 1st July 2021 from NSE
+bhav("01072021", "BSE")
+```
+
+``` r
+   SC_CODE      SC_NAME SC_GROUP SC_TYPE    OPEN    HIGH     LOW   CLOSE    LAST PREVCLOSE NO_TRADES NO_OF_SHRS NET_TURNOV TDCLOINDI    ISIN_CODE TRADING_DATE
+1   500002 ABB LTD.           A        Q 1819.65 1826.10 1780.05 1792.05 1791.90   1806.05       757       8965   16246432        NA INE117A01022    01-Jul-21
+2   500003 AEGIS LOGIS        A        Q  345.00  362.25  345.00  357.65  357.65    342.80      3074      95922   34299617        NA INE208C01025    01-Jul-21
+3   500008 AMAR RAJA BA       A        Q  749.70  749.70  742.50  744.85  745.15    744.90      1187      22591   16828110        NA INE885A01032    01-Jul-21
+4   500009 A.SARABHAI         X        Q   35.00   35.35   33.80   33.95   33.95     34.85      1717     381483   13084161        NA INE432A01017    01-Jul-21
+5   500010 HDFC               A        Q 2489.00 2489.95 2456.50 2460.15 2460.15   2474.25      2973      26940   66470141        NA INE001A01036    01-Jul-21
+6   500012 ANDHRA PETRO       X        Q  120.00  120.80  115.00  117.25  117.25    117.75      2281     331896   39531178        NA INE714B01016    01-Jul-21
+7   500013 ANSAL INFRAS       T        Q    8.55    8.55    8.01    8.11    8.25      8.30        79      30811     251446        NA INE436A01026    01-Jul-21
+8   500014 UTIQUE             X        Q    3.48    3.48    3.48    3.48    3.48      3.55        22       7613      26493        NA INE096A01010    01-Jul-21
+9   500016 ARUNAHTEL          XT       Q   14.91   14.91   14.91   14.91   14.91     14.62         7       2663      39705        NA INE957C01019    01-Jul-21
+10  500020 BOM DYEING         A        Q   87.70   87.70   84.70   85.05   85.05     86.25      2296     382690   33028742        NA INE032A01023    01-Jul-21
+11  500023 ASIANHOTNR         B        Q   92.00   92.00   89.10   90.95   90.95     91.00        42       1073      97213        NA INE363A01022    01-Jul-21
+12  500027 ATUL LTD.          A        Q 8962.85 8975.80 8886.70 8948.80 8956.00   8972.55       273        508    4535065        NA INE100A01010    01-Jul-21
+13  500028 ATV PROJECTS       XT       Q    9.32    9.32    9.10    9.32    9.32      8.88        95     107690    1003376        NA INE447A01015    01-Jul-21
+14  500031 BAJAJ ELECT.       A        Q 1038.95 1050.00 1024.55 1044.20 1043.85   1027.60      2724      13627   14093016        NA INE193E01025    01-Jul-21
+15  500032 BAJAJHIND          A        Q   21.45   21.45   20.50   21.45   21.45     20.46      5199   19001888  406752574        NA INE306A01021    01-Jul-21
 ```
 
 ## Example 2. Downloading Historical F\&O Bhavcopy
@@ -147,9 +172,39 @@ downloaded 77 KB
 12    AAATECH     SM    60.00    60.00    60.00    60.00    60.00     61.85      3000 1.800000e+05 26-OCT-2021           1 INE0D0U01013 NA
 13     AAKASH     EQ   187.10   190.30   186.25   189.05   186.30    186.85      3849 7.271254e+05 26-OCT-2021         166 INE087Z01016 NA
 ```
+
+``` r
+library(nser)
+bhavtoday('BSE') # 23/12/2021
+```
+``` r
+trying URL 'https://www.bseindia.com/download/BhavCopy/Equity/EQ_ISINCODE_231221.zip'
+Content type 'application/x-zip-compressed' length 146824 bytes (143 KB)
+downloaded 143 KB
+
+   SC_CODE      SC_NAME SC_GROUP SC_TYPE    OPEN    HIGH     LOW   CLOSE    LAST PREVCLOSE NO_TRADES NO_OF_SHRS NET_TURNOV TDCLOINDI    ISIN_CODE TRADING_DATE
+1   500002 ABB LTD.           A        Q 2287.15 2304.95 2254.70 2261.65 2259.10   2283.55      1117       7475   17019043        NA INE117A01022    23-Dec-21
+2   500003 AEGIS LOGIS        A        Q  219.90  224.00  219.05  219.75  219.75    218.30       783      30511    6767504        NA INE208C01025    23-Dec-21
+3   500008 AMAR RAJA BA       A        Q  614.60  621.95  611.05  620.50  620.30    608.60      3451      56877   35118270        NA INE885A01032    23-Dec-21
+4   500009 A.SARABHAI         X        Q   30.45   30.45   29.50   29.75   29.75     30.10       454     118787    3569735        NA INE432A01017    23-Dec-21
+5   500010 HDFC               A        Q 2564.00 2582.00 2544.95 2570.25 2570.25   2541.90      5486      37749   96945478        NA INE001A01036    23-Dec-21
+6   500012 ANDHRA PETRO       B        Q  126.00  127.45  122.00  122.65  123.55    125.40      1185     116676   14508923        NA INE714B01016    23-Dec-21
+7   500013 ANSAL INFRAS       T        Q   12.11   12.60   11.91   12.22   12.35     12.35        53      11117     134839        NA INE436A01026    23-Dec-21
+8   500014 UTIQUE             X        Q    9.40    9.41    8.53    9.41    9.41      8.97      1385     727786    6624707        NA INE096A01010    23-Dec-21
+9   500016 ARUNAHTEL          XT       Q    8.65    8.65    8.22    8.64    8.64      8.65        40       5584      47012        NA INE957C01019    23-Dec-21
+10  500020 BOM DYEING         A        Q  105.90  111.15  103.65  107.20  107.20    105.55     16033    1993212  215443878        NA INE032A01023    23-Dec-21
+11  500023 ASIANHOTNR         B        Q   73.80   73.80   69.10   70.75   72.35     71.70        74       1075      75959        NA INE363A01022    23-Dec-21
+12  500027 ATUL LTD.          A        Q 8730.70 8837.30 8652.75 8823.35 8821.00   8622.30       854       1608   14128970        NA INE100A01010    23-Dec-21
+13  500028 ATV PROJECTS       XT       Q   14.00   14.00   13.25   13.45   13.75     13.49       110      34516     471944        NA INE447A01015    23-Dec-21
+14  500031 BAJAJ ELECT.       A        Q 1338.05 1373.30 1309.90 1332.00 1332.00   1354.40      3903      51270   68772672        NA INE193E01025    23-Dec-21
+15  500032 BAJAJHIND          A        Q   14.26   14.35   13.98   14.04   14.04     14.10      1456     593060    8351390        NA INE306A01021    23-Dec-21
+```
+
+
 ``` r
 fobhavtoday() # 26/10/2021
 ```
+
 ``` r
 trying URL 'https://archives.nseindia.com/content/historical/DERIVATIVES/2021/OCT/fo26OCT2021bhav.csv.zip'
 Content type 'application/zip' length 861429 bytes (841 KB)
@@ -319,4 +374,39 @@ daytoweek(dailydata)
 11    SBIN 335.95 339.50 324.50 331.85    2019-12-16  2019-12-20
 ```
 
+## Example 11. Daily data to Monthly data
+
+``` r 
+library(nser)
+data(dailydata)
+daytomonth(dailydata)
+```
+``` r
+   SYMBOL   OPEN   HIGH    LOW  CLOSE          MONTH
+1    SBIN 250.10 317.80 244.35 312.40   October-2019
+2    SBIN 312.40 351.00 299.70 341.85  November-2019
+3    SBIN 343.90 344.60 308.00 333.75  December-2019
+4    SBIN 334.70 339.85 305.65 318.45   January-2020
+5    SBIN 317.95 331.90 295.35 303.00  February-2020
+6    SBIN 311.00 312.00 173.55 196.85     March-2020
+7    SBIN 194.00 198.00 175.00 190.50     April-2020
+8    SBIN 182.45 183.50 149.45 161.30       May-2020
+9    SBIN 164.00 197.50 163.35 178.45      June-2020
+10   SBIN 179.45 202.50 178.60 191.45      July-2020
+11   SBIN 192.00 231.55 189.55 212.00    August-2020
+12   SBIN 213.10 219.00 175.50 185.40 September-2020
+13   SBIN 187.00 207.30 185.90 189.25   October-2020
+14   SBIN 192.20 253.00 190.05 244.25  November-2020
+15   SBIN 245.00 279.90 244.10 274.95  December-2020
+16   SBIN 274.90 310.90 269.50 282.10   January-2021
+17   SBIN 285.10 427.70 282.75 390.15  February-2021
+18   SBIN 395.10 408.90 345.20 364.30     March-2021
+19   SBIN 367.70 371.90 321.30 353.50     April-2021
+20   SBIN 349.60 433.65 341.40 424.35       May-2021
+21   SBIN 426.05 441.95 400.50 419.20      June-2021
+22   SBIN 420.30 444.40 417.15 431.80      July-2021
+23   SBIN 434.75 467.45 401.25 426.05    August-2021
+24   SBIN 427.50 471.90 425.10 453.00 September-2021
+25   SBIN 448.50 471.00 443.80 457.90   October-2021
+```
 
