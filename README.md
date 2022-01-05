@@ -14,7 +14,7 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 
 ### Latest Version: `1.4.0`(24-12-2021)
 
-## NOTE: Functions `bhavtoday` and `bhav` are unable to fetch data from 03-01-2022
+## NOTE: Functions `bhavtoday` and `bhav` working 05-01-2022. 
 
 ## New functions `daytoweek` `nsetree`, `bhavfos`
 
