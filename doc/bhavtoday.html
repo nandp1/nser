@@ -143,12 +143,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
-<p>Download today’s equity bhavcopy. Just use <code>bhavtoday()</code>. Note that today’s bhavcopy is made available by NSE in the evening.</p>
+<p>Download today’s equity bhavcopy from NSE(National Stock Exchange) and BSE(Bombay Stock Exchange).</p>
+<p>Just use <code>bhavtoday()</code>. Note that today’s bhavcopy is made available in the evening.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(nser)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>report <span class="ot">=</span> <span class="fu">bhavtoday</span>()</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(report)</span></code></pre></div>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Todays NSE Equity Bhavcopy</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>report <span class="ot">=</span> <span class="fu">bhavtoday</span>()</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#Todays BSE Equity Bhavcopy</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>report <span class="ot">=</span> <span class="fu">bhavtoday</span>(<span class="st">&#39;BSE&#39;</span>)</span></code></pre></div>
 </div>
 
 

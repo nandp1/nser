@@ -12,7 +12,7 @@
 
 
 
-<title>bhav: Historical Equity Bhavcopy</title>
+<title>daytomonth: Convert Daily OHLC data of a stock to Monthly data</title>
 
 <script src="data:application/javascript;base64,Ly8gUGFuZG9jIDIuOSBhZGRzIGF0dHJpYnV0ZXMgb24gYm90aCBoZWFkZXIgYW5kIGRpdi4gV2UgcmVtb3ZlIHRoZSBmb3JtZXIgKHRvCi8vIGJlIGNvbXBhdGlibGUgd2l0aCB0aGUgYmVoYXZpb3Igb2YgUGFuZG9jIDwgMi44KS4KZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcignRE9NQ29udGVudExvYWRlZCcsIGZ1bmN0aW9uKGUpIHsKICB2YXIgaHMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCJkaXYuc2VjdGlvbltjbGFzcyo9J2xldmVsJ10gPiA6Zmlyc3QtY2hpbGQiKTsKICB2YXIgaSwgaCwgYTsKICBmb3IgKGkgPSAwOyBpIDwgaHMubGVuZ3RoOyBpKyspIHsKICAgIGggPSBoc1tpXTsKICAgIGlmICghL15oWzEtNl0kL2kudGVzdChoLnRhZ05hbWUpKSBjb250aW51ZTsgIC8vIGl0IHNob3VsZCBiZSBhIGhlYWRlciBoMS1oNgogICAgYSA9IGguYXR0cmlidXRlczsKICAgIHdoaWxlIChhLmxlbmd0aCA+IDApIGgucmVtb3ZlQXR0cmlidXRlKGFbMF0ubmFtZSk7CiAgfQp9KTsK"></script>
 
@@ -42,26 +42,16 @@
 
 
 
-<h1 class="title toc-ignore">bhav: Historical Equity Bhavcopy</h1>
+<h1 class="title toc-ignore">daytomonth: Convert Daily OHLC data of a stock to Monthly data</h1>
 
 
 
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
-<ul>
-<li><p>Download bhavcopy from NSE(National Stock Exchange) and BSE(Bombay Stock Exchange).</p></li>
-<li><p>To download historical bhavcopy just mention the date in numeric format(Date, Month, Year). Note that date should be mentioned in quotation mark &quot;&quot; (inverted comma).</p></li>
-</ul>
-<pre><code># Example: Let&#39;s download the Equity bhavcopy for 1 July 2021. 
-
-library(nser)
-#Download bhavcopy from NSE
-report = bhav(&quot;01072021&quot;)
-
-#Download bhavcopy from BSE
-report = bhav(&quot;01072021&quot;, &#39;BSE&#39;)
-
-</code></pre>
+<p>Convert the Daily OHLC data of a stock to Monthly data. The dataframe should contain six columns named <code>SYMBOL</code>, <code>OPEN</code>, <code>HIGH</code>, <code>LOW</code>, <code>CLOSE</code>, <code>DATE</code>.</p>
+<pre><code>library(nser)
+data(dailydata)
+daytomonth(dailydata)</code></pre>
 </div>
 
 

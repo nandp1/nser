@@ -19,12 +19,18 @@ knitr::opts_chunk$set(
 
 ## Introduction 
 
-Download today's equity bhavcopy. Just use ```bhavtoday()```. Note that today's bhavcopy is made available by NSE in the evening. 
+Download today's equity bhavcopy from NSE(National Stock Exchange) and BSE(Bombay Stock Exchange).
+
+Just use ```bhavtoday()```. Note that today's bhavcopy is made available in the evening. 
 
 ``` r
 # Example
 
 library(nser)
+#Todays NSE Equity Bhavcopy
 report = bhavtoday()
-head(report)
+
+#Todays BSE Equity Bhavcopy
+report = bhavtoday('BSE')
+
 ```

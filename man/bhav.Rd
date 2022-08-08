@@ -21,7 +21,7 @@ Bhavcopy for the given date.
 Bhavcopy from NSE
 }
 \details{
-Gets Bhavcopy from NSE for the given date.
+Gets Bhavcopy from NSE for the given date. The function tries to get the bhavcopy from two sources i.e., Old and New website of NSE.
 }
 \note{
 The date should be strictly numerical and mentioned in quotation mark. `bhav` can be used to download bhavcopy from 1 Jan 2016 on wards. To download bhavcopy previous to aforementioned date use `bhavs`.

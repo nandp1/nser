@@ -19,7 +19,7 @@ Todays's Bhavcopy.
 Get Bhavcopy for the present day
 }
 \details{
-Gets todays bhavcopy from NSE.
+Gets todays bhavcopy from NSE. The function tries to get the bhavcopy from two sources Old and New website of NSE.
 }
 \note{
 The date should be strictly numerical and mentioned in quotation mark.The present days Bhavcopy would usually available in the evening

@@ -1,0 +1,31 @@
+---
+title: "dailydata: Daily data of a stock "
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{dailydata}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+## Introduction 
+
+A sample daily data of stock 'SBIN'. The data has six columns i.e., SYMBOL, OPEN, HIGH, LOW, CLOSE, DATE. 
+
+
+```r
+
+library(nser)
+data("dailydata")
+
+# Convert daily data to montly data
+daytomonth(dailydata)
+
+# Convert daily data to weekly data
+daytoweek(dailydata)
+```
