@@ -8,12 +8,13 @@
 #' @note The date should be strictly numerical and mentioned in quotation mark. `bhav` can be used to download bhavcopy from 1 Jan 2016 on wards. To download bhavcopy previous to aforementioned date use `bhavs`.
 #' @return Bhavcopy for the given date.
 #' @author Nandan L. Patil \email{tryanother609@@gmail.com}
-#' @details Gets Bhavcopy from NSE for the given date.
+#' @details Gets Bhavcopy from NSE for the given date. The function tries to get the bhavcopy from two sources i.e., Old and New website of NSE.
 #' @source <https://www1.nseindia.com/products/content/all_daily_reports.htm>, <https://www.bseindia.com/markets/marketinfo/BhavCopy.aspx>
 #' @seealso \code{\link[nser]{bhavpr}}\code{\link[nser]{bhavtoday}}
 #'
 #' @import stats
 #' @importFrom utils download.file read.csv unzip
+#' @importFrom curl has_internet
 #' @export
 #'
 #' @examples \dontrun{
@@ -24,6 +25,12 @@
 #' report = bhav("01072021", 'BSE')
 #' }
 bhav = function(x, se = 'NSE'){
+  # First check internet connection
+  if (!curl::has_internet()) {
+    message("No internet connection.")
+    return(invisible(NULL))
+  }
+
   if(!nchar(gsub("[^0-9]+", "", x)) == 8){
     print("Check the date. It should be an Eight digit interger.")
   } else{
@@ -97,8 +104,9 @@ bhav = function(x, se = 'NSE'){
     }
 
     if(se == 'NSE'){
-      df = tryCatch(bhav2(), error=function(e) bhav1())
-    }else if(se == 'BSE') df = bsebhav()
+      df = tryCatch(bhav2(), error=function(e) bhav1(), warning = function(w) conditionMessage(w))
+    }else if(se == 'BSE') df = tryCatch(bsebhav(), error = function(e) conditionMessage(e),
+                                        warning = function(w) conditionMessage(w))
 
     return(df)
   }

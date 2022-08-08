@@ -1,5 +1,5 @@
 ---
-title: "fdii"
+title: "fdii: Get latest FII/DII data"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{fdii}

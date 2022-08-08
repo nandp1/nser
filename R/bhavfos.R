@@ -18,6 +18,7 @@
 #' @import stats
 #' @import RSelenium
 #' @importFrom utils download.file read.csv unzip
+#' @importFrom curl has_internet
 #'
 #' @export
 #'

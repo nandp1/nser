@@ -11,6 +11,8 @@
 #'
 #' @import stats
 #' @importFrom jsonlite fromJSON
+#' @importFrom curl has_internet
+#'
 #' @export
 #' @examples \dontrun{
 #' #Live status of Nifty Indices
@@ -18,6 +20,12 @@
 #' nseindex()
 #' }
 nseindex = function(){
+  # First check internet connection
+  if (!curl::has_internet()) {
+    message("No internet connection.")
+    return(invisible(NULL))
+  }
+
   dat = fromJSON('https://www1.nseindia.com/homepage/Indices1.json')
   live = dat[["data"]]
   live = live[,-5]

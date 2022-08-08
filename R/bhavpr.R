@@ -15,6 +15,8 @@
 #' @import stats
 #' @importFrom utils download.file read.csv unzip
 #' @importFrom readr read_csv
+#' @importFrom curl has_internet
+#'
 #' @export
 #'
 #' @examples \dontrun{
@@ -23,6 +25,11 @@
 #' report = bhavpr("01072021")
 #' }
 bhavpr = function(x){
+  if (!curl::has_internet()) {
+    message("No internet connection.")
+    return(invisible(NULL))
+  }
+
   if(!nchar(gsub("[^0-9]+", "", x)) == 8){
     print("Check the date. It should be an Eight digit interger.")
   } else{

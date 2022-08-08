@@ -14,6 +14,8 @@
 #' @importFrom jsonlite fromJSON
 #' @importFrom googleVis gvisTreeMap
 #' @importFrom dplyr mutate
+#' @importFrom curl has_internet
+#'
 #' @export
 #'
 #' @examples  \dontrun{ # Treemap of NIFTY50 securities
@@ -24,6 +26,12 @@
 #' }
 #'
 nsetree = function(x = "n50"){
+  # check internet connection
+  if (!curl::has_internet()) {
+    message("No internet connection.")
+    return(invisible(NULL))
+  }
+
   if(x == "n50"){
   dat = nselive()
   dat = dat[,c(1,7)]

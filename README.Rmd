@@ -20,9 +20,23 @@ knitr::opts_chunk$set(
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable-1)
 ![Downloads](http://cranlogs.r-pkg.org/badges/nser)
 [![](https://cranlogs.r-pkg.org/badges/grand-total/nser)](https://cran.r-project.org/package=nser)
-[![Travis build status](https://travis-ci.com/nandp1/nser.svg?branch=main)](https://travis-ci.com/nandp1/nser)
-[![R-CMD-check](https://github.com/nandp1/nser/workflows/R-CMD-check/badge.svg)](https://github.com/nandp1/nser/actions)
+
 <!-- badges: end -->
+
+# Latest Version `1.3.5`
+
+* `optnifty`, `optbanknifty` are deprecated.
+
+# New functions `nsetree`,  `bhavfos`, `daytoweek`, `daytomonth`
+
+* `daytomonth` Convert daily OHLC data to monthly data
+
+* `daytoweek` Convert daily OHLC data of a stock to weekly data.
+
+* `nsetree` Get a treeplot plot of NSE NIFTY 50 and FO securities. 
+
+* `bhavfos` Download historical F&O Bhavcopy zip file through RSelenium. 
+
 
 # Introduction
 
@@ -30,11 +44,10 @@ knitr::opts_chunk$set(
 
 Package website [nser](https://nandp1.github.io/nser/)
 
-## New function ```bhavs``` to download Equity Bhavcopy zip file through RSelenium. 
 
 ## Installation
 
-You can install "nser" from [CRAN](https://cloud.r-project.org/web/packages/nser/index.html) with:
+You can install "nser" from [CRAN](https://cran.r-project.org/package=nser) with:
 
 ``` r
 install.packages("nser")
@@ -48,7 +61,7 @@ install_github("nandp1/nser")
 
 ## Example 1. Downloading Historical Equity Bhavcopy 
 
-```{r example}
+``` r
 library(nser)
 # Download Bhavcopy of 1st July 2021
 report1 = bhav("01072021")
@@ -56,13 +69,13 @@ report1 = bhav("01072021")
 
 ## Example 2. Downloading Historical F&O Bhavcopy 
 
-```{r example}
+``` r
 library(nser)
 # Download Bhavcopy of 1st July 2021
 report2 = fobhav("01072021")
 ```
 ## Example 3. Downloading today's Equity and F&O Bhavcopy 
-```{r example}
+```r
 library(nser)
 report3 = bhavtoday()
 report4 = fobhavtoday()
@@ -81,7 +94,7 @@ nseopen("fo")
 ```
 
 ## Example 6. Current and Upcoming IPO's
-``` {r example}
+``` 
 library(nser)
 nseipo()
 ```
@@ -140,14 +153,16 @@ nsetree()
 nsetree("fo")
 ```
 
-## Example 10. NSE NIFTY50 Option chain 
-``` r 
+## Example 10. Daily data to Weelkly data
+``` 
 library(nser)
-optnifty()
+data(dailydata)
+daytoweek(dailydata)
 ```
 
-## Example 11. NSE NIFTY50 Option chain 
-``` r 
+## Example 11. Daily data to Monthly data
+``` 
 library(nser)
-optbanknifty()
+data(dailydata)
+daytomonth(dailydata)
 ```

@@ -19,6 +19,7 @@
 #' @import RSelenium
 #' @importFrom utils download.file read.csv unzip
 #'
+#'
 #' @export
 #'
 #' @examples \dontrun{ # Start a selenium server and browser

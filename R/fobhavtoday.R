@@ -12,6 +12,8 @@
 #'
 #' @import stats
 #' @importFrom utils download.file read.csv unzip
+#' @importFrom curl has_internet
+#'
 #' @export
 #' @examples \dontrun{
 #' #Todays F&O Bhavcopy
@@ -20,6 +22,12 @@
 #' }
 fobhavtoday = function()
 {
+  # First check internet connection
+  if (!curl::has_internet()) {
+    message("No internet connection.")
+    return(invisible(NULL))
+  }
+
   baseurl = "https://archives.nseindia.com/content/historical/DERIVATIVES/"
   end = ".csv.zip"
   month = format(Sys.time(), "%m")

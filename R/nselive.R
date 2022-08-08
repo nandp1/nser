@@ -14,6 +14,8 @@
 #'
 #' @import stats
 #' @importFrom jsonlite fromJSON
+#' @importFrom curl has_internet
+#'
 #' @export
 #' @examples \dontrun{
 #' # NSE Live market data for Nifty 50 stocks
@@ -24,6 +26,12 @@
 #' nselive("fo")
 #' }
 nselive = function(x = "n50"){
+  #  check internet connection
+  if (!curl::has_internet()) {
+    message("No internet connection.")
+    return(invisible(NULL))
+  }
+
   if(x == "n50"){
     dat = fromJSON('https://www1.nseindia.com/live_market/dynaContent/live_watch/stock_watch/niftyStockWatch.json')
     live = dat[["data"]]

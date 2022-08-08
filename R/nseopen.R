@@ -14,6 +14,8 @@
 #'
 #' @import stats
 #' @importFrom jsonlite fromJSON
+#' @importFrom curl has_internet
+#'
 #' @export
 #' @examples \dontrun{
 #' # NSE Pre market open data of Nifty 50 stocks

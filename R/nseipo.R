@@ -13,6 +13,9 @@
 #' @import tidyverse
 #' @importFrom rvest read_html html_nodes html_table
 #' @importFrom stringr str_remove_all
+#'
+#' @importFrom curl has_internet
+#'
 #' @export
 #' @examples \dontrun{
 #' # NSE IPO's
@@ -20,6 +23,11 @@
 #' nseipo()
 #' }
 nseipo = function(){
+  # First check internet connection
+  if (!curl::has_internet()) {
+    message("No internet connection.")
+    return(invisible(NULL))
+  }
   url = 'https://www.moneycontrol.com/ipo/ipo-snapshot/issues-open.html'
   dat = url %>%
     read_html() %>%

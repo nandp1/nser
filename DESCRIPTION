@@ -1,8 +1,8 @@
 Package: nser
 Type: Package
-Title: Bhavcopy and Live Market Data from National Stock Exchange (NSE) India for Equities and Equity Derivatives (F&O)
-Version: 1.4.0
-Date: 2021-12-24
+Title: Bhavcopy and Live Market Data from National Stock Exchange (NSE) & Bombay Stock Exchange (BSE) India for Equities and Equity Derivatives (F&O)
+Version: 1.4.2
+Date: 2022-06-12
 Authors@R: person("Nandan", "Patil", email = "tryanother609@gmail.com", role = c("cre", "aut"))
 Maintainer: Nandan Patil <tryanother609@gmail.com>
 Description: Download Present & Historical Bhavcopy. Get Live Market data from NSE India of Equities and Derivatives(F&O) segment. Data source  <https://www.nseindia.com/>. 
@@ -26,7 +26,8 @@ Imports:
     googleVis,
     dplyr, 
     lubridate,
-    purrr
+    purrr, 
+    curl
 Suggests: 
     rmarkdown,
     testthat (>= 3.0.0),

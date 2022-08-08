@@ -14,11 +14,19 @@
 #'
 #' @import stats
 #' @importFrom utils download.file read.csv unzip
+#' @importFrom curl has_internet
+#'
 #' @export
 #'
 #' @examples report = fobhav("01072021") # Download F&O bhavcopy for 01 July 2021
 #' report
 fobhav = function(x){
+  # check internet connection
+  if (!curl::has_internet()) {
+    message("No internet connection.")
+    return(invisible(NULL))
+  }
+
 if(!nchar(gsub("[^0-9]+", "", x)) == 8){
   print("Check the date. It should be an Eight digit interger.")
 } else{
