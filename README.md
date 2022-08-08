@@ -12,7 +12,10 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 [![](https://cranlogs.r-pkg.org/badges/grand-total/nser)](https://cran.r-project.org/package=nser)
 <!-- badges: end -->
 
-Latest Version: `1.4.0`(24-12-2021)
+The packaged has been removed from CRAN, working on getting ot back up.... hold on
+
+Latest Version: `1.4.2`(12-06-2022)
+
 
 
 ## New functions `daytoweek` `nsetree`, `bhavfos`
