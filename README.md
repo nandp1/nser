@@ -12,11 +12,9 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 [![](https://cranlogs.r-pkg.org/badges/grand-total/nser)](https://cran.r-project.org/package=nser)
 <!-- badges: end -->
 
-The packaged has been removed from CRAN(due to their policy change), working on getting it back up.... hold on
+Package now available on CRAN. 
 
-Latest Version: `1.4.2`(12-06-2022)
-
-
+Latest Version: `1.4.3`(08-08-2022)
 
 ## New functions `daytoweek` `nsetree`, `bhavfos`
 
@@ -36,6 +34,8 @@ Latest Version: `1.4.2`(12-06-2022)
 
 ### NOTE 
 * `optnifty`, `optbanknifty` are deprecated.
+
+#### For any suggestions feel free to reach out. 
 
 
 # Introduction
