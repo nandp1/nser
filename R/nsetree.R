@@ -18,7 +18,7 @@
 #'
 #' @export
 #'
-#' @examples  \dontrun{ # Treemap of NIFTY50 securities
+#' @examples  \donttest{ # Treemap of NIFTY50 securities
 #' nsetree()
 #'
 #' # Treemap of F&O securities

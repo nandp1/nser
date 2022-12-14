@@ -19,7 +19,7 @@
 #' @importFrom curl has_internet
 #'
 #' @export
-#' @examples \dontrun{
+#' @examples \donttest{
 #' #Todays NSE Equity Bhavcopy
 #' library(nser)
 #' report = bhavtoday()

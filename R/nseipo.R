@@ -17,7 +17,7 @@
 #' @importFrom curl has_internet
 #'
 #' @export
-#' @examples \dontrun{
+#' @examples \donttest{
 #' # NSE IPO's
 #' library(nser)
 #' nseipo()

@@ -22,7 +22,7 @@
 #'
 #' @export
 #'
-#' @examples \dontrun{ # Start a selenium server and browser
+#' @examples \donttest{ # Start a selenium server and browser
 #'# For Google Chrome (Update Chrome to latest version)
 #' library(RSelenium)
 #' driver = rsDriver(browser = c("chrome"), port = 3163L, chromever = "91.0.4472.101")

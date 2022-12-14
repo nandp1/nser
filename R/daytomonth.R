@@ -15,7 +15,7 @@
 #' @importFrom lubridate dmy ymd isoweek
 #' @importFrom dplyr arrange mutate
 #' @export
-#' @examples \dontrun{
+#' @examples \donttest{
 #' data(dailydata)
 #' daytomonth(dailydata)
 #' }

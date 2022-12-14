@@ -23,7 +23,7 @@
 #'
 #'@source https://www.nseindia.com/
 #'
-#' @examples \dontrun{
+#' @examples \donttest{
 #' data(dailydata)
 #' daytoweek(dailydata)
 #' }

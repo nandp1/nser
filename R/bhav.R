@@ -17,7 +17,7 @@
 #' @importFrom curl has_internet
 #' @export
 #'
-#' @examples \dontrun{
+#' @examples \donttest{
 #' #Download Bhavcopy from NSE
 #' report = bhav("01072021") # Download bhavcopy for 01 July 2021
 #'
@@ -32,7 +32,7 @@ bhav = function(x, se = 'NSE'){
   }
 
   if(!nchar(gsub("[^0-9]+", "", x)) == 8){
-    print("Check the date. It should be an Eight digit interger.")
+    message("Check the date. It should be an Eight digit interger.")
   } else{
     x = as.character(x)
     dy = substr(x, start = 0, stop = 2)

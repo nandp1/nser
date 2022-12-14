@@ -19,7 +19,7 @@
 #'
 #' @export
 #'
-#' @examples \dontrun{
+#' @examples \donttest{
 #' # Equity Bhavcopy PR
 #' library(nser)
 #' report = bhavpr("01072021")
@@ -31,7 +31,7 @@ bhavpr = function(x){
   }
 
   if(!nchar(gsub("[^0-9]+", "", x)) == 8){
-    print("Check the date. It should be an Eight digit interger.")
+    message("Check the date. It should be an Eight digit interger.")
   } else{
   x = as.character(x)
   dy = substr(x, start = 0, stop = 2)

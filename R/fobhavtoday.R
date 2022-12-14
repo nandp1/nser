@@ -15,7 +15,7 @@
 #' @importFrom curl has_internet
 #'
 #' @export
-#' @examples \dontrun{
+#' @examples \donttest{
 #' #Todays F&O Bhavcopy
 #' library(nser)
 #' report = fobhavtoday()
