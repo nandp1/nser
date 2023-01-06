@@ -12,9 +12,11 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 
 # Latest Version `1.4.4`
 
--   `optnifty`, `optbanknifty` are deprecated.
+## Upcoming functions
 
-# New functions `nsetree`, `bhavfos`, `daytoweek`, `daytomonth`
+* Download bhavcopy's between two dates. 
+
+## New functions `nsetree`, `bhavfos`, `daytoweek`, `daytomonth`
 
 -   `daytomonth` Convert daily OHLC data to monthly data
 
