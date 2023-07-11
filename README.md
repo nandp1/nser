@@ -10,17 +10,17 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 
 <!-- badges: end -->
 
+# NEWS UPDATE
+* Since last few months the functions `nselive`, `nseopen` haven't been working as the API from nse have not been not responding to requests from `R`. Thus, now we are writing functions using R package `reticulate` so as to run pyhton inside R. We have been able to scarape data using this method and revised functions would soon be included in package. 
+
 # Latest Version `1.4.4`
 
 ## Upcoming functions
 
+* Revised `nselive`, `nseopen`. 
 * Download bhavcopy's between two dates. 
 
-## New functions `nsetree`, `bhavfos`, `daytoweek`, `daytomonth`
-
--   `daytomonth` Convert daily OHLC data to monthly data
-
--   `daytoweek` Convert daily OHLC data of a stock to weekly data.
+## New functions `nsetree`, `bhavfos`
 
 -   `nsetree` Get a treeplot plot of NSE NIFTY 50 and FO securities.
 
@@ -29,7 +29,7 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 
 # Introduction
 
-“nser” helps you to download historical bhavcopy of Equities and F&O
+`nser` helps you to download historical bhavcopy of Equities and F&O
 segment easily.
 
 Package website [nser](https://nandp1.github.io/nser/)
