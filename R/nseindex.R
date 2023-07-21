@@ -9,8 +9,9 @@
 #' @source <https://www1.nseindia.com/live_market/dynaContent/live_watch/live_index_watch.htm>
 #' @seealso \code{\link[nser]{bhavpr}}\code{\link[nser]{bhav}}\code{\link[nser]{fobhavtoday}}\code{\link[nser]{nseopen}}\code{\link[nser]{nselive}}
 #'
-#' @import stats
-#' @importFrom jsonlite fromJSON
+#' @import dplyr reticulate
+#' @importFrom dplyr mutate_at
+#' @importFrom dplyr mutate_if
 #' @importFrom curl has_internet
 #'
 #' @export
@@ -25,18 +26,17 @@ nseindex = function(){
     message("No internet connection.")
     return(invisible(NULL))
   }
+  x= reticulate::py_run_file(system.file("nindex.py", package = "nser"))
+  nindex = x$dat4
 
-  dat = fromJSON('https://www1.nseindia.com/homepage/Indices1.json')
-  live = dat[["data"]]
-  live = live[,-5]
-  live = `colnames<-`(live, c("NAME", "Last Price", "Change", "pChange"))
-  num = sapply(live[,(2:4)], function(x) as.numeric(gsub(",","",x)))
-  num = as.data.frame(num)
-  num$SYMBOL = live$NAME
-  num = num[,c(4,1:3)]
-  time = dat[["time"]]
-  status = dat[["status"]]
-  message("\n", status, "\n",
-          "\nTime ", time, "\n")
-  return(num)
+  nindex = lapply(nindex,`[`, c('index', 'last', 'variation', 'percentChange', 'open', 'high', 'low', 'previousClose',
+                                'previousDay'))
+  nindex = lapply(nindex, function(x) t(x))
+  nindex = do.call(rbind.data.frame, nindex)
+
+  po <- nindex %>% mutate_at(c('index'), as.character)
+  po <- po %>% mutate_at(c('last', 'variation', 'percentChange', 'open', 'high', 'low', 'previousClose',
+                           'previousDay'), as.numeric)
+  po = po %>% mutate_if(is.numeric, ~round(., 2))
+  return(po)
 }

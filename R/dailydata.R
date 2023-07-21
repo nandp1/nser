@@ -24,6 +24,7 @@
 #'@source https://www.nseindia.com/
 #'
 #' @examples \donttest{
+#' library(nser)
 #' data(dailydata)
 #' daytoweek(dailydata)
 #' }

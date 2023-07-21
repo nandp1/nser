@@ -12,10 +12,9 @@
 #' @author Nandan L. Patil \email{tryanother609@@gmail.com}
 #'
 #' @details Gets zip Bhavcopy from NSE for the given date.
-#' @source <https://www1.nseindia.com/products/content/derivatives/equities/archieve_fo.htm>
+#' @source <https://www.nseindia.com/all-reports>
 #' @seealso \code{\link[nser]{bhavpr}}\code{\link[nser]{bhavtoday}}\code{\link[nser]{bhav}}\code{\link[nser]{fobhav}}\code{\link[nser]{bhavs}}
 #'
-#' @import stats
 #' @import RSelenium
 #' @importFrom utils download.file read.csv unzip
 #' @importFrom curl has_internet
@@ -23,19 +22,19 @@
 #' @export
 #'
 #' @examples \donttest{ # Start a selenium server and browser
-#'# For Google Chrome (Update Chrome to latest version)
+#' # For Google Chrome (Update Chrome to latest version)
 #' library(RSelenium)
-#' driver = rsDriver(browser = c("chrome"), port = 3163L, chromever = "91.0.4472.101")
-#' remDr = driver$client
+#' #driver = rsDriver(browser = c("chrome"), port = 3163L, chromever = "91.0.4472.101")
+#' #remDr = driver$client
 #'
-#'# For Firefox
-#' driver = rsDriver(browser = c("firefox"), port = 3799L)
+#' # For Firefox
+#' #driver = rsDriver(browser = c("firefox"), port = 3799L)
 #'
-#'# Download Equity Bhavcopy zip file
-#' bhavfos("03012000", 3)
+#' # Download Equity Bhavcopy zip file
+#' #bhavfos("03012000", 3)
 #'
 #' # Close the Browser
-#' remDr$close()
+#' #remDr$close()
 #'}
 #'
 bhavfos = function(x, n = 0){

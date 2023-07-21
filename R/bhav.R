@@ -9,10 +9,9 @@
 #' @return Bhavcopy for the given date.
 #' @author Nandan L. Patil \email{tryanother609@@gmail.com}
 #' @details Gets Bhavcopy from NSE for the given date. The function tries to get the bhavcopy from two sources i.e., Old and New website of NSE.
-#' @source <https://www1.nseindia.com/products/content/all_daily_reports.htm>, <https://www.bseindia.com/markets/marketinfo/BhavCopy.aspx>
+#' @source <https://www.nseindia.com/all-reports>, <https://www.bseindia.com/markets/marketinfo/BhavCopy.aspx>
 #' @seealso \code{\link[nser]{bhavpr}}\code{\link[nser]{bhavtoday}}
 #'
-#' @import stats
 #' @importFrom utils download.file read.csv unzip
 #' @importFrom curl has_internet
 #' @export
@@ -66,23 +65,14 @@ bhav = function(x, se = 'NSE'){
     }
 
     baseurl = "https://archives.nseindia.com/content/historical/EQUITIES/"
-    baseurl1 = 'https://www1.nseindia.com/content/historical/EQUITIES/'
+
     end = ".csv.zip"
     bhavurl = paste0(baseurl, yr, "/", mt, "/cm", dy, mt, yr, "bhav", end)
-    bhavurl1 = paste0(baseurl1, yr, "/", mt, "/cm", dy, mt, yr, "bhav", end)
     zipname = paste0("cm", dy, mt, yr, "bhav", ".csv")
 
     bhav1 = function(x){
       temp <- tempfile()
       download.file(bhavurl, temp)
-      file = read.csv(unz(temp, filename = zipname))
-      unlink(temp)
-      return(file)
-    }
-
-    bhav2 = function(x){
-      temp <- tempfile()
-      download.file(bhavurl1, temp)
       file = read.csv(unz(temp, filename = zipname))
       unlink(temp)
       return(file)
@@ -104,7 +94,7 @@ bhav = function(x, se = 'NSE'){
     }
 
     if(se == 'NSE'){
-      df = tryCatch(bhav2(), error=function(e) bhav1(), warning = function(w) conditionMessage(w))
+      df = tryCatch(bhav1(), error=function(e) bhav1(), warning = function(w) conditionMessage(w))
     }else if(se == 'BSE') df = tryCatch(bsebhav(), error = function(e) conditionMessage(e),
                                         warning = function(w) conditionMessage(w))
 

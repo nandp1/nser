@@ -4,7 +4,7 @@
 \alias{bhavfos}
 \title{Futures and Options (F&o) Bhavcopy through RSelenium}
 \source{
-<https://www1.nseindia.com/products/content/derivatives/equities/archieve_fo.htm>
+<https://www.nseindia.com/all-reports>
 }
 \usage{
 bhavfos(x, n = 0)
@@ -27,20 +27,20 @@ Gets zip Bhavcopy from NSE for the given date.
 The date should be strictly of numeric and of format 'ddmmyyyy' mentioned in quotation mark.  All the Bhavcopy's can be downloaded.
 }
 \examples{
-\dontrun{ # Start a selenium server and browser
+\donttest{ # Start a selenium server and browser
 # For Google Chrome (Update Chrome to latest version)
 library(RSelenium)
-driver = rsDriver(browser = c("chrome"), port = 3163L, chromever = "91.0.4472.101")
-remDr = driver$client
+#driver = rsDriver(browser = c("chrome"), port = 3163L, chromever = "91.0.4472.101")
+#remDr = driver$client
 
 # For Firefox
-driver = rsDriver(browser = c("firefox"), port = 3799L)
+#driver = rsDriver(browser = c("firefox"), port = 3799L)
 
 # Download Equity Bhavcopy zip file
-bhavfos("03012000", 3)
+#bhavfos("03012000", 3)
 
 # Close the Browser
-remDr$close()
+#remDr$close()
 }
 
 }

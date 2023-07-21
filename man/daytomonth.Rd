@@ -22,7 +22,7 @@ Converts the Daily data of a stock to Monthly data.
 The dataframe should contain six columns named SYMBOL, OPEN, HIGH, LOW, CLOSE & DATE.
 }
 \examples{
-\dontrun{
+\donttest{
 data(dailydata)
 daytomonth(dailydata)
 }

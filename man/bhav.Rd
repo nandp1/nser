@@ -4,7 +4,7 @@
 \alias{bhav}
 \title{Bhavcopy from NSE}
 \source{
-<https://www1.nseindia.com/products/content/all_daily_reports.htm>, <https://www.bseindia.com/markets/marketinfo/BhavCopy.aspx>
+<https://www.nseindia.com/all-reports>, <https://www.bseindia.com/markets/marketinfo/BhavCopy.aspx>
 }
 \usage{
 bhav(x, se = "NSE")
@@ -27,7 +27,7 @@ Gets Bhavcopy from NSE for the given date. The function tries to get the bhavcop
 The date should be strictly numerical and mentioned in quotation mark. `bhav` can be used to download bhavcopy from 1 Jan 2016 on wards. To download bhavcopy previous to aforementioned date use `bhavs`.
 }
 \examples{
-\dontrun{
+\donttest{
 #Download Bhavcopy from NSE
 report = bhav("01072021") # Download bhavcopy for 01 July 2021
 

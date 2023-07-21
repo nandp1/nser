@@ -9,10 +9,9 @@
 #' @return List of Bhavcopy PR for the given date.
 #' @author Nandan L. Patil \email{tryanother609@@gmail.com}
 #' @details Gets Bhavcopy PR from NSE for the given date.
-#'
+#' @source <https://www.nseindia.com/all-reports>
 #' @seealso \code{\link[nser]{bhav}}\code{\link[nser]{bhavtoday}}
 #'
-#' @import stats
 #' @importFrom utils download.file read.csv unzip
 #' @importFrom readr read_csv
 #' @importFrom curl has_internet

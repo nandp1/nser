@@ -1,38 +1,25 @@
 Package: nser
 Type: Package
-Title: Bhavcopy and Live Market Data from National Stock Exchange (NSE) & Bombay Stock Exchange (BSE) India for Equities and Equity Derivatives (F&O)
-Version: 1.4.4
-Date: 2022-06-12
+Title: Bhavcopy and Live Market Data from National Stock Exchange (NSE)
+        & Bombay Stock Exchange (BSE) India
+Version: 1.5.0
+Date: 2023-07-01
 Authors@R: person("Nandan", "Patil", email = "tryanother609@gmail.com", role = c("cre", "aut"))
-Maintainer: Nandan Patil <tryanother609@gmail.com>
-Description: Download Present & Historical Bhavcopy. Get Live Market data from NSE India of Equities and Derivatives(F&O) segment. Data source  <https://www.nseindia.com/>. 
-URL: https://github.com/nandp1/nser/ 
-BugReports: https://github.com/nandp1/nser/issues 
+Description: Download Current & Historical Bhavcopy. Get Live Market data from NSE India of Equities and Derivatives (F&O) segment. Data source  <https://www.nseindia.com/>. 
+URL: https://github.com/nandp1/nser/
+BugReports: https://github.com/nandp1/nser/issues
 Language: en-US
-License: GPL-3 
+License: GPL-3
 Depends: R (>= 3.0)
 Encoding: UTF-8
 LazyData: true
-Imports: 
-    stats,
-    utils,
-    readr,
-    magrittr,
-    rvest,
-    tidyverse,
-    stringr,
-    jsonlite, 
-    RSelenium,  
-    googleVis,
-    dplyr, 
-    lubridate,
-    purrr, 
-    curl
-Suggests: 
-    rmarkdown,
-    testthat (>= 3.0.0),
-    knitr,
-    reshape2
-RoxygenNote: 7.1.2
+Imports: utils, readr, magrittr, rvest, stringr, jsonlite,
+        RSelenium, googleVis, dplyr, lubridate, purrr, curl, reticulate
+Suggests: rmarkdown, testthat (>= 3.0.0), knitr, reshape2
+RoxygenNote: 7.2.3
 VignetteBuilder: knitr
-Config/testthat/edition: 3
+Packaged: 2023-03-09 16:13:00 UTC; ACER
+Author: Nandan Patil [cre, aut]
+Maintainer: Nandan Patil <tryanother609@gmail.com>
+Repository: CRAN
+

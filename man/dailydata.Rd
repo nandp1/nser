@@ -25,7 +25,8 @@ data(dailydata)
 Daily data of a stock with six columns.
 }
 \examples{
-\dontrun{
+\donttest{
+library(nser)
 data(dailydata)
 daytoweek(dailydata)
 }

@@ -23,7 +23,7 @@ knitr::opts_chunk$set(
 
 *Just use ```bhavtoday()```. Note that today's bhavcopy is made available in the evening. 
 
-* The function tries to download bhavcopy from two sources i.e., Old (https://www1.nseindia.com/products/content/equities/equities/archieve_eq.htm) and New (https://www.nseindia.com/all-reports) websites of NSE. 
+* The function tries to download bhavcopy from https://www.nseindia.com/all-reports websites of NSE. 
 
 ``` r
 # Example

@@ -3,6 +3,9 @@
 \name{bhavpr}
 \alias{bhavpr}
 \title{Bhavcopy PR from NSE}
+\source{
+<https://www.nseindia.com/all-reports>
+}
 \usage{
 bhavpr(x)
 }
@@ -22,7 +25,7 @@ Gets Bhavcopy PR from NSE for the given date.
 The date should be strictly numerical and mentioned in quotation mark.
 }
 \examples{
-\dontrun{
+\donttest{
 # Equity Bhavcopy PR
 library(nser)
 report = bhavpr("01072021")

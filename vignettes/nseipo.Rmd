@@ -16,9 +16,9 @@ knitr::opts_chunk$set(
 
 ## Introduction
 
-List of current and upcoming IPO's (Initital Public offering) on NSE. `nseipo` returns a dataframe with details of the IPO. 
+List of current and upcoming IPO's (Initial Public offering) on NSE. `nseipo` returns a dataframe with details of the IPO. 
 
-```{r example}
+```
 library(nser)
 nseipo()
 ```

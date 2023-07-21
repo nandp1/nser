@@ -7,10 +7,10 @@
 #' @return treemap A Treemap of recent percent change in value of securities.
 #' @author Nandan L. Patil \email{tryanother609@@gmail.com}
 #' @details The function plots a treemap eith the recent change in price of securities.
-#' @source <https://www1.nseindia.com/live_market/dynaContent/live_watch/equities_stock_watch.htm?cat=N>
+#' @source <https://www.nseindia.com/market-data/live-market-indices>
 #' @seealso \code{\link[nser]{bhavpr}}\code{\link[nser]{bhavtoday}}\code{\link[nser]{bhavs}}\code{\link[nser]{bhavfos}}
 #'
-#' @import stats graphics
+#' @import graphics
 #' @importFrom jsonlite fromJSON
 #' @importFrom googleVis gvisTreeMap
 #' @importFrom dplyr mutate
@@ -19,10 +19,10 @@
 #' @export
 #'
 #' @examples  \donttest{ # Treemap of NIFTY50 securities
-#' nsetree()
+#' #nsetree()
 #'
 #' # Treemap of F&O securities
-#' nsetree("fo")
+#' #nsetree("fo")
 #' }
 #'
 nsetree = function(x = "n50"){

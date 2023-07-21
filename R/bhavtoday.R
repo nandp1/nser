@@ -10,11 +10,10 @@
 #' @author Nandan L. Patil \email{tryanother609@@gmail.com}
 #' @details Gets todays bhavcopy from NSE. The function tries to get the bhavcopy from two sources Old and New website of NSE.
 #'
-#' @source <https://www1.nseindia.com/products/content/all_daily_reports.htm>, <https://www.bseindia.com/markets/marketinfo/BhavCopy.aspx>
+#' @source <https://www.nseindia.com/all-reports>, <https://www.bseindia.com/markets/marketinfo/BhavCopy.aspx>
 #'
 #' @seealso \code{\link[nser]{bhavpr}}\code{\link[nser]{bhav}}
 #'
-#' @import stats
 #' @importFrom utils download.file read.csv unzip
 #' @importFrom curl has_internet
 #'

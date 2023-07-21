@@ -14,7 +14,7 @@ vignette: >
 * To download historical bhavcopy just mention the date in numeric format(Date, Month, Year). Note that date should be mentioned 
 in quotation mark "" (inverted comma). 
 
-* The function tries to download bhavcopy from two sources i.e., Old (https://www1.nseindia.com/products/content/equities/equities/archieve_eq.htm) and New (https://www.nseindia.com/all-reports) websites of NSE. 
+* The function tries to download bhavcopy from two sources https://www.nseindia.com/all-reports websites of NSE. 
 
 ``` 
 # Example: Let's download the Equity bhavcopy for 1 July 2021. 

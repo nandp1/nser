@@ -3,6 +3,8 @@
 <!-- badges: start -->
 
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/nser)](https://cran.r-project.org/package=nser)
+[![cran
+checks](https://cranchecks.info/badges/summary/nser)](https://cran.r-project.org/web/checks/check_results_nser.html)
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable-1)
 ![Downloads](http://cranlogs.r-pkg.org/badges/nser)
@@ -10,26 +12,23 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 
 <!-- badges: end -->
 
-# NEWS UPDATE
-* Since last few months the functions `nselive`, `nseopen` haven't been working as the API from nse have not been not responding to requests from `R`. Thus, now we are writing functions using R package `reticulate` so as to run pyhton inside R. We have been able to scarape data using this method and revised functions would soon be included in package. 
+# Latest Version `1.3.5`
 
-# Latest Version `1.4.4`
+- `optnifty`, `optbanknifty` are deprecated.
 
-## Upcoming functions
+# New functions `nsetree`, `bhavfos`, `daytoweek`, `daytomonth`
 
-* Revised `nselive`, `nseopen`. 
-* Download bhavcopy's between two dates. 
+- `daytomonth` Convert daily OHLC data to monthly data
 
-## New functions `nsetree`, `bhavfos`
+- `daytoweek` Convert daily OHLC data of a stock to weekly data.
 
--   `nsetree` Get a treeplot plot of NSE NIFTY 50 and FO securities.
+- `nsetree` Get a treeplot plot of NSE NIFTY 50 and FO securities.
 
--   `bhavfos` Download historical F&O Bhavcopy zip file through
-    RSelenium.
+- `bhavfos` Download historical F&O Bhavcopy zip file through RSelenium.
 
 # Introduction
 
-`nser` helps you to download historical bhavcopy of Equities and F&O
+“nser” helps you to download historical bhavcopy of Equities and F&O
 segment easily.
 
 Package website [nser](https://nandp1.github.io/nser/)

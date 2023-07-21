@@ -10,7 +10,6 @@
 #'
 #' @seealso \code{\link[nser]{bhavpr}}\code{\link[nser]{bhav}}
 #'
-#' @import stats
 #' @importFrom utils download.file read.csv unzip
 #' @importFrom curl has_internet
 #'
@@ -18,7 +17,7 @@
 #' @examples \donttest{
 #' #Todays F&O Bhavcopy
 #' library(nser)
-#' report = fobhavtoday()
+#' try(stop(report = fobhavtoday()))
 #' }
 fobhavtoday = function()
 {

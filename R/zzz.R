@@ -4,4 +4,3 @@
            requireNamespace, quietly = TRUE)
   ))
 }
-

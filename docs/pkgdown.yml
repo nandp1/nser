@@ -1,5 +1,5 @@
-pandoc: 2.11.4
-pkgdown: 1.6.1
+pandoc: 3.1.1
+pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
   bhav: bhav.html
@@ -7,7 +7,10 @@ articles:
   bhavpr: bhavpr.html
   bhavs: bhavs.html
   bhavtoday: bhavtoday.html
+  dailydata: dailydata.html
+  daytomonth: daytomonth.html
   daytoweek: daytoweek.html
+  fdii: fdii.html
   fobhav: fobhav.html
   fobhavtoday: fobhavtoday.html
   nseindex: nseindex.html
@@ -15,5 +18,7 @@ articles:
   nselive: nselive.html
   nseopen: nseopen.html
   nsetree: nsetree.html
-last_built: 2021-10-07T16:52Z
+  optbanknifty: optbanknifty.html
+  optnifty: optnifty.html
+last_built: 2023-07-21T05:41Z
 

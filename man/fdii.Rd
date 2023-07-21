@@ -19,7 +19,7 @@ Get latest FII/DII data.
 Data gathered from moneycontrol.
 }
 \examples{
-\dontrun{
+\donttest{
 # NSE IPO's
 library(nser)
 fdii()

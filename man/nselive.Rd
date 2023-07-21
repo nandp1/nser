@@ -4,7 +4,7 @@
 \alias{nselive}
 \title{NSE Live Market data}
 \source{
-<https://www1.nseindia.com/live_market/dynaContent/live_watch/equities_stock_watch.htm?cat=N>
+<https://www.nseindia.com/market-data/live-market-indices>
 }
 \usage{
 nselive(x = "n50")
@@ -25,7 +25,7 @@ Get live NSE market data of Nifty 50 and Futures & Options
 NSE pre-open market 09.00 hrs to 9.08 hrs (IST). Regular Trading Session 09.15 hrs to 15.30 hrs (IST)
 }
 \examples{
-\dontrun{
+\donttest{
 # NSE Live market data for Nifty 50 stocks
 library(nser)
 nselive()

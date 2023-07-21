@@ -10,9 +10,8 @@
 #' @details Converts the Daily data of a stock to Weekly data.
 #' @seealso \code{\link[nser]{bhavpr}}\code{\link[nser]{bhavtoday}}\code{\link[nser]{bhav}}
 #'
-#' @import stats
 #' @importFrom utils download.file read.csv unzip head tail
-#' @importFrom lubridate dmy ymd isoweek
+#' @importFrom lubridate dmy ymd isoweek year
 #' @importFrom dplyr arrange mutate
 #' @importFrom purrr reduce
 #' @export
