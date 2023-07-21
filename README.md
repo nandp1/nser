@@ -2,19 +2,17 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 <!-- badges: start -->
 
-[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/nser)](https://cran.r-project.org/package=nser)
-[![cran
-checks](https://cranchecks.info/badges/summary/nser)](https://cran.r-project.org/web/checks/check_results_nser.html)
-[![Lifecycle:
-stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable-1)
+[![CRAN status](https://www.r-pkg.org/badges/version-ago/nser)](https://CRAN.R-project.org/package=nser) 
+[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable-1)
+[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/nser)](https://cran.r-project.org/package=nser)
 ![Downloads](http://cranlogs.r-pkg.org/badges/nser)
 [![](https://cranlogs.r-pkg.org/badges/grand-total/nser)](https://cran.r-project.org/package=nser)
+[<img src="https://zenodo.org/badge/383885771.svg" alt="DOI" width="186"/>](https://zenodo.org/badge/latestdoi/383885771)
+
 
 <!-- badges: end -->
 
-# Latest Version `1.3.5`
-
-- `optnifty`, `optbanknifty` are deprecated.
+# Latest Version `1.5.0`
 
 # New functions `nsetree`, `bhavfos`, `daytoweek`, `daytomonth`
 
