@@ -14,6 +14,8 @@
 
 # Latest Version `1.5.0`
 
+Functions `bhav`, `fobhav`, `nselive` and `nseopen` are revised fully functional.  
+
 # New functions `nsetree`, `bhavfos`, `daytoweek`, `daytomonth`
 
 - `daytomonth` Convert daily OHLC data to monthly data
