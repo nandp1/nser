@@ -1,0 +1,29 @@
+---
+title: "optbanknifty: Option Chain for NSE BANKNIFTY"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{optbanknifty}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Introduction 
+
+Option chain of NSE BANKNIFTY. 
+
+
+``` r
+library(nser)
+# BANKNIFTY option chain table
+optbanknifty()
+
+### Only the raw data
+optbanknifty(raw_data = TRUE)
+```

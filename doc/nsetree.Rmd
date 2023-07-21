@@ -23,11 +23,11 @@ library(nser)
 
 # Example 
 #Treemap of NIFTY50 securities
-nsetree()
+#nsetree()
 
 
 #Treemap of F&O securities
-nsetree("fo")
+#nsetree("fo")
 
  
 ```

@@ -1,8 +1,8 @@
 ---
-title: "fdii: Get latest FII/DII data"
+title: "optnifty: Option Chain for NSE Nifty 50"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{fdii}
+  %\VignetteIndexEntry{optnifty}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -14,11 +14,16 @@ knitr::opts_chunk$set(
 )
 ```
 
-## Introduction
+## Introduction 
 
-Get the latest FII(Foreign Institutional Investor) and DII(Domestic Institutional Investor) data from Moneycontrol. 
+Option chain of NSE NIFTY 50. 
 
-```{r example}
+
+``` r
 library(nser)
-fdii()
+# NIFTY 50 option chain table
+optnifty()
+
+### Only the raw data
+optnifty(raw_data = TRUE)
 ```

@@ -19,9 +19,11 @@ knitr::opts_chunk$set(
 
 ## Introduction 
 
-Download today's equity bhavcopy from NSE(National Stock Exchange) and BSE(Bombay Stock Exchange).
+*Download today's equity bhavcopy from NSE(National Stock Exchange) and BSE(Bombay Stock Exchange).
 
-Just use ```bhavtoday()```. Note that today's bhavcopy is made available in the evening. 
+*Just use ```bhavtoday()```. Note that today's bhavcopy is made available in the evening. 
+
+* The function tries to download bhavcopy from two sources i.e., Old (https://www1.nseindia.com/products/content/equities/equities/archieve_eq.htm) and New (https://www.nseindia.com/all-reports) websites of NSE. 
 
 ``` r
 # Example
