@@ -1,24 +1,32 @@
 import requests
-import pandas as pd
-import json
 
-data=[]
-headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36',}
-with requests.session() as req:
-  req.get("https://www.nseindia.com/api/equity-stockIndices?index=SECURITIES%20IN%20F%26O",headers = headers)
-  
-api_req1 = req.get('https://www.nseindia.com/api/equity-stockIndices?index=SECURITIES%20IN%20F%26O',headers = headers).json()
-df1 =  api_req1["data"]
-nlive = pd.DataFrame(df1)
+headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; '
+  'x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36'}
 
+main_url = "https://www.nseindia.com/"
+response = requests.get(main_url, headers=headers)
+#print(response.status_code)
+cookies = response.cookies
 
-data=[]
-headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36',}
-with requests.session() as req:
-  req.get("https://www.nseindia.com/api/equity-stockIndices?index=NIFTY%2050",headers = headers)
-  
-api_req2 = req.get('https://www.nseindia.com/api/equity-stockIndices?index=NIFTY%2050',headers = headers).json()
-df2 =  api_req2["data"]
-nlive2 = pd.DataFrame(df2)
+new_url = 'https://www.nseindia.com/api/equity-stockIndices?index=NIFTY%2050'
+bank_nifty_oi_data = requests.get(new_url, headers=headers, cookies=cookies)
+dat = bank_nifty_oi_data.json()
 
+dat1 = dat['data']
+
+###
+
+headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; '
+  'x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36'}
+
+main_url = "https://www.nseindia.com/"
+response = requests.get(main_url, headers=headers)
+#print(response.status_code)
+cookies = response.cookies
+
+new_url1 = 'https://www.nseindia.com/api/equity-stockIndices?index=SECURITIES%20IN%20F%26O'
+bank_nifty_oi_data_1 = requests.get(new_url1, headers=headers, cookies=cookies)
+dat2 = bank_nifty_oi_data_1.json()
+
+dat2 = dat2['data']
 

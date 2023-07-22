@@ -33,15 +33,20 @@ nselive = function(x = "n50"){
 
   if(x == "n50"){
     x= reticulate::py_run_file(system.file("nlive.py", package = "nser"))
-    nlive = x$nlive2
-    nlive = nlive[, c(2, 4, 5, 6, 7, 8, 9, 10)]
-    nlive  = nlive %>% mutate_at(c('open', 'dayHigh', 'dayLow', 'lastPrice', 'previousClose', 'change', 'pChange'), as.numeric)
-    live = nlive
+    nlive = x$dat1
+    nlive = lapply(nlive, function(x) t(x))
+    nlive1 = nlive[-1]
+    nlive1 = do.call(rbind.data.frame, nlive1)
+    nlive1 = nlive1[, c(2,  5, 6, 7, 8, 9, 10, 11)]
+    nlive1  = nlive1 %>% mutate_at(c('open', 'dayHigh', 'dayLow', 'lastPrice', 'previousClose', 'change', 'pChange'), as.numeric)
+    live = nlive1
     return(live)
   }
   else if(x == "fo"){
     x= reticulate::py_run_file(system.file("nlive.py", package = "nser"))
-    nlive = x$nlive
+    nlive = x$dat2
+    nlive = lapply(nlive, function(x) t(x))
+    nlive = do.call(rbind.data.frame, nlive)
     nlive = nlive[, c(1, 4, 5, 6, 7, 8, 9, 10)]
     nlive  = nlive %>% mutate_at(c('open', 'dayHigh', 'dayLow', 'lastPrice', 'previousClose', 'change', 'pChange'), as.numeric)
     live = nlive
