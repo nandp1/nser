@@ -39,6 +39,8 @@ nselive = function(x = "n50"){
     nlive1 = do.call(rbind.data.frame, nlive1)
     nlive1 = nlive1[, c(2,  5, 6, 7, 8, 9, 10, 11)]
     nlive1  = nlive1 %>% mutate_at(c('open', 'dayHigh', 'dayLow', 'lastPrice', 'previousClose', 'change', 'pChange'), as.numeric)
+    nlive1  = nlive1 %>% mutate_at(c('symbol'), as.character())
+    colnames(nlive1) <- c("SYMBOL", "OPEN", 'HIGH', 'LOW', 'LAST', 'CLOSE', 'Change', 'pChange')
     live = nlive1
     return(live)
   }
@@ -49,8 +51,9 @@ nselive = function(x = "n50"){
     nlive = do.call(rbind.data.frame, nlive)
     nlive = nlive[, c(1, 4, 5, 6, 7, 8, 9, 10)]
     nlive  = nlive %>% mutate_at(c('open', 'dayHigh', 'dayLow', 'lastPrice', 'previousClose', 'change', 'pChange'), as.numeric)
+    nlive  = nlive %>% mutate_at(c('symbol'), as.character())
+    colnames(nlive) <- c("SYMBOL", "OPEN", 'HIGH', 'LOW', 'LAST', 'CLOSE', 'Change', 'pChange')
     live = nlive
     return(live)
   }
 }
-

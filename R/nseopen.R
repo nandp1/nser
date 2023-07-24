@@ -36,6 +36,8 @@ nseopen = function(x = "n50"){
     npo1 = npo1[,c(1, 4, 5, 6, 7, 13)]
     po <- npo1 %>% mutate_at(c('symbol'), as.character)
     po <- po %>% mutate_at(c('lastPrice', 'change', 'pChange', 'previousClose', 'iep'), as.numeric)
+    po  = po %>% mutate_at(c('symbol'), as.character())
+    colnames(po) <- c("SYMBOL", "Price","Change", "pChange", "Prev.Close", 'IEP')
     po = po %>% mutate_if(is.numeric, ~round(., 2))
     return(po)
   }
@@ -49,6 +51,8 @@ nseopen = function(x = "n50"){
     npo1 = npo1[,c(1, 4, 5, 6, 7, 13)]
     po <- npo1 %>% mutate_at(c('symbol'), as.character)
     po <- po %>% mutate_at(c('lastPrice', 'change', 'pChange', 'previousClose', 'iep'), as.numeric)
+    po  = po %>% mutate_at(c('symbol'), as.character())
+    colnames(po) <- c("SYMBOL", "Price","Change", "pChange", "Prev.Close", 'IEP')
     po = po %>% mutate_if(is.numeric, ~round(., 2))
     return(po)
   }
@@ -62,6 +66,8 @@ nseopen = function(x = "n50"){
     npo1 = npo1[,c(1, 4, 5, 6, 7, 13)]
     po <- npo1 %>% mutate_at(c('symbol'), as.character)
     po <- po %>% mutate_at(c('lastPrice', 'change', 'pChange', 'previousClose', 'iep'), as.numeric)
+    po  = po %>% mutate_at(c('symbol'), as.character())
+    colnames(po) <- c("SYMBOL", "Price","Change", "pChange", "Prev.Close", 'IEP')
     po = po %>% mutate_if(is.numeric, ~round(., 2))
     return(po)
   }
