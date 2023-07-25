@@ -15,7 +15,7 @@
 # Latest Version `1.5.0`
 ## Yet to be released on CRAN as the CRAN team is on vaaction. 
 
-Functions `bhav`, `fobhav`, `nselive` and `nseopen` are revised fully functional.  
+Functions `bhav`, `fobhav`, `nselive` and `nseopen` are revised & fully functional.  
 
 # New functions `nsetree`, `bhavfos`, `daytoweek`, `daytomonth`
 
