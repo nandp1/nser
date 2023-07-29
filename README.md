@@ -17,15 +17,7 @@
 
 Functions `bhav`, `fobhav`, `nselive` and `nseopen` are revised & fully functional.  
 
-# New functions `nsetree`, `bhavfos`, `daytoweek`, `daytomonth`
-
-- `daytomonth` Convert daily OHLC data to monthly data
-
-- `daytoweek` Convert daily OHLC data of a stock to weekly data.
-
-- `nsetree` Get a treeplot plot of NSE NIFTY 50 and FO securities.
-
-- `bhavfos` Download historical F&O Bhavcopy zip file through RSelenium.
+The functions now obtain data from NSE using python scripts. 
 
 # Introduction
 
