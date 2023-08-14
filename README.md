@@ -13,11 +13,18 @@
 <!-- badges: end -->
 
 # Latest Version `1.5.0`
-## Yet to be released on CRAN as the CRAN team is on vaaction. 
+## Yet to be released on CRAN. 
 
 Functions `bhav`, `fobhav`, `nselive` and `nseopen` are revised & fully functional.  
 
-The functions now obtain data from NSE using python scripts. 
+## NOTE 
+The functions now obtain data from NSE using python scripts. Python packages `pandas` and `requests` should be installed by, 
+``` r
+library(reticulate)
+py_install("requests")
+py_install("pandas")
+```
+
 
 # Introduction
 
