@@ -15,7 +15,7 @@
 # Latest Version `1.5.0`
 ## Yet to be released on CRAN. 
 
-Functions `bhav`, `fobhav`, `nselive` and `nseopen` are revised & fully functional.  
+Functions `bhav`, `fobhav`, `nselive`, `nseopen` and `nsetree` are revised & fully functional.  
 
 ## NOTE 
 The functions now obtain data from NSE using python scripts. Python packages `pandas` and `requests` should be installed in R module by, 
