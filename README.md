@@ -18,7 +18,7 @@
 Functions `bhav`, `fobhav`, `nselive` and `nseopen` are revised & fully functional.  
 
 ## NOTE 
-The functions now obtain data from NSE using python scripts. Python packages `pandas` and `requests` should be installed by, 
+The functions now obtain data from NSE using python scripts. Python packages `pandas` and `requests` should be installed in R module by, 
 ``` r
 library(reticulate)
 py_install("requests")
