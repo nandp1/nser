@@ -19,7 +19,8 @@
 #'
 #' @export
 #' @examples \donttest{
-#' #Todays NSE Equity Bhavcopy
+#'
+#' #Todays NSE Equity Bhavcopy, the data would be available usually after 6.30 PM.
 #' library(nser)
 #' report = bhavtoday()
 #'
@@ -72,8 +73,10 @@ bhavtoday = function(se = 'NSE')
   }
 
   if(se == 'NSE'){
-    df = nsebhav()
-  }else if(se == 'BSE') df = bsebhav()
+    df = tryCatch(nsebhav(), error=function(e) conditionMessage(w),
+                  warning = function(w) conditionMessage(w))
+  }else if(se == 'BSE') df = tryCatch(bsebhav(), error = function(e) conditionMessage(e),
+                                      warning = function(w) conditionMessage(w))
 
   return(df)
 }
