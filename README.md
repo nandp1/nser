@@ -13,7 +13,7 @@
 <!-- badges: end -->
 
 # Latest Version `1.5.0`
-## Yet to be released on CRAN. 
+## Yo be released on CRAN soon... 
 
 Functions `bhav`, `fobhav`, `nselive`, `nseopen` and `nsetree` are revised & fully functional.  
 
