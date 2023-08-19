@@ -18,11 +18,14 @@
 Functions `bhav`, `fobhav`, `nselive`, `nseopen` and `nsetree` are revised & fully functional.  
 
 ## NOTE 
-The functions now obtain data from NSE using python scripts. Python packages `pandas` and `requests` should be installed in R module by, 
+`nselive`, `nseopen` `nseindex` and `nsetree` obtain data from NSE using python scripts. Thus you need to install Python modules `pandas` and `requests` should be installed in R, 
 ``` r
-library(reticulate)
-py_install("requests")
-py_install("pandas")
+install.packages('reticulate')  # Install package reticulate
+library(reticulate) # Load package
+install_python("3.11:latest")  # Install latest python
+install_miniconda() # Install Miniconda
+py_install("requests") # Install package requests
+py_install("pandas") # Install package pandas
 ```
 
 
