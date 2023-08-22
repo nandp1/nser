@@ -26,7 +26,8 @@ The date should be strictly numerical and mentioned in quotation mark.The presen
 }
 \examples{
 \donttest{
-#Todays NSE Equity Bhavcopy
+
+#Todays NSE Equity Bhavcopy, the data would be available usually after 6.30 PM.
 library(nser)
 report = bhavtoday()
 

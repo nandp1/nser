@@ -8,10 +8,9 @@
 #' @author Nandan L. Patil \email{tryanother609@@gmail.com}
 #' @details The function plots a treemap eith the recent change in price of securities.
 #' @source <https://www.nseindia.com/market-data/live-market-indices>
-#' @seealso \code{\link[nser]{bhavpr}}\code{\link[nser]{bhavtoday}}\code{\link[nser]{bhavs}}\code{\link[nser]{bhavfos}}
+#' @seealso \code{\link[nser]{bhavpr}}\code{\link[nser]{bhavtoday}}\code{\link[nser]{bhav}}\code{\link[nser]{fobhav}}
 #'
-#' @import graphics rvest xml2
-#' @importFrom jsonlite fromJSON
+#' @import graphics rvest xml2 reticulate
 #' @importFrom googleVis gvisTreeMap
 #' @importFrom dplyr mutate
 #' @importFrom curl has_internet
@@ -19,9 +18,17 @@
 #' @export
 #'
 #' @examples # Treemap of NIFTY50 securities
+#' library(nser)
+#' library(reticulate)
+#' py_install("pandas")
+#' py_install("requests")
 #' nsetree()
 #'
 #' # Treemap of F&O securities
+#' library(nser)
+#' library(reticulate)
+#' py_install("pandas")
+#' py_install("requests")
 #' nsetree("fo")
 #'
 nsetree = function(x = "n50"){
