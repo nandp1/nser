@@ -27,10 +27,12 @@ Following steps should help you to get statrted,
 ``` r
 install.packages('reticulate')  # Install package reticulate
 library(reticulate) # Load package
-py_install("requests") # Install package requests
-py_install("pandas") # Install package pandas
+# You can also install miniconda in R by,
+# install_miniconda()
+py_install("requests") # Install python package requests
+py_install("pandas") # Install python package pandas
 ```
-
+You should be good to go now...
 
 # Introduction
 
