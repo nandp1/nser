@@ -13,17 +13,20 @@
 <!-- badges: end -->
 
 # Latest Version `1.5.0`
-## Yo be released on CRAN soon... 
+### Working on to release on CRAN, as the package now uses functions of `reticulate` package, its diffcult to meet the CRAN requiremtns. 
+
 
 Functions `bhav`, `fobhav`, `nselive`, `nseopen` and `nsetree` are revised & fully functional.  
 
 ## NOTE 
 `nselive`, `nseopen` `nseindex` and `nsetree` obtain data from NSE using python scripts. Thus you need to install Python modules `pandas` and `requests` should be installed in R, 
+
+Following steps should help you to get statrted, 
+* Install latest version of `Python`, `Ananconda` and `Miniconda`. And add Python as PATH variable. 
+* Then in R, 
 ``` r
 install.packages('reticulate')  # Install package reticulate
 library(reticulate) # Load package
-install_python("3.11:latest")  # Install latest python
-install_miniconda() # Install Miniconda
 py_install("requests") # Install package requests
 py_install("pandas") # Install package pandas
 ```
