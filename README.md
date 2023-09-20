@@ -13,8 +13,7 @@
 <!-- badges: end -->
 
 # Latest Version `1.5.0`
-### Working on to release on CRAN, as the package now uses functions of `reticulate` package, its diffcult to meet the CRAN requiremtns. 
-
+### The package is now on CRAN...
 
 Functions `bhav`, `fobhav`, `nselive`, `nseopen` and `nsetree` are revised & fully functional.  
 
