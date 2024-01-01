@@ -35,7 +35,7 @@ You should be good to go now...
 
 # Introduction
 
-“nser” helps you to download historical bhavcopy of Equities and F&O
+`nser` helps you to download historical bhavcopy of Equities and F&O
 segment easily.
 
 Package website [nser](https://nandp1.github.io/nser/)
