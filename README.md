@@ -12,6 +12,10 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 
 # Latest Version `1.5.1`
 
+## New Functions
+* `optbanknifty` and `optnifty` to get option chain of BANKNIFTY and NIFTY 50 repsectively.
+* Updated function `nseipo`.
+  
 ## NOTE 
 `nselive`, `nseopen` `nseindex`, `nsetree`, `optbanknifty` and `optnifty` obtain data from NSE using python scripts. Thus, you need to install Python modules `pandas` and `requests` in R, 
 
