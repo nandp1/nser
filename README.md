@@ -23,7 +23,7 @@ Functions `bhav`, `fobhav`, `nselive`, `nseopen` and `nsetree` are revised & ful
 ## NOTE 
 `nselive`, `nseopen` `nseindex` and `nsetree` obtain data from NSE using python scripts. Thus, you need to install Python modules `pandas` and `requests` in R, 
 
-Following steps should help you to get statrted, 
+Following steps should help you to get started, 
 * Install latest version of `Python`, `Ananconda` and `Miniconda`. And add Python as PATH variable. 
 * Then in R, 
 ``` r
