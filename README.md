@@ -17,7 +17,7 @@
 
 Functions `bhav`, `fobhav`, `nselive`, `nseopen` and `nsetree` are revised & fully functional.  
 ### Upcoming functions
-* Bringinh back `optbanknifty` and `optnifty` to get option chain data of BANKNIFTY and NIFTY. 
+* Bringing back `optbanknifty` and `optnifty` to get option chain data of BANKNIFTY and NIFTY. 
 * Correcting `nseipo` function
   
 ## NOTE 
