@@ -10,7 +10,7 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 
 <!-- badges: end -->
 
-# Latest Version `1.5.1`
+# Latest Version `1.5.1` on Github 
 
 ## New Functions
 * `optbanknifty` and `optnifty` to get option chain of BANKNIFTY and NIFTY 50 repsectively.
