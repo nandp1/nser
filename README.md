@@ -16,7 +16,10 @@
 ### The package is now on CRAN...
 
 Functions `bhav`, `fobhav`, `nselive`, `nseopen` and `nsetree` are revised & fully functional.  
-
+### Upcoming functions
+* Bringinh back `optbanknifty` and `optnifty` to get option chain data of BANKNIFTY and NIFTY. 
+* Correcting `nseipo` function
+  
 ## NOTE 
 `nselive`, `nseopen` `nseindex` and `nsetree` obtain data from NSE using python scripts. Thus, you need to install Python modules `pandas` and `requests` in R, 
 
