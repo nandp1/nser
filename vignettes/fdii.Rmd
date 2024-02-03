@@ -20,5 +20,6 @@ Get the latest FII (Foreign Institutional Investor) and DII (Domestic Institutio
 
 ```
 library(nser)
+
 fdii()
 ```

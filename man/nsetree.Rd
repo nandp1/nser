@@ -22,17 +22,11 @@ Treemap for Nifty50 and F&O Securities
 The function plots a treemap eith the recent change in price of securities.
 }
 \examples{
+\dontrun{
 # Treemap of NIFTY50 securities
 library(nser)
-py_install("pandas")
-py_install("requests")
 nsetree()
-
-# Treemap of F&O securities
-library(nser)
-library(reticulate)
-nsetree("fo")
-
+}
 }
 \seealso{
 \code{\link[nser]{bhavpr}}\code{\link[nser]{bhavtoday}}\code{\link[nser]{bhav}}\code{\link[nser]{fobhav}}

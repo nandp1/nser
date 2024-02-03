@@ -19,7 +19,7 @@ NSE Nifty Indices
 Live report of Nifty Indices
 }
 \examples{
-\donttest{
+\dontrun{
 #Live status of Nifty Indices
 library(nser)
 nseindex()

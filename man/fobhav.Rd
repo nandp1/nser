@@ -26,7 +26,7 @@ The date should be strictly numerical and mentioned in quotation mark. `fobhav` 
 }
 \examples{
 report = fobhav("01072021") # Download F&O bhavcopy for 01 July 2021
-report
+
 }
 \seealso{
 \code{\link[nser]{bhavpr}}\code{\link[nser]{bhavtoday}}

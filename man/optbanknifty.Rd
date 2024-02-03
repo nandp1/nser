@@ -7,13 +7,10 @@
 <https://www.nseindia.com/option-chain>
 }
 \usage{
-optbanknifty(raw_data = FALSE)
-}
-\arguments{
-\item{raw_data}{If TRUE, the output is a raw dataframe of the option chain. Default FALSE.}
+optbanknifty()
 }
 \value{
-datatable The option chain of BANKNIFTY for the current expiry.
+A dataframe containing option chain of NSE BANKNIFTY.
 }
 \description{
 Option Chain for NSE BANKNIFTY.
@@ -27,7 +24,7 @@ optbanknifty()
 }
 }
 \seealso{
-\code{\link[nser]{bhavpr}}\code{\link[nser]{bhavtoday}}\code{\link[nser]{bhavfos}}\code{\link[nser]{nsetree}}\code{\link[nser]{optbanknifty}}
+\code{\link[nser]{optnifty}}\code{\link[nser]{bhavtoday}}\code{\link[nser]{bhavfos}}\code{\link[nser]{nsetree}}\code{\link[nser]{nseipo}}
 }
 \author{
 Nandan L. Patil \email{tryanother609@gmail.com}

@@ -19,7 +19,7 @@ Current and Upcoming IPO's on NSE.
 List of upcoming and current IPO's on NSE gathered from moneycontrol.
 }
 \examples{
-\donttest{
+\dontrun{
 # NSE IPO's
 library(nser)
 nseipo()

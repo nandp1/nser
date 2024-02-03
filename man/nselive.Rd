@@ -25,7 +25,7 @@ Get live NSE market data of Nifty 50 and Futures & Options
 NSE pre-open market 09.00 hrs to 9.08 hrs (IST). Regular Trading Session 09.15 hrs to 15.30 hrs (IST)
 }
 \examples{
-\donttest{
+\dontrun{
 # NSE Live market data for Nifty 50 stocks
 library(nser)
 nselive()

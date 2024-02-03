@@ -2,21 +2,18 @@
 % Please edit documentation in R/optnifty.R
 \name{optnifty}
 \alias{optnifty}
-\title{Option Chain for NSE Nifty 50.}
+\title{Option Chain of NSE Nifty 50.}
 \source{
 <https://www.nseindia.com/option-chain>
 }
 \usage{
-optnifty(raw_data = FALSE)
-}
-\arguments{
-\item{raw_data}{If TRUE, the output is a raw dataframe of the option chain. Default FALSE.}
+optnifty()
 }
 \value{
-datatable The option chain of NIFTY 50 for the current expiry.
+A dataframe containing option chain of NSE Nifty 50.
 }
 \description{
-Option Chain for NSE Nifty 50.
+Option Chain of NSE Nifty 50.
 }
 \details{
 Get visual friendly display of Option chain of NIFTY 50 for the current expiry.
@@ -25,10 +22,9 @@ Get visual friendly display of Option chain of NIFTY 50 for the current expiry.
  \dontrun{# Example: NIFTY 50 option chain
 optnifty()
 }
-
 }
 \seealso{
-\code{\link[nser]{bhavpr}}\code{\link[nser]{bhavtoday}}\code{\link[nser]{bhavfos}}\code{\link[nser]{nsetree}}\code{\link[nser]{optbanknifty}}
+\code{\link[nser]{optbanknifty}}\code{\link[nser]{bhavtoday}}\code{\link[nser]{bhavfos}}\code{\link[nser]{nsetree}}\code{\link[nser]{nseipo}}
 }
 \author{
 Nandan L. Patil \email{tryanother609@gmail.com}

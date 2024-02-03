@@ -2,26 +2,18 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 <!-- badges: start -->
 
-[![CRAN status](https://www.r-pkg.org/badges/version-ago/nser)](https://CRAN.R-project.org/package=nser) 
-[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable-1)
-[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/nser)](https://cran.r-project.org/package=nser)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/nser)](https://cran.r-project.org/package=nser)
+[![Lifecycle:
+stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable-1)
 ![Downloads](http://cranlogs.r-pkg.org/badges/nser)
 [![](https://cranlogs.r-pkg.org/badges/grand-total/nser)](https://cran.r-project.org/package=nser)
-[<img src="https://zenodo.org/badge/383885771.svg" alt="DOI" width="186"/>](https://zenodo.org/badge/latestdoi/383885771)
-
 
 <!-- badges: end -->
 
-# Latest Version `1.5.0`
-### The package is now on CRAN...
+# Latest Version `1.5.1`
 
-Functions `bhav`, `fobhav`, `nselive`, `nseopen` and `nsetree` are revised & fully functional.  
-### Upcoming functions
-* Bringing back `optbanknifty` and `optnifty` to get option chain data of BANKNIFTY and NIFTY. 
-* Correcting `nseipo` function
-  
 ## NOTE 
-`nselive`, `nseopen` `nseindex` and `nsetree` obtain data from NSE using python scripts. Thus, you need to install Python modules `pandas` and `requests` in R, 
+`nselive`, `nseopen` `nseindex`, `nsetree`, `optbanknifty` and `optnifty` obtain data from NSE using python scripts. Thus, you need to install Python modules `pandas` and `requests` in R, 
 
 Following steps should help you to get started, 
 * Install latest version of `Python`, `Ananconda` and `Miniconda`. And add Python as PATH variable. 
@@ -40,7 +32,7 @@ You should be good to go now...
 # Introduction
 
 `nser` helps you to download historical bhavcopy of Equities and F&O
-segment as easy as possible.
+segment easily.
 
 Package website [nser](https://nandp1.github.io/nser/)
 
@@ -101,11 +93,54 @@ nseopen("fo")
 
 ## Example 6. Current and Upcoming IPO’s
 
-    library(nser)
-    nseipo()
+library(nser)
+nseipo()
 
+## Example 7. RSelenium to Download Equity Bhavcopy
 
-## Example 7. NSE Treemap
+``` r
+library(nser)
+library(RSelenium)
+
+# Start a selenium server and browser
+# For Google Chrome (Update Chrome to latest version)
+
+ driver <- rsDriver(browser = c("chrome"), port = 3163L, chromever = "91.0.4472.101")
+ remDr <- driver$client
+
+# or for Firefox
+ driver <- rsDriver(browser = c("firefox"), port = 3799L)
+ 
+# Download Equity Bhavcopy zip file
+bhavs("03012000", 2)
+
+# Close the Browser
+remDr$close()
+```
+
+## Example 8. RSelenium to Download F&O Bhavcopy
+
+``` r
+library(nser)
+library(RSelenium)
+
+# Start a selenium server and browser
+# For Google Chrome (Update Chrome to latest version)
+
+ driver <- rsDriver(browser = c("chrome"), port = 3163L, chromever = "91.0.4472.101")
+ remDr <- driver$client
+
+# or for Firefox
+ driver <- rsDriver(browser = c("firefox"), port = 3799L)
+ 
+# Download Equity Bhavcopy zip file
+bhavfos("03012000", 2)
+
+# Close the Browser
+remDr$close()
+```
+
+## Example 9. NSE Treemap
 
 ``` r
 library(nser)
@@ -116,14 +151,27 @@ nsetree()
 nsetree("fo")
 ```
 
-## Example 8. Daily data to Weelkly data
+## Example 10. Daily data to Weelkly data
 
     library(nser)
     data(dailydata)
     daytoweek(dailydata)
 
-## Example 9. Daily data to Monthly data
+## Example 11. Daily data to Monthly data
 
     library(nser)
     data(dailydata)
     daytomonth(dailydata)
+
+## Example 12. Option chain Nifty 50
+
+    library(nser)
+    optnifty()
+
+## Example 12. Option chain Banknifty
+
+    library(nser)
+    optbanknifty()
+    
+    
+    
