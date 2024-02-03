@@ -29,7 +29,7 @@ library(reticulate) # Load package
 # install_miniconda()
 py_install("requests") # Install python package requests
 py_install("pandas") # Install python package pandas
-# Helpgul tip: you can also add interpreter in "Tools/Global options/Python/miniconda". 
+# Helpful tip: Add interpreter in "Tools/Global options/Python/miniconda". 
 ```
 You should be good to go now...
 
