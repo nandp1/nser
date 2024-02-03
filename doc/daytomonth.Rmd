@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 
 ## Introduction 
 
-Convert the Daily OHLC data of a stock to Monthly data. The dataframe should contain six columns named `SYMBOL`, `OPEN`, `HIGH`, `LOW`, `CLOSE`, `DATE`. 
+Convert the Daily OHLC data of a stock to Monthly data. The data frame should contain six columns named `SYMBOL`, `OPEN`, `HIGH`, `LOW`, `CLOSE`, `DATE`. 
 
 
 ```

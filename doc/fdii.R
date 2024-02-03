@@ -4,7 +4,3 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 
-## ----example------------------------------------------------------------------
-library(nser)
-fdii()
-

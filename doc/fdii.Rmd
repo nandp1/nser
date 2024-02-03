@@ -16,9 +16,10 @@ knitr::opts_chunk$set(
 
 ## Introduction
 
-Get the latest FII(Foreign Institutional Investor) and DII(Domestic Institutional Investor) data from Moneycontrol. 
+Get the latest FII (Foreign Institutional Investor) and DII (Domestic Institutional Investor) data from Moneycontrol. 
 
-```{r example}
+```
 library(nser)
+
 fdii()
 ```
