@@ -15,7 +15,7 @@
 #' @importFrom dplyr arrange mutate
 #' @importFrom purrr reduce
 #' @export
-#' @examples \dontrun{
+#' @examples \donttest{
 #' data(dailydata)
 #' daytoweek(dailydata)
 #' }

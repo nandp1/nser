@@ -15,7 +15,7 @@
 #' @importFrom curl has_internet
 #'
 #' @export
-#' @examples \donttest{
+#' @examples \dontrun{
 #' #Live status of Nifty Indices
 #' library(nser)
 #' nseindex()

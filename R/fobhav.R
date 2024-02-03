@@ -18,7 +18,7 @@
 #' @export
 #'
 #' @examples report = fobhav("01072021") # Download F&O bhavcopy for 01 July 2021
-#' report
+#'
 fobhav = function(x){
   # check internet connection
   if (!curl::has_internet()) {

@@ -10,12 +10,11 @@
 #' @seealso \code{\link[nser]{bhavpr}}\code{\link[nser]{bhav}}\code{\link[nser]{fobhavtoday}}\code{\link[nser]{nseopen}}
 #'
 #' @importFrom rvest read_html html_nodes html_table
-#' @importFrom stringr str_remove_all
 #'
 #' @importFrom curl has_internet
 #'
 #' @export
-#' @examples \donttest{
+#' @examples \dontrun{
 #' # NSE IPO's
 #' library(nser)
 #' nseipo()
@@ -24,14 +23,12 @@ nseipo = function(){
   url = 'https://www.moneycontrol.com/ipo/ipo-snapshot/issues-open.html'
   dat = url %>%
     read_html() %>%
-    html_nodes(xpath='//*[@id="mytable"]') %>%
     html_table()
-  dat = dat[[1]]
-  dat = as.data.frame(dat)
-  nam = str_remove_all(dat$`Equity /IPO Name`, "\t")
-  nam = str_remove_all(nam, "\r")
-  nam = str_remove_all(nam, "\n")
-  nam = str_remove_all(nam, "View Profile")
-  dat$`Equity /IPO Name` = nam
+
+  dat2 = dat[[2]]
+  dat3 = dat[[3]]
+  nam = names(dat2)
+  dat3 = `names<-`(dat3, nam)
+  dat = rbind(dat2, dat3)
   return(dat)
 }

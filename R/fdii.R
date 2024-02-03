@@ -14,8 +14,9 @@
 #' @importFrom stringr str_extract
 #' @importFrom curl has_internet
 #' @export
-#' @examples \donttest{
-#' # NSE IPO's
+#' @examples \dontrun{
+#' # The function may fail when accessed outside from INDIA.
+#'
 #' library(nser)
 #' fdii()
 #' }

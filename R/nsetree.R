@@ -17,20 +17,11 @@
 #' @importFrom stringr str_extract
 #' @export
 #'
-#' @examples # Treemap of NIFTY50 securities
+#' @examples \dontrun{
+#' # Treemap of NIFTY50 securities
 #' library(nser)
-#' library(reticulate)
-#' py_install("pandas")
-#' py_install("requests")
 #' nsetree()
-#'
-#' # Treemap of F&O securities
-#' library(nser)
-#' library(reticulate)
-#' py_install("pandas")
-#' py_install("requests")
-#' nsetree("fo")
-#'
+#'}
 nsetree = function(x = "n50"){
   # check internet connection
   if (!curl::has_internet()) {

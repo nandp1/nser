@@ -16,7 +16,7 @@
 #' @importFrom curl has_internet
 #'
 #' @export
-#' @examples \donttest{
+#' @examples \dontrun{
 #' # NSE Live market data for Nifty 50 stocks
 #' library(nser)
 #' nselive()

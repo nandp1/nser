@@ -18,7 +18,7 @@
 #' @importFrom curl has_internet
 #'
 #' @export
-#' @examples \donttest{
+#' @examples \dontrun{
 #'
 #' #Todays NSE Equity Bhavcopy, the data would be available usually after 6.30 PM.
 #' library(nser)
