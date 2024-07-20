@@ -11,6 +11,8 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 
 <!-- badges: end -->
 
+# NSE has changed their website interface and bhavcopy format, revised `bhav` function coming soon. 
+
 # Latest Version `1.5.1` on Github 
 
 ## New Functions
