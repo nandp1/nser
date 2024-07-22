@@ -11,13 +11,13 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 
 <!-- badges: end -->
 
-# NSE has changed their website interface and bhavcopy format, revised `bhav` function coming soon. 
-
-# Latest Version `1.5.1` on Github 
+# Latest Version `1.5.3` on Github 
+  * Due to change in NSE website interface the `bhav` function has been revised from `1.5.3` and old code is maintained in `bhav1`. 
+  * `bhav` downloads bhavcopy from 1 Jan 2020 onwards, 
+  * `bhav1` downloads NSE bhavcopy from from 1 Jan 2016 to  05 July 2024. 
 
 ## New Functions
-* `optbanknifty` and `optnifty` to get option chain of BANKNIFTY and NIFTY 50 repsectively.
-* Updated function `nseipo`.
+* `bhav1`, `optbanknifty` and `optnifty` to get option chain of BANKNIFTY and NIFTY 50 repsectively.
   
 ## NOTE 
 `nselive`, `nseopen` `nseindex`, `nsetree`, `optbanknifty` and `optnifty` obtain data from NSE using python scripts. Thus, you need to install Python modules `pandas` and `requests` in R, 
@@ -180,5 +180,9 @@ nsetree("fo")
     library(nser)
     optbanknifty()
     
+## Example 13. Bhavcopy using `bhav1` function 
+
+    library(nser)
+    bhav1('05072024')
     
     
