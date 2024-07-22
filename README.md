@@ -6,7 +6,7 @@
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable-1)
 [![Github Code Size](https://img.shields.io/github/languages/code-size/nandp1/gpbStat.svg)](https://github.com/nandp1/nser)
-![Downloads](http://cranlogs.r-pkg.org/badges/nser)
+[![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/last-month/metan?color=orange)](https://r-pkg.org/pkg/nser)
 [![](https://cranlogs.r-pkg.org/badges/grand-total/nser)](https://cran.r-project.org/package=nser)
 
 <!-- badges: end -->
