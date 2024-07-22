@@ -1,7 +1,7 @@
 #' @name bhavtoday
 #' @aliases bhavtoday
 #'
-#' @title Get Bhavcopy for the present day
+#' @title Get Bhavcopy for the present day from NSE and BSE
 #'
 #' @param se Stock Exchange either 'NSE' or 'BSE'. Default is 'NSE'.
 #'

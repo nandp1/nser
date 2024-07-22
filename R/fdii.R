@@ -1,11 +1,11 @@
 #' @name fdii
 #' @aliases fdii
 #'
-#' @title Get latest FII/DII data.
+#' @title Latest FII/DII data.
 #'
 #' @return Dataframe containing FII/DII data.
 #' @author Nandan L. Patil \email{tryanother609@@gmail.com}
-#' @details Data gathered from moneycontrol.
+#' @details Get latest FII/DII data from Moneycontrol website.
 #'
 #' @source <https://www.moneycontrol.com/stocks/marketstats/fii_dii_activity/index.php>
 #' @seealso \code{\link[nser]{nseipo}}\code{\link[nser]{bhav}}\code{\link[nser]{fobhavtoday}}\code{\link[nser]{nseopen}}
@@ -19,6 +19,7 @@
 #'
 #' library(nser)
 #' fdii()
+#'
 #' }
 #'
 fdii = function(){

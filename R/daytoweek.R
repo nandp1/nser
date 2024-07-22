@@ -16,6 +16,7 @@
 #' @importFrom purrr reduce
 #' @export
 #' @examples \donttest{
+#' library(nser)
 #' data(dailydata)
 #' daytoweek(dailydata)
 #' }

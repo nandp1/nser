@@ -3,7 +3,7 @@
 #'
 #' @title NSE Nifty Indices
 #'
-#' @return A dataframe containing last price and % change of Nifty Indices.
+#' @return A dataframe containing last price and per cent change of nifty indices.
 #' @author Nandan L. Patil \email{tryanother609@@gmail.com}
 #' @details Live report of Nifty Indices
 #' @source <https://www1.nseindia.com/live_market/dynaContent/live_watch/live_index_watch.htm>

@@ -15,3 +15,4 @@ NULL
 utils::globalVariables(c("remDr"))
 utils::globalVariables(c("across",'DATE', 'year', "SYMBOL", 'pChange', 'month'))
 utils::globalVariables(c("w", "foo"))
+utils::globalVariables(c("pCHANGE"))

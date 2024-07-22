@@ -5,7 +5,7 @@
 #'
 #' @param x numeric date format
 #'
-#' @note The date should be strictly numerical and mentioned in quotation mark.
+#' @note The date should be strictly numerical and mentioned in quotation mark, refer example.
 #' @return List of Bhavcopy PR for the given date.
 #' @author Nandan L. Patil \email{tryanother609@@gmail.com}
 #' @details Gets Bhavcopy PR from NSE for the given date.

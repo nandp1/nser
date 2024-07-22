@@ -6,7 +6,7 @@
 #'
 #' @return treemap A Treemap of recent percent change in value of securities.
 #' @author Nandan L. Patil \email{tryanother609@@gmail.com}
-#' @details The function plots a treemap eith the recent change in price of securities.
+#' @details Plot treemap representing per cent change in 'NIFTY50' and 'F&O' stocks.
 #' @source <https://www.nseindia.com/market-data/live-market-indices>
 #' @seealso \code{\link[nser]{bhavpr}}\code{\link[nser]{bhavtoday}}\code{\link[nser]{bhav}}\code{\link[nser]{fobhav}}
 #'
@@ -19,8 +19,14 @@
 #'
 #' @examples \dontrun{
 #' # Treemap of NIFTY50 securities
+#'
 #' library(nser)
 #' nsetree()
+#'
+#' # Treemap of FO securities
+#'
+#' library(nser)
+#' nsetree('fo')
 #'}
 nsetree = function(x = "n50"){
   # check internet connection
@@ -33,11 +39,11 @@ nsetree = function(x = "n50"){
   dat = nselive()
   dat = dat[,c(1,8)]
   dat$parent = "NIFTY"
-  dat$abs = abs(dat$pChange)
-  dat = dat %>% mutate(SYM = paste0(SYMBOL, " (", pChange, ")"))
+  dat$abs = abs(dat$pCHANGE)
+  dat = dat %>% mutate(SYM = paste0(SYMBOL, " (", pCHANGE, ")"))
   dat$SYMBOL = as.factor(dat$SYMBOL)
   dat$parent = as.factor(dat$parent)
-  dat_add <- data.frame(SYMBOL = c("NIFTY"), parent = c(NA), pChange  = c(0), abs = c(0), SYM = "NIFTY")
+  dat_add <- data.frame(SYMBOL = c("NIFTY"), parent = c(NA), pCHANGE  = c(0), abs = c(0), SYM = "NIFTY")
   dat = rbind(dat, dat_add)
 
   url = 'https://www.moneycontrol.com/stocksmarketsindia/heat-map-advance-decline-ratio-nse-bse'
@@ -54,7 +60,7 @@ nsetree = function(x = "n50"){
 
   maxColorValue = 100
   minColorValue = -100
-  Tree <- gvisTreeMap(dat,  idvar="SYM", parentvar="parent", sizevar="abs", colorvar="pChange",
+  Tree <- gvisTreeMap(dat,  idvar="SYM", parentvar="parent", sizevar="abs", colorvar="pCHANGE",
                       options=list(title = heading,
                                    titleTextStyle="{color:'blue',
                                               fontSize:24}",
@@ -70,18 +76,18 @@ nsetree = function(x = "n50"){
     dat = nselive("fo")
     dat = dat[,c(1,8)]
     dat$parent = "FO"
-    dat$abs = abs(dat$pChange)
-    dat = dat %>% mutate(SYM = paste0(SYMBOL, "(", pChange, ")"))
+    dat$abs = abs(dat$pCHANGE)
+    dat = dat %>% mutate(SYM = paste0(SYMBOL, "(", pCHANGE, ")"))
     dat$SYMBOL = as.factor(dat$SYMBOL)
     dat$parent = as.factor(dat$parent)
-    dat_add <- data.frame(SYMBOL = c("FO"), parent = c(NA), pChange  = c(0), abs = c(0), SYM = "FO")
+    dat_add <- data.frame(SYMBOL = c("FO"), parent = c(NA), pCHANGE  = c(0), abs = c(0), SYM = "FO")
     dat = rbind(dat, dat_add)
 
     heading = paste0("Securities in Futures and Options ")
 
     maxColorValue = 100
     minColorValue = -100
-    Tree <- gvisTreeMap(dat,  idvar="SYM", parentvar="parent", sizevar="abs", colorvar="pChange",
+    Tree <- gvisTreeMap(dat,  idvar="SYM", parentvar="parent", sizevar="abs", colorvar="pCHANGE",
                         options=list(title = heading,
                                      titleTextStyle="{color:'blue',
                                               fontSize:24}",

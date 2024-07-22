@@ -1,12 +1,12 @@
 #' @name optnifty
 #' @aliases optnifty
-#' @title Option Chain of NSE Nifty 50.
+#' @title Option Chain of NSE Nifty 50 (current expiry date).
 #'
-#' @return A dataframe containing option chain of NSE Nifty 50.
+#' @return A dataframe containing option chain of NSE Nifty 50 for current expiry date.
 #' @author Nandan L. Patil \email{tryanother609@@gmail.com}
-#' @details Get visual friendly display of Option chain of NIFTY 50 for the current expiry.
+#' @details Option chain of NIFTY 50 for the current expiry.
 #' @source <https://www.nseindia.com/option-chain>
-#' @seealso \code{\link[nser]{optbanknifty}}\code{\link[nser]{bhavtoday}}\code{\link[nser]{bhavfos}}\code{\link[nser]{nsetree}}\code{\link[nser]{nseipo}}
+#' @seealso \code{\link[nser]{optbanknifty}}\code{\link[nser]{bhavtoday}}\code{\link[nser]{nselive}}\code{\link[nser]{nsetree}}\code{\link[nser]{nseipo}}
 #'
 #' @import reticulate
 #' @importFrom dplyr bind_rows

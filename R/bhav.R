@@ -1,27 +1,28 @@
 #' @name bhav
 #' @aliases bhav
-#' @title Bhavcopy from NSE
+#' @title Bhavcopy from NSE and BSE
 #'
 #' @param x numeric date format
 #' @param se Stock Exchange either 'NSE' or 'BSE'. Default is 'NSE'.
 #'
-#' @note The date should be strictly numerical and mentioned in quotation mark. `bhav` can be used to download bhavcopy from 1 Jan 2016 on wards. To download bhavcopy previous to aforementioned date use `bhavs`.
+#' @note The date should be strictly numerical and mentioned in quotation mark (refer examples). `bhav` can be used to download NSE bhavcopy from 1 Jan 2020 on wards.
 #' @return Bhavcopy for the given date.
 #' @author Nandan L. Patil \email{tryanother609@@gmail.com}
-#' @details Gets Bhavcopy from NSE for the given date. The function tries to get the bhavcopy from two sources i.e., Old and New website of NSE.
+#' @details Gets Bhavcopy from NSE and BSE for the given date.
 #' @source <https://www.nseindia.com/all-reports>, <https://www.bseindia.com/markets/marketinfo/BhavCopy.aspx>
 #' @seealso \code{\link[nser]{bhavpr}}\code{\link[nser]{bhavtoday}}
 #'
 #' @importFrom utils download.file read.csv unzip
 #' @importFrom curl has_internet
+#' @importFrom httr GET content add_headers
 #' @export
 #'
 #' @examples \donttest{
 #' #Download Bhavcopy from NSE
-#' report = bhav("01072021") # Download bhavcopy for 01 July 2021
+#' report = bhav("01072024") # Download bhavcopy for 01 July 2024
 #'
 #' #Download bhavcopy from BSE
-#' report = bhav("01072021", 'BSE')
+#' report = bhav("01072024", 'BSE')
 #' }
 bhav = function(x, se = 'NSE'){
   # First check internet connection
@@ -64,18 +65,22 @@ bhav = function(x, se = 'NSE'){
       mt = "DEC"
     }
 
-    baseurl = "https://archives.nseindia.com/content/historical/EQUITIES/"
+    # NSE Bhavcopy
 
-    end = ".csv.zip"
-    bhavurl = paste0(baseurl, yr, "/", mt, "/cm", dy, mt, yr, "bhav", end)
-    zipname = paste0("cm", dy, mt, yr, "bhav", ".csv")
-
-    bhav1 = function(x){
-      temp <- tempfile()
-      download.file(bhavurl, temp)
-      file = read.csv(unz(temp, filename = zipname))
-      unlink(temp)
-      return(file)
+    nsebhav = function(){
+          nseurl = paste0("https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_", x, ".csv")
+          #url <- "https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_02012019.csv"
+          UA <- paste('Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:98.0)',
+                      'Gecko/20100101 Firefox/98.0')
+          res <- GET(nseurl, add_headers(`User-Agent` = UA, Connection = 'keep-alive'))
+          df1 = content(res)
+          df1 = df1[,c(-10,-14, -15)]
+          df1 = df1[,c(1,2,5,6,7,9,8,4,10,11,3,12)]
+          df1$ISIN = ''
+          df1$X = ''
+          colnames(df1) <- c("SYMBOL","SERIES","OPEN","HIGH","LOW","CLOSE","LAST","PREVCLOSE" ,
+                            "TOTTRDQTY","TOTTRDVAL","TIMESTAMP","TOTALTRADES" ,"ISIN","X")
+          return(df1)
     }
 
     #####   BSE Bhavcopy
@@ -94,7 +99,7 @@ bhav = function(x, se = 'NSE'){
     }
 
     if(se == 'NSE'){
-      df = tryCatch(bhav1(), error=function(e) bhav1(), warning = function(w) conditionMessage(w))
+      df = tryCatch(nsebhav(), error=function(e) nsebhav(), warning = function(w) conditionMessage(w))
     }else if(se == 'BSE') df = tryCatch(bsebhav(), error = function(e) conditionMessage(e),
                                         warning = function(w) conditionMessage(w))
 

@@ -1,7 +1,7 @@
 #' @name nseopen
 #' @aliases nseopen
 #'
-#' @title NSE Pre Open Market
+#' @title NSE Pre Open Market data
 #'
 #' @param x "fo" for F&O stocks, "all" for all the stocks. Default is "n50" for NIFTY 50 stocks.
 #'
@@ -21,7 +21,7 @@
 #' library(nser)
 #' nseopen("n50")
 #'
-#' # Pre market for F&O stocks
+#' # Pre open market data of F&O stocks
 #' nseopen("fo")
 #' }
 

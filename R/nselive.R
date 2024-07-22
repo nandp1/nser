@@ -32,15 +32,26 @@ nselive = function(x = "n50"){
   }
 
   if(x == "n50"){
+
     x= reticulate::py_run_file(system.file("nlive.py", package = "nser"))
     nlive = x$dat1
     nlive = lapply(nlive, function(x) t(x))
     nlive1 = nlive[-1]
-    nlive1 = do.call(rbind.data.frame, nlive1)
-    nlive1 = nlive1[, c(2,  5, 6, 7, 8, 9, 10, 11)]
-    nlive1  = nlive1 %>% mutate_at(c('open', 'dayHigh', 'dayLow', 'lastPrice', 'previousClose', 'change', 'pChange'), as.numeric)
-    nlive1 = nlive1 %>% mutate(symbol = unlist(nlive1$symbol) %>% as.vector())
-    colnames(nlive1) <- c("SYMBOL", "OPEN", 'HIGH', 'LOW', 'LAST', 'CLOSE', 'Change', 'pChange')
+    nlive1 = cbind.data.frame(
+      SYMBOL = unname(sapply(nlive1, `[[`, 2)),
+      OPEN  = unname(sapply(nlive1, `[[`, 5)),
+      HIGH  = unname(sapply(nlive1, `[[`, 6)),
+      LOW  = unname(sapply(nlive1, `[[`, 7)),
+      LAST   = unname(sapply(nlive1, `[[`, 8)),
+      previousCLOSE   = unname(sapply(nlive1, `[[`, 9)),
+      CHANGE    = unname(sapply(nlive1, `[[`, 10)),
+      pCHANGE    = unname(sapply(nlive1, `[[`, 11)),
+      totalVOLUME    = unname(sapply(nlive1, `[[`, 12)),
+      totalVALUE    = unname(sapply(nlive1, `[[`, 13))
+    )
+    nlive1 = nlive1 %>% mutate_at(c("OPEN", "HIGH", "LOW",
+                                  "LAST", "previousCLOSE", "CHANGE", "pCHANGE", "totalVOLUME", "totalVALUE"),
+                                as.numeric)
     live = nlive1
     return(live)
   }
@@ -48,11 +59,22 @@ nselive = function(x = "n50"){
     x= reticulate::py_run_file(system.file("nlive.py", package = "nser"))
     nlive = x$dat2
     nlive = lapply(nlive, function(x) t(x))
-    nlive = do.call(rbind.data.frame, nlive)
-    nlive = nlive[, c(1, 4, 5, 6, 7, 8, 9, 10)]
-    nlive  = nlive %>% mutate_at(c('open', 'dayHigh', 'dayLow', 'lastPrice', 'previousClose', 'change', 'pChange'), as.numeric)
-    nlive = nlive %>% mutate(symbol = unlist(nlive$symbol) %>% as.vector())
-    colnames(nlive) <- c("SYMBOL", "OPEN", 'HIGH', 'LOW', 'LAST', 'CLOSE', 'Change', 'pChange')
+
+    nlive = cbind.data.frame(
+      SYMBOL = unname(sapply(nlive, `[[`, 1)),
+      OPEN  = unname(sapply(nlive, `[[`, 4)),
+      HIGH  = unname(sapply(nlive, `[[`, 5)),
+      LOW  = unname(sapply(nlive, `[[`, 6)),
+      LAST   = unname(sapply(nlive, `[[`, 7)),
+      previousCLOSE   = unname(sapply(nlive, `[[`, 8)),
+      CHANGE    = unname(sapply(nlive, `[[`, 9)),
+      pCHANGE    = unname(sapply(nlive, `[[`, 10)),
+      totalVOLUME    = unname(sapply(nlive, `[[`, 11)),
+      totalVALUE    = unname(sapply(nlive, `[[`, 12))
+    )
+    nlive = nlive %>% mutate_at(c("OPEN", "HIGH", "LOW",
+                                  "LAST", "previousCLOSE", "CHANGE", "pCHANGE", "totalVOLUME", "totalVALUE"),
+                                as.numeric)
     live = nlive
     return(live)
   }

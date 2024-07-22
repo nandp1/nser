@@ -1,12 +1,12 @@
 #' @name optbanknifty
 #' @aliases optbanknifty
-#' @title Option Chain for NSE BANKNIFTY.
+#' @title Option Chain of NSE BANKNIFTY (current expiry date).
 #'
-#' @return A dataframe containing option chain of NSE BANKNIFTY.
+#' @return A dataframe containing option chain of NSE BANKNIFT current expiry date.
 #' @author Nandan L. Patil \email{tryanother609@@gmail.com}
-#' @details Get visual friendly display of Option chain of BANKNIFTY for the current expiry.
+#' @details Option chain of BANKNIFTY for the current expiry.
 #' @source <https://www.nseindia.com/option-chain>
-#' @seealso \code{\link[nser]{optnifty}}\code{\link[nser]{bhavtoday}}\code{\link[nser]{bhavfos}}\code{\link[nser]{nsetree}}\code{\link[nser]{nseipo}}
+#' @seealso \code{\link[nser]{optnifty}}\code{\link[nser]{bhavtoday}}\code{\link[nser]{nselive}}\code{\link[nser]{nsetree}}\code{\link[nser]{nseipo}}
 #'
 #' @import reticulate
 #' @importFrom dplyr bind_rows

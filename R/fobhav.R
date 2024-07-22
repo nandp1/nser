@@ -4,7 +4,7 @@
 #'
 #' @param x numeric date format
 #'
-#' @note The date should be strictly numerical and mentioned in quotation mark. `fobhav` can be used to download bhavcopy from 1 Jan 2016 onwards. To download bhavcopy previous to aforementioned date use `bhavfos`.
+#' @note The date should be strictly numerical and mentioned in quotation mark. `fobhav` can be used to download bhavcopy from 1 Jan 2016 onwards.
 #' @return F&O Bhavcopy for the given date.
 #' @author Nandan L. Patil \email{tryanother609@@gmail.com}
 #' @details Gets Futures and Options Bhavcopy from NSE for the given date.
