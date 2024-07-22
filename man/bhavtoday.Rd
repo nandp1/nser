@@ -2,7 +2,7 @@
 % Please edit documentation in R/bhavtoday.R
 \name{bhavtoday}
 \alias{bhavtoday}
-\title{Get Bhavcopy for the present day}
+\title{Get Bhavcopy for the present day from NSE and BSE}
 \source{
 <https://www.nseindia.com/all-reports>, <https://www.bseindia.com/markets/marketinfo/BhavCopy.aspx>
 }
@@ -16,7 +16,7 @@ bhavtoday(se = "NSE")
 Todays's Bhavcopy.
 }
 \description{
-Get Bhavcopy for the present day
+Get Bhavcopy for the present day from NSE and BSE
 }
 \details{
 Gets todays bhavcopy from NSE. The function tries to get the bhavcopy from two sources Old and New website of NSE.

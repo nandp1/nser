@@ -23,6 +23,7 @@ The dataframe should contain six columns named SYMBOL, OPEN, HIGH, LOW, CLOSE & 
 }
 \examples{
 \donttest{
+library(nser)
 data(dailydata)
 daytoweek(dailydata)
 }

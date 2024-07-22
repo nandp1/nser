@@ -2,7 +2,7 @@
 % Please edit documentation in R/fdii.R
 \name{fdii}
 \alias{fdii}
-\title{Get latest FII/DII data.}
+\title{Latest FII/DII data.}
 \source{
 <https://www.moneycontrol.com/stocks/marketstats/fii_dii_activity/index.php>
 }
@@ -13,10 +13,10 @@ fdii()
 Dataframe containing FII/DII data.
 }
 \description{
-Get latest FII/DII data.
+Latest FII/DII data.
 }
 \details{
-Data gathered from moneycontrol.
+Get latest FII/DII data from Moneycontrol website.
 }
 \examples{
 \dontrun{
@@ -24,6 +24,7 @@ Data gathered from moneycontrol.
 
 library(nser)
 fdii()
+
 }
 
 }

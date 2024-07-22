@@ -22,7 +22,7 @@ Bhavcopy PR from NSE
 Gets Bhavcopy PR from NSE for the given date.
 }
 \note{
-The date should be strictly numerical and mentioned in quotation mark.
+The date should be strictly numerical and mentioned in quotation mark, refer example.
 }
 \examples{
 \donttest{

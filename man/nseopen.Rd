@@ -2,7 +2,7 @@
 % Please edit documentation in R/nseopen.R
 \name{nseopen}
 \alias{nseopen}
-\title{NSE Pre Open Market}
+\title{NSE Pre Open Market data}
 \source{
 <https://www1.nseindia.com/live_market/dynaContent/live_watch/pre_open_market/pre_open_market.htm>
 }
@@ -16,7 +16,7 @@ nseopen(x = "n50")
 A dataframe with NSE Pre open market data.
 }
 \description{
-NSE Pre Open Market
+NSE Pre Open Market data
 }
 \details{
 Get NSE Pre open market data.
@@ -30,7 +30,7 @@ NSE market opening time is 9.00 AM (IST). The NSE pre market closes at 9.08 AM (
 library(nser)
 nseopen("n50")
 
-# Pre market for F&O stocks
+# Pre open market data of F&O stocks
 nseopen("fo")
 }
 }

@@ -10,7 +10,7 @@
 nseindex()
 }
 \value{
-A dataframe containing last price and % change of Nifty Indices.
+A dataframe containing last price and per cent change of nifty indices.
 }
 \description{
 NSE Nifty Indices

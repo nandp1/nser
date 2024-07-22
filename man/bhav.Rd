@@ -2,12 +2,12 @@
 % Please edit documentation in R/bhav.R
 \name{bhav}
 \alias{bhav}
-\title{Bhavcopy from NSE}
+\title{Bhavcopy from NSE and BSE}
 \source{
 <https://www.nseindia.com/all-reports>, <https://www.bseindia.com/markets/marketinfo/BhavCopy.aspx>
 }
 \usage{
-bhav(x, se = "NSE")
+bhav(x)
 }
 \arguments{
 \item{x}{numeric date format}
@@ -18,21 +18,21 @@ bhav(x, se = "NSE")
 Bhavcopy for the given date.
 }
 \description{
-Bhavcopy from NSE
+Bhavcopy from NSE and BSE
 }
 \details{
-Gets Bhavcopy from NSE for the given date. The function tries to get the bhavcopy from two sources i.e., Old and New website of NSE.
+Gets Bhavcopy from NSE and BSE for the given date.
 }
 \note{
-The date should be strictly numerical and mentioned in quotation mark. `bhav` can be used to download bhavcopy from 1 Jan 2016 on wards. To download bhavcopy previous to aforementioned date use `bhavs`.
+The date should be strictly numerical and mentioned in quotation mark (refer examples). `bhav` can be used to download NSE bhavcopy from 1 Jan 2020 on wards.
 }
 \examples{
 \donttest{
 #Download Bhavcopy from NSE
-report = bhav("01072021") # Download bhavcopy for 01 July 2021
+report = bhav("01072024") # Download bhavcopy for 01 July 2024
 
 #Download bhavcopy from BSE
-report = bhav("01072021", 'BSE')
+report = bhav("01072024", 'BSE')
 }
 }
 \seealso{

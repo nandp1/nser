@@ -19,13 +19,19 @@ treemap A Treemap of recent percent change in value of securities.
 Treemap for Nifty50 and F&O Securities
 }
 \details{
-The function plots a treemap eith the recent change in price of securities.
+Plot treemap representing per cent change in 'NIFTY50' and 'F&O' stocks.
 }
 \examples{
 \dontrun{
 # Treemap of NIFTY50 securities
+
 library(nser)
 nsetree()
+
+# Treemap of FO securities
+
+library(nser)
+nsetree('fo')
 }
 }
 \seealso{
