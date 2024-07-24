@@ -1,27 +1,23 @@
 ---
-title: "bhav: Historical Equity Bhavcopy from NSE and BSE"
+title: "bhav1: Historical Equity Bhavcopy from NSE"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{bhav}
+  %\VignetteIndexEntry{bhav1}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
 ## Introduction 
 
-* Download bhavcopy from NSE(National Stock Exchange) from 1 Jan 2020 onwards and BSE(Bombay Stock Exchange). 
+* Download bhavcopy from NSE(National Stock Exchange) from 1 Jan 2016 to 05 July 2024.
 
 * To download historical bhavcopy just mention the date in numeric format(Date, Month, Year). Note that date should be mentioned in quotation mark "" (inverted comma). 
 
 ``` 
-# Example: Let's download the Equity bhavcopy for 08 July 2021. 
+# Example: Let's download the Equity bhavcopy for 1 July 2024. 
 
 library(nser)
 #Download bhavcopy from NSE
-report = bhav("08072024")
-
-#Download bhavcopy from BSE
-report = bhav("08072024", 'BSE')
-
+report = bhav1("01072024")
 
 ```

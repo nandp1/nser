@@ -24,6 +24,4 @@ library(nser)
 # NIFTY 50 option chain table
 optnifty()
 
-### Only the raw data
-optnifty(raw_data = TRUE)
 ```

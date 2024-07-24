@@ -12,7 +12,7 @@
 
 
 
-<title>bhav: Historical Equity Bhavcopy from NSE and BSE</title>
+<title>bhav1: Historical Equity Bhavcopy from NSE</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -235,8 +235,8 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 
 
-<h1 class="title toc-ignore">bhav: Historical Equity Bhavcopy from NSE
-and BSE</h1>
+<h1 class="title toc-ignore">bhav1: Historical Equity Bhavcopy from
+NSE</h1>
 
 
 
@@ -244,20 +244,16 @@ and BSE</h1>
 <h2>Introduction</h2>
 <ul>
 <li><p>Download bhavcopy from NSE(National Stock Exchange) from 1 Jan
-2020 onwards and BSE(Bombay Stock Exchange).</p></li>
+2016 to 05 July 2024.</p></li>
 <li><p>To download historical bhavcopy just mention the date in numeric
 format(Date, Month, Year). Note that date should be mentioned in
 quotation mark “” (inverted comma).</p></li>
 </ul>
-<pre><code># Example: Let&#39;s download the Equity bhavcopy for 08 July 2021. 
+<pre><code># Example: Let&#39;s download the Equity bhavcopy for 1 July 2024. 
 
 library(nser)
 #Download bhavcopy from NSE
-report = bhav(&quot;08072024&quot;)
-
-#Download bhavcopy from BSE
-report = bhav(&quot;08072024&quot;, &#39;BSE&#39;)
-
+report = bhav1(&quot;01072024&quot;)
 </code></pre>
 </div>
 

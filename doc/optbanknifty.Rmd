@@ -23,7 +23,4 @@ Option chain of NSE BANKNIFTY.
 library(nser)
 # BANKNIFTY option chain table
 optbanknifty()
-
-### Only the raw data
-optbanknifty(raw_data = TRUE)
 ```
