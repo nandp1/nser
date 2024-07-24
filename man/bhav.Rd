@@ -7,7 +7,7 @@
 <https://www.nseindia.com/all-reports>, <https://www.bseindia.com/markets/marketinfo/BhavCopy.aspx>
 }
 \usage{
-bhav(x)
+bhav(x, se = "NSE")
 }
 \arguments{
 \item{x}{numeric date format}

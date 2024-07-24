@@ -2,13 +2,12 @@
 % Please edit documentation in R/bhav1.R
 \name{bhav1}
 \alias{bhav1}
-\alias{bhav}
 \title{Bhavcopy from NSE upto 05 July 2024}
 \source{
 <https://www.nseindia.com/all-reports>
 }
 \usage{
-bhav(x)
+bhav1(x)
 }
 \arguments{
 \item{x}{numeric date format}
