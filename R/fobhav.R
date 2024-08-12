@@ -4,7 +4,7 @@
 #'
 #' @param x numeric date format
 #'
-#' @note The date should be strictly numerical and mentioned in quotation mark. `fobhav` can be used to download bhavcopy from 1 Jan 2016 onwards.
+#' @note The date should be strictly numerical and mentioned in quotation mark (refer examples). `fobhav` can be used to download NSE bhavcopy from 1 Jan 2020 on wards.
 #' @return F&O Bhavcopy for the given date.
 #' @author Nandan L. Patil \email{tryanother609@@gmail.com}
 #' @details Gets Futures and Options Bhavcopy from NSE for the given date.
@@ -14,6 +14,7 @@
 #'
 #' @importFrom utils download.file read.csv unzip
 #' @importFrom curl has_internet
+#' @importFrom httr GET content add_headers
 #'
 #' @export
 #'
@@ -34,41 +35,19 @@ if(!nchar(gsub("[^0-9]+", "", x)) == 8){
        mt = substr(x, start = 3, stop = 4)
        yr = substr(x, start = 5, stop = 8)
 
-       if(mt == "01"){
-         mt = "JAN"
-       } else if(mt == "02"){
-         mt = "FEB"
-       } else if(mt == "03"){
-         mt = "MAR"
-       } else if(mt == "04"){
-         mt = "APR"
-       } else if(mt == "05"){
-         mt = "MAY"
-       } else if(mt == "06"){
-         mt = "JUN"
-       } else if(mt == "07"){
-         mt = "JUL"
-       } else if(mt == "08"){
-         mt = "AUG"
-       } else if(mt == "09"){
-         mt = "SEP"
-       } else if(mt == "10"){
-         mt = "OCT"
-       } else if(mt == "11"){
-         mt = "NOV"
-       } else if(mt == "12"){
-         mt = "DEC"
-       }
+       # NSE Bhavcopy
+       nseurl = paste0("https://nsearchives.nseindia.com/content/fo/BhavCopy_NSE_FO_0_0_0_", yr, mt, dy, "_F_0000.csv.zip")
+       #url <- "https://nsearchives.nseindia.com/content/fo/BhavCopy_NSE_FO_0_0_0_20240809_F_0000.csv.zip"
+       UA <- paste('Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:98.0)',
+                   'Gecko/20100101 Firefox/98.0')
+       res <- GET(nseurl, add_headers(`User-Agent` = UA, Connection = 'keep-alive'))
 
-       baseurl = "https://archives.nseindia.com/content/historical/DERIVATIVES/"
-       end = ".csv.zip"
-       bhavurl = paste0(baseurl, yr, "/", mt, "/fo", dy, mt, yr, "bhav", end)
-       zipname = paste0("fo", dy, mt, yr, "bhav", ".csv")
+       temp_file <- tempfile() # create temporary file
+       writeBin(content(res), temp_file) # unzip CSV results to temporary file
+       df <- read_csv(temp_file) # read in temporary csv file to dataframe
+       file.remove(temp_file)
 
-       temp <- tempfile()
-       download.file(bhavurl, temp)
-       file <-  read.csv(unz(temp, filename = zipname))
-       unlink(temp)
-       return(file)
+      return(df)
+
   }
 }
