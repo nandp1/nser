@@ -15,8 +15,11 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
   * Due to change in NSE website interface the `bhav` and `bhavtoday` functions have been revised and old code is maintained in `bhav1`. 
   * `bhav` downloads bhavcopy from 1 Jan 2020 onwards,
   * `bhavtoday` download todays bhavcopy from NSE.  
-  * `bhav1` downloads NSE bhavcopy from from 1 Jan 2016 to  05 July 2024. 
-
+  * `bhav1` downloads NSE bhavcopy from from 1 Jan 2016 to  05 July 2024.
+  * `fobhav` download derivatives (F&O) bhavcopy from 1 Jan 2020 onwards
+  * `fobhavtoday` derivatives (F&O) todays bhavcopy from NSE.
+  * `fobhav1` downloads NSE bhavcopy from from 1 Jan 2016 to  05 July 2024.
+    
 ## New Functions
 * `bhav1`, `optbanknifty` and `optnifty` to get option chain of BANKNIFTY and NIFTY 50 repsectively.
   
