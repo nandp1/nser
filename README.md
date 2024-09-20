@@ -10,6 +10,9 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 [![](https://cranlogs.r-pkg.org/badges/grand-total/nser)](https://cran.r-project.org/package=nser)
 
 <!-- badges: end -->
+nser: R package to download historical bhavcopy of Equities and F&O, get live market data, plot treemap of movement in securities
+
+Author: Nandan L. Patil 
 
 # Latest Version `1.5.4` on Github 
   * Due to change in NSE website interface the `bhav` and `bhavtoday` functions have been revised and old code is maintained in `bhav1`. 
