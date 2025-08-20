@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 To download historical bhavcopy just mention the date in numeric format(Date, Month, Year). Note that date should be mentioned 
 in quotation mark "" (inverted comma). 
 
-```{r example}
+``` r
 # Example: Lets download the bhavcopy of 1 July 2021 for Derivatives (F&O). 
 library(nser)
 report = fobhav("01072021")

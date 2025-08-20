@@ -49,7 +49,7 @@ overflow: visible;
 </style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -350,8 +350,8 @@ NSE for the given date through RSelenium.</p>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="co"># Start a selenium server and browser either from Google Chrome (Update it to latest version) or from Firefox</span></span>
 <span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a>driver <span class="ot">&lt;-</span> <span class="fu">rsDriver</span>(<span class="at">browser =</span> <span class="fu">c</span>(<span class="st">&quot;chrome&quot;</span>), <span class="at">port =</span> 3163L, <span class="at">chromever =</span> <span class="st">&quot;91.0.4472.101&quot;</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a>driver <span class="ot">&lt;-</span> <span class="fu">rsDriver</span>(<span class="at">browser =</span> <span class="fu">c</span>(<span class="st">&quot;firefox&quot;</span>), <span class="at">port =</span> 3799L)</span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a>driver <span class="ot">&lt;-</span> <span class="fu">rsDriver</span>(<span class="at">browser =</span> <span class="fu">c</span>(<span class="st">&quot;chrome&quot;</span>), <span class="at">port =</span> <span class="dv">3163</span><span class="dt">L</span>, <span class="at">chromever =</span> <span class="st">&quot;91.0.4472.101&quot;</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a>driver <span class="ot">&lt;-</span> <span class="fu">rsDriver</span>(<span class="at">browser =</span> <span class="fu">c</span>(<span class="st">&quot;firefox&quot;</span>), <span class="at">port =</span> <span class="dv">3799</span><span class="dt">L</span>)</span>
 <span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a>remDr <span class="ot">&lt;-</span> driver<span class="sc">$</span>client</span></code></pre></div>
 <p>Use `<code>bhavfos</code> to download the bhavcopy zipfile for the
 given date. Mention the date in numeric (ddmmyyyy). Time interval delay

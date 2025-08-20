@@ -49,7 +49,7 @@ overflow: visible;
 </style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -60,7 +60,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
 { counter-reset: source-line 0; }
@@ -349,28 +349,7 @@ quotation mark “” (inverted comma).</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="co"># Example: Lets download the bhavcopy of 1 July 2021 for Derivatives (F&amp;O). </span></span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">library</span>(nser)</span>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>report <span class="ot">=</span> <span class="fu">fobhav</span>(<span class="st">&quot;01072021&quot;</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="fu">head</span>(report)</span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="co">#&gt;   INSTRUMENT    SYMBOL   EXPIRY_DT STRIKE_PR OPTION_TYP     OPEN     HIGH</span></span>
-<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="co">#&gt; 1     FUTIDX BANKNIFTY 29-Jul-2021         0         XX 34975.75 35086.35</span></span>
-<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="co">#&gt; 2     FUTIDX BANKNIFTY 26-Aug-2021         0         XX 35426.30 35426.30</span></span>
-<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a><span class="co">#&gt; 3     FUTIDX BANKNIFTY 30-Sep-2021         0         XX 35303.05 35358.20</span></span>
-<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="co">#&gt; 4     FUTIDX  FINNIFTY 01-Jul-2021         0         XX 16480.00 16480.00</span></span>
-<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a><span class="co">#&gt; 5     FUTIDX  FINNIFTY 08-Jul-2021         0         XX 16435.00 16435.00</span></span>
-<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a><span class="co">#&gt; 6     FUTIDX  FINNIFTY 15-Jul-2021         0         XX     0.00     0.00</span></span>
-<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a><span class="co">#&gt;        LOW    CLOSE SETTLE_PR CONTRACTS VAL_INLAKH OPEN_INT CHG_IN_OI</span></span>
-<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a><span class="co">#&gt; 1 34810.85 34853.05  34853.05    105417  920286.40  2113400    -91225</span></span>
-<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a><span class="co">#&gt; 2 34973.45 35004.70  35004.70      2041   17894.82    79450      3850</span></span>
-<span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a><span class="co">#&gt; 3 35128.85 35159.30  35159.30       264    2324.22    10300       425</span></span>
-<span id="cb1-16"><a href="#cb1-16" tabindex="-1"></a><span class="co">#&gt; 4 16368.50 16373.10  16376.85       112     735.46      600      -720</span></span>
-<span id="cb1-17"><a href="#cb1-17" tabindex="-1"></a><span class="co">#&gt; 5 16415.00 16415.00  16388.35         3      19.70      240       120</span></span>
-<span id="cb1-18"><a href="#cb1-18" tabindex="-1"></a><span class="co">#&gt; 6     0.00 15608.35  16399.80         0       0.00        0         0</span></span>
-<span id="cb1-19"><a href="#cb1-19" tabindex="-1"></a><span class="co">#&gt;     TIMESTAMP  X</span></span>
-<span id="cb1-20"><a href="#cb1-20" tabindex="-1"></a><span class="co">#&gt; 1 01-JUL-2021 NA</span></span>
-<span id="cb1-21"><a href="#cb1-21" tabindex="-1"></a><span class="co">#&gt; 2 01-JUL-2021 NA</span></span>
-<span id="cb1-22"><a href="#cb1-22" tabindex="-1"></a><span class="co">#&gt; 3 01-JUL-2021 NA</span></span>
-<span id="cb1-23"><a href="#cb1-23" tabindex="-1"></a><span class="co">#&gt; 4 01-JUL-2021 NA</span></span>
-<span id="cb1-24"><a href="#cb1-24" tabindex="-1"></a><span class="co">#&gt; 5 01-JUL-2021 NA</span></span>
-<span id="cb1-25"><a href="#cb1-25" tabindex="-1"></a><span class="co">#&gt; 6 01-JUL-2021 NA</span></span></code></pre></div>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="fu">head</span>(report)</span></code></pre></div>
 </div>
 
 

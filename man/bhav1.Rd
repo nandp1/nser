@@ -27,7 +27,7 @@ The date should be strictly numerical and mentioned in quotation mark (refer exa
 \examples{
 \donttest{
 #Download Bhavcopy from NSE
-report = bhav("01072021") # Download bhavcopy for 01 July 2021
+report = bhav1("01072021") # Download bhavcopy for 01 July 2021
 
 }
 }

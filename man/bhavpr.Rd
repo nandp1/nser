@@ -25,7 +25,7 @@ Gets Bhavcopy PR from NSE for the given date.
 The date should be strictly numerical and mentioned in quotation mark, refer example.
 }
 \examples{
-\donttest{
+\dontrun{
 # Equity Bhavcopy PR
 library(nser)
 report = bhavpr("01072021")
