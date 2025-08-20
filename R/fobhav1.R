@@ -1,5 +1,5 @@
-#' @name fobhav
-#' @aliases fobhav
+#' @name fobhav1
+#' @aliases fobhav1
 #' @title Futures and Options Bhavcopy from NSE
 #'
 #' @param x numeric date format
@@ -17,9 +17,9 @@
 #'
 #' @export
 #'
-#' @examples report = fobhav("01072021") # Download F&O bhavcopy for 01 July 2021
+#' @examples report = fobhav1("01072021") # Download F&O bhavcopy for 01 July 2021
 #'
-fobhav = function(x){
+fobhav1 = function(x){
   # check internet connection
   if (!curl::has_internet()) {
     message("No internet connection.")

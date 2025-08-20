@@ -18,7 +18,7 @@
 #'
 #' @export
 #'
-#' @examples \donttest{
+#' @examples \dontrun{
 #' # Equity Bhavcopy PR
 #' library(nser)
 #' report = bhavpr("01072021")

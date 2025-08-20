@@ -1,5 +1,5 @@
 ---
-title: "fobhav:  Historical Derivatives(F&O) Bhavcopy"
+title: "fobhav1:  Historical Derivatives(F&O) Bhavcopy"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{fobhav}
@@ -19,9 +19,9 @@ knitr::opts_chunk$set(
 To download historical bhavcopy just mention the date in numeric format(Date, Month, Year). Note that date should be mentioned 
 in quotation mark "" (inverted comma). 
 
-``` r
+```{r example}
 # Example: Lets download the bhavcopy of 1 July 2021 for Derivatives (F&O). 
 library(nser)
-report = fobhav("01072024")
+report = fobhav1("01072021")
 head(report)
 ```

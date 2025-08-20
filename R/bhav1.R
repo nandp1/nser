@@ -17,10 +17,10 @@
 #'
 #' @examples \donttest{
 #' #Download Bhavcopy from NSE
-#' report = bhav("01072021") # Download bhavcopy for 01 July 2021
+#' report = bhav1("01072021") # Download bhavcopy for 01 July 2021
 #'
 #' }
-bhav = function(x){
+bhav1 = function(x){
   # First check internet connection
   if (!curl::has_internet()) {
     message("No internet connection.")
@@ -67,7 +67,7 @@ bhav = function(x){
     bhavurl = paste0(baseurl, yr, "/", mt, "/cm", dy, mt, yr, "bhav", end)
     zipname = paste0("cm", dy, mt, yr, "bhav", ".csv")
 
-    bhav1 = function(x){
+    bhav11 = function(x){
       temp <- tempfile()
       download.file(bhavurl, temp)
       file = read.csv(unz(temp, filename = zipname))
@@ -75,7 +75,7 @@ bhav = function(x){
       return(file)
     }
 
-      df = bhav1()
+      df = bhav11()
 
     return(df)
   }
