@@ -104,10 +104,10 @@ nseopen("fo")
 ```
 
 ## Example 6. Current and Upcoming IPO’s
-
+``` r
 library(nser)
 nseipo()
-
+```
 ## Example 7. RSelenium to Download Equity Bhavcopy
 
 ``` r
@@ -191,4 +191,5 @@ nsetree("fo")
     bhav1('05072024')
     
     
+
 
