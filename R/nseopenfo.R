@@ -1,14 +1,14 @@
 #' @name nseopenfo
 #' @aliases nseopenfo
 #'
-#' @title NSE Pre Open Market data
+#' @title NSE Derivatives Pre Open Market of current month's future stock.
 #'
-#' @param x "fo" for F&O stocks, "all" for all the stocks. Default is "n50" for NIFTY 50 stocks.
+#' @param x "fo" for F&O stocks,
 #'
 #' @note NSE market opening time is 9.00 AM (IST). The NSE pre market closes at 9.08 AM (IST).
-#' @return A dataframe with NSE Pre open market data.
+#' @return A dataframe with Derivatives Pre Open Market of current month's future stock.
 #' @author Nandan L. Patil \email{tryanother609@@gmail.com}
-#' @details Get NSE Pre open market data.
+#' @details Get Derivatives Pre Open Market of current month's future stock.
 #' @source <https://www1.nseindia.com/live_market/dynaContent/live_watch/pre_open_market/pre_open_market.htm>
 #' @seealso \code{\link[nser]{bhavpr}}\code{\link[nser]{bhav}}\code{\link[nser]{fobhavtoday}}
 #'
