@@ -25,8 +25,9 @@ Gets Futures and Options Bhavcopy from NSE for the given date.
 The date should be strictly numerical and mentioned in quotation mark. `fobhav` can be used to download bhavcopy from 1 Jan 2016 onwards.
 }
 \examples{
+\dontrun{
 report = fobhav1("01072021") # Download F&O bhavcopy for 01 July 2021
-
+}
 }
 \seealso{
 \code{\link[nser]{bhavpr}}\code{\link[nser]{bhavtoday}}

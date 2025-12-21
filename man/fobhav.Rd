@@ -26,7 +26,7 @@ The date should be strictly numerical and mentioned in quotation mark (refer exa
 }
 \examples{
 \dontrun{
-report = fobhav("01072021") # Download F&O bhavcopy for 01 July 2021
+report = fobhav("09122025") # Download F&O bhavcopy for 01 July 2021
 }
 }
 \seealso{

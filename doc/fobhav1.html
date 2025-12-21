@@ -12,7 +12,7 @@
 
 
 
-<title>dailydata: Daily data of a stock</title>
+<title>fobhav1: Historical Derivatives (F&amp;O) Bhavcopy</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -336,23 +336,20 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 
 
-<h1 class="title toc-ignore">dailydata: Daily data of a stock</h1>
+<h1 class="title toc-ignore">fobhav1: Historical Derivatives (F&amp;O)
+Bhavcopy</h1>
 
 
 
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
-<p>A sample daily data of stock ‘SBIN’. The data has six columns i.e.,
-SYMBOL, OPEN, HIGH, LOW, CLOSE, DATE.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a></span>
+<p>To download historical bhavcopy just mention the date in numeric
+format(Date, Month, Year). Note that date should be mentioned in
+quotation mark “” (inverted comma).</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="co"># Example: Lets download the bhavcopy of 1 July 2021 for Derivatives (F&amp;O). </span></span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">library</span>(nser)</span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="fu">data</span>(<span class="st">&quot;dailydata&quot;</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="co"># Convert daily data to montly data</span></span>
-<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="fu">daytomonth</span>(dailydata)</span>
-<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a><span class="co"># Convert daily data to weekly data</span></span>
-<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="fu">daytoweek</span>(dailydata)</span></code></pre></div>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>report <span class="ot">=</span> <span class="fu">fobhav1</span>(<span class="st">&quot;01072021&quot;</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="fu">head</span>(report)</span></code></pre></div>
 </div>
 
 
