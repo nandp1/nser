@@ -13,6 +13,14 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Visit website for examples and more info [nser](https://nandp1.github.io/nser/)
 
+## Version `1.5.9`
+
+* New function `nseopenfo` to get NSE Derivatives Pre Open Market of current month's future stock.
+
+## Version `1.5.4` to `1.5.8`
+
+* Fixes to CRAN errors
+
 ## Version `1.5.3`
 
 * Due to change in NSE website interface the bhav function has been revised from 1.5.3 and old code is maintained in bhav1.
