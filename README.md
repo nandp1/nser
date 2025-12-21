@@ -29,7 +29,7 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 
   
 ##  Usage of `reticulate` package 
-`nselive`, `nseopen` `nseindex`, `nsetree`, `optbanknifty` and `optnifty` obtain data from NSE using python scripts. Thus, you need to install Python modules `pandas` and `requests` in R, 
+`nselive`, `nseopen`,  `nseopenfo`, `nseindex`, `nsetree`, `optbanknifty` and `optnifty` obtain data from NSE using python scripts. Thus, you need to install Python modules `pandas` and `requests` in R, 
 
 Following steps should help you to get started, 
 * Install latest version of `Python`, `Ananconda` and `Miniconda`. And add Python as PATH variable. 
@@ -194,6 +194,7 @@ nsetree("fo")
     bhav1('05072024')
     
     
+
 
 
 
