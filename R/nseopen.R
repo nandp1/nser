@@ -33,7 +33,7 @@ nseopen = function(x = "n50"){
     npo1 = lapply(npo1, function(x)
       t(x))
     npo1 = do.call(rbind.data.frame, npo1)
-    npo1 = npo1[,c(1, 4, 5, 6, 7, 13)]
+    npo1 = npo1[c("symbol", "lastPrice", "change",'pChange', 'previousClose', 'iep')]
     po <- npo1 %>% mutate_at(c('symbol'), as.character)
     po <- po %>% mutate_at(c('lastPrice', 'change', 'pChange', 'previousClose', 'iep'), as.numeric)
     po = po %>% mutate(symbol = unlist(po$symbol) %>% as.vector())
@@ -48,7 +48,7 @@ nseopen = function(x = "n50"){
     npo1 = lapply(npo1, function(x)
       t(x))
     npo1 = do.call(rbind.data.frame, npo1)
-    npo1 = npo1[,c(1, 4, 5, 6, 7, 13)]
+    npo1 = npo1[c("symbol", "lastPrice", "change",'pChange', 'previousClose', 'iep')]
     po <- npo1 %>% mutate_at(c('symbol'), as.character)
     po <- po %>% mutate_at(c('lastPrice', 'change', 'pChange', 'previousClose', 'iep'), as.numeric)
     po  = po %>% mutate_at(c('symbol'), as.character())
@@ -63,7 +63,7 @@ nseopen = function(x = "n50"){
     npo1 = lapply(npo1, function(x)
       t(x))
     npo1 = do.call(rbind.data.frame, npo1)
-    npo1 = npo1[,c(1, 4, 5, 6, 7, 13)]
+    npo1 = npo1[c("symbol", "lastPrice", "change",'pChange', 'previousClose', 'iep')]
     po <- npo1 %>% mutate_at(c('symbol'), as.character)
     po <- po %>% mutate_at(c('lastPrice', 'change', 'pChange', 'previousClose', 'iep'), as.numeric)
     po = po %>% mutate(symbol = unlist(po$symbol) %>% as.vector())

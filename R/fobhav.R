@@ -19,7 +19,7 @@
 #' @export
 #'
 #' @examples \dontrun{
-#' report = fobhav("01072021") # Download F&O bhavcopy for 01 July 2021
+#' report = fobhav("09122025") # Download F&O bhavcopy for 01 July 2021
 #' }
 fobhav = function(x){
   # check internet connection
@@ -44,7 +44,11 @@ if(!nchar(gsub("[^0-9]+", "", x)) == 8){
        res <- GET(nseurl, add_headers(`User-Agent` = UA, Connection = 'keep-alive'))
 
        temp_file <- tempfile() # create temporary file
-       writeBin(content(res), temp_file) # unzip CSV results to temporary file
+       #writeBin(content(res), temp_file) # unzip CSV results to temporary file
+
+      tryCatch(writeBin(content(res), temp_file), error=function(e) conditionMessage(e),
+                     warning = function(w) conditionMessage(w))
+
        df <- read_csv(temp_file) # read in temporary csv file to dataframe
        file.remove(temp_file)
 
@@ -52,3 +56,4 @@ if(!nchar(gsub("[^0-9]+", "", x)) == 8){
 
   }
 }
+
