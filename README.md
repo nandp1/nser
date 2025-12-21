@@ -10,9 +10,14 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 [![](https://cranlogs.r-pkg.org/badges/grand-total/nser)](https://cran.r-project.org/package=nser)
 
 <!-- badges: end -->
-nser: R package to download historical bhavcopy of Equities and F&O, get live market data, plot treemap of movement in securities
+**nser**: R package to download historical bhavcopy of Equities and F&O, get live market data, plot treemap of movement in securities
 
-# Latest Version `1.5.6` on Github 
+# Latest Version `1.5.9` on Github 
+
+## New Functions
+* `nseopenfo` to obtain NSE pre market open data of F&O stacoks for current month's future.
+  
+## NOTE
   * Due to change in NSE website interface the `bhav` and `bhavtoday` functions have been revised and old code is maintained in `bhav1`. 
   * `bhav` downloads bhavcopy from 1 Jan 2020 onwards,
   * `bhavtoday` download todays bhavcopy from NSE.  
@@ -21,10 +26,9 @@ nser: R package to download historical bhavcopy of Equities and F&O, get live ma
   * `fobhavtoday` derivatives (F&O) todays bhavcopy from NSE.
   * `fobhav1` downloads NSE bhavcopy from from 1 Jan 2016 to  05 July 2024.
     
-## New Functions
-* `bhav1`, `optbanknifty` and `optnifty` to get option chain of BANKNIFTY and NIFTY 50 repsectively.
+
   
-## NOTE 
+##  Usage of `reticulate` package 
 `nselive`, `nseopen` `nseindex`, `nsetree`, `optbanknifty` and `optnifty` obtain data from NSE using python scripts. Thus, you need to install Python modules `pandas` and `requests` in R, 
 
 Following steps should help you to get started, 
@@ -43,8 +47,7 @@ You should be good to go now...
 
 # Introduction
 
-`nser` helps you to download historical bhavcopy of Equities and F&O
-segment easily.
+`nser` helps you to get various live NSE market data and download historical bhavcopy of Equities and F&O segment easily.
 
 Package website [nser](https://nandp1.github.io/nser/)
 
@@ -191,5 +194,6 @@ nsetree("fo")
     bhav1('05072024')
     
     
+
 
 
