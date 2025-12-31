@@ -15,7 +15,7 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 # Latest Version `1.5.9` on Github 
 
 ## New Functions
-* `nseopenfo` to obtain NSE pre market open data of F&O stacoks for current month's future.
+* `nseopenfo` to obtain NSE pre market open data of F&O scripts for current month's future.
   
 ## NOTE
   * Due to change in NSE website interface the `bhav` and `bhavtoday` functions have been revised and old code is maintained in `bhav1`. 
@@ -194,6 +194,7 @@ nsetree("fo")
     bhav1('05072024')
     
     
+
 
 
 
